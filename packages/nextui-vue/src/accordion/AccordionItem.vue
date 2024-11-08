@@ -1,19 +1,25 @@
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { accordionItem } from '@nextui-org/theme'
+import { accordionItem, type AccordionItemVariantProps } from '@nextui-org/theme'
 import {
   AccordionContent,
   AccordionHeader,
   AccordionTrigger,
   AccordionItem as RadixAccordionItem,
+  type AccordionItemProps as ItemProps
 } from 'radix-vue'
-import { animate } from 'motion'
-import type { AccordionItemProps, AccordionItemStyleProps } from './accordion'
+
+
+export interface AccordionItemProps extends ItemProps {
+  title: string
+  content: string
+  ui?: AccordionItemVariantProps
+}
 
 const props = defineProps<AccordionItemProps>()
 
 const className = computed(() => {
-  const config: AccordionItemStyleProps = {
+  const config: AccordionItemVariantProps = {
     ...(props.ui),
   }
 

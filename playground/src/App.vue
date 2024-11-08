@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { NVAccordion, NVAccordionItem, NVButton } from 'nextui-vue'
+import { NButton } from "nextui-vue"
 
 const accordionItems = [
   {
@@ -23,11 +23,13 @@ const accordionItems = [
 <template>
   <div class="h-svh flex">
     <div class="m-auto w-[500px] h-[500px]">
-      <!-- <NVButton type="flat" :disabled="false">
+      <NButton
+        type="solid"
+      >
         Test
-      </NVButton> -->
+      </NButton>
 
-      <NVAccordion>
+      <!-- <NVAccordion>
         <template
           v-for="(item, index) in accordionItems"
           :key="index"
@@ -36,7 +38,7 @@ const accordionItems = [
             <span>{{ item.content }}</span>
           </NVAccordionItem>
         </template>
-      </NVAccordion>
+      </NVAccordion> -->
     </div>
   </div>
 </template>

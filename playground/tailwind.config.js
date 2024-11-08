@@ -1,3 +1,5 @@
+import themeConfig from "nextui-vue/themeConfig"
+
 /** @type {import('tailwindcss').Config} */
 export default {
   mode: 'jit',
@@ -5,4 +7,5 @@ export default {
   theme: {
   },
   darkMode: 'class',
+  presets: [themeConfig],
 }

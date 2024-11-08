@@ -3,10 +3,13 @@
   "compilerOptions": {
     "target": "esnext",
     "jsx": "preserve",
-    "lib": ["esnext", "dom"]
+    "lib": ["esnext", "dom"],
+    "baseUrl": ".",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true
   },
   "include": [
-    "./**/*",
-    "./**/*.vue"
+    "src/**/*",
+    "src/**/*.vue"
   ]
 }

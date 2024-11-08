@@ -23,10 +23,12 @@
     "tailwindcss"
   ],
   "exports": {
-    ".": "./index.ts"
+    ".": "./src/index.ts",
+    "./themeConfig": "./tailwind.config.js"
   },
   "dependencies": {
     "@nextui-org/theme": "^2.2.9",
+    "@vueuse/core": "^11.2.0",
     "motion": "^10.18.0",
     "radix-vue": "^1.9.2",
     "vue": "^3.4.31"

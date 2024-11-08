@@ -1,9 +1,10 @@
 {
   "name": "nextui-vue",
-  "type": "module",
-  "version": "0.0.1-alpha.1",
+  "version": "0.0.1-alpha.2",
   "private": true,
+  "packageManager": "pnpm@9.0.0+",
   "scripts": {
+    "dev": "pnpm run -C playground dev",
     "clear:dep": "rimraf node_modules */node_modules */*/node_modules",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
@@ -11,10 +12,6 @@
     "lint": "eslint . --cache",
     "lint:fix": "eslint . --cache --fix"
   },
-  "workspaces": [
-    "playground",
-    "packages/*"
-  ],
   "devDependencies": {
     "@antfu/eslint-config": "^2.24.1",
     "eslint": "9.5.0",

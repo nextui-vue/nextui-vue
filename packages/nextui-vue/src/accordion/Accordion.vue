@@ -1,16 +1,18 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { AccordionRoot, Slot } from 'radix-vue'
-import { accordion } from '@nextui-org/theme'
-import useAccordionItem from './useAccordionItem.vue'
-import type { AccordionProps, AccordionStyleProps } from './accordion'
+import { AccordionRoot } from 'radix-vue'
+import { accordion, type AccordionItemVariantProps } from '@nextui-org/theme'
+import type { AccordionRootProps } from 'radix-vue'
+
+export interface AccordionProps extends AccordionRootProps {
+  ui?: AccordionItemVariantProps
+}
 
 const props = defineProps<AccordionProps>()
 
 const className = computed(() => {
-  const config: AccordionStyleProps = {
+  const config: AccordionItemVariantProps = {
     ...props.ui,
-    variant: 'bordered',
   }
   return accordion(config)
 })

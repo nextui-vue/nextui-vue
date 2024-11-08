@@ -1,28 +1,34 @@
 <script lang="ts" setup>
 import { computed, ref } from 'vue'
-import type { ButtonVariantProps } from '@nextui-org/theme'
 import { button } from '@nextui-org/theme'
-import type { ButtonProps } from './button'
+import type { ButtonVariantProps } from '@nextui-org/theme'
+import useRipple from '../shared/useRipple'
+
+export interface ButtonProps {
+  disabled?: boolean
+  size?: ButtonVariantProps['size']
+  type?: ButtonVariantProps['variant']
+}
 
 const props = defineProps<ButtonProps>()
 
+const buttonRef = ref<HTMLButtonElement>()
+useRipple(buttonRef)
 const hover = ref(true)
 const click = ref(true)
 
 const className = computed(() => {
-  const config: ButtonVariantProps = {
+  return button({
     variant: props.type,
     size: 'sm',
-    color: 'primary',
+    color: 'success',
     radius: 'sm',
     fullWidth: false,
     isDisabled: props.disabled,
     isInGroup: false,
     disableAnimation: false,
     isIconOnly: false,
-  }
-
-  return button(config)
+  })
 })
 
 function focus() {
@@ -36,10 +42,10 @@ function blur() {
 
 <template>
   <button
+    ref="buttonRef"
     :data-pressed="click ? true : null"
     :data-hover="hover ? true : null"
     :class="className"
-    v-bind="props"
     @mouseup="blur"
     @mousedown="focus"
     @mouseenter="hover = true"
