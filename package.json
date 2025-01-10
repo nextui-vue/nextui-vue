@@ -10,10 +10,12 @@
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
     "lint": "eslint . --cache",
-    "lint:fix": "eslint . --cache --fix"
+    "lint:fix": "eslint . --cache --fix",
+    "bumpp": "bumpp"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.24.1",
+    "bumpp": "^9.10.0",
     "eslint": "9.5.0",
     "pnpm": "^9.8.0",
     "rimraf": "^6.0.1",
