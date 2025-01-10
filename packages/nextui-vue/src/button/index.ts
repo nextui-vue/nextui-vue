@@ -1,1 +1,1 @@
-export { default as NButton, type ButtonProps } from './Button.vue'
+export * as Button from './src/Button.vue'
