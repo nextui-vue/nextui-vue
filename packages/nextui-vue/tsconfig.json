@@ -1,15 +1,15 @@
 {
   "extends": "@vue/tsconfig/tsconfig.dom.json",
   "compilerOptions": {
-    "target": "esnext",
-    "jsx": "preserve",
-    "lib": ["esnext", "dom"],
     "baseUrl": ".",
+    // See https://www.typescriptlang.org/tsconfig/#allowSyntheticDefaultImports
     "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
   "include": [
-    "src/**/*",
+    "src/**/*.ts",
     "src/**/*.vue"
   ]
 }
