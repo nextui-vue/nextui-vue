@@ -2,18 +2,30 @@ import { useEventListener, type MaybeRefOrGetter } from "@vueuse/core";
 
 const rippleElement = document.createElement('span')
 
+function setCSSStyle(el: HTMLElement, style: CSSStyleDeclaration) {
+  for (const [key, value] of Object.entries(style)) {
+    // @ts-ignore
+    el.style[key] = value
+  }
+}
+
 function ripple(event: MouseEvent) {
   const target = event.currentTarget as HTMLElement;
   const { x, y, width, height } = target.getBoundingClientRect()
   const { clientX, clientY } = event
 
   const newElement = rippleElement.cloneNode() as HTMLSpanElement
-  newElement.style.borderRadius = '50%'
-  newElement.style.position = 'absolute'
-  newElement.style.background = 'white'
-  newElement.style.transform = `translate(-50%, -50%)`
-  newElement.style.left = `${clientX - x}px`
-  newElement.style.top = `${clientY - y}px`
+  const style = {
+    position:'absolute',
+    left: `${clientX - x}px`,
+    top:`${clientY - y}px`,
+    borderRadius: '50%',
+    background: 'white',
+    transform: `translate(-50%, -50%)`,
+    pointerEvents: 'none',
+  } as CSSStyleDeclaration
+
+  setCSSStyle(newElement, style)
 
   const radius = Math.round(Math.hypot(width, height)) * 2
   const animate = newElement.animate({
