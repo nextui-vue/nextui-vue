@@ -17,6 +17,7 @@
     "esModuleInterop": true,
     "isolatedModules": true,
     "skipLibCheck": true,
+    "composite": true,
   },
   "include": ["src/**/*", "src/**/*.vue"],
   "exclude": ["**/node_modules", "**/dist"]
