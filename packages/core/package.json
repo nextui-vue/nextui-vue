@@ -15,6 +15,9 @@
   "bugs": {
     "url": "https://github.com/hotdogc1017/nextui-vue/issues"
   },
+  "exports": {
+    ".": "./src/index.ts"
+  },
   "keywords": [
     "nextui",
     "vue",
@@ -22,18 +25,7 @@
     "ui framework",
     "tailwindcss"
   ],
-  "exports": {
-    ".": "./src/index.ts",
-    "./themeConfig": "./tailwind.config.js"
-  },
   "dependencies": {
-    "@nextui-org/theme": "^2.2.9",
-    "@vueuse/core": "^11.2.0",
-    "motion": "^10.18.0",
-    "radix-vue": "^1.9.2",
-    "vue": "^3.4.31"
-  },
-  "devDependencies": {
-    "@vue/tsconfig": "^0.5.1"
+    "@nextui-vue/button": "workspace: *"
   }
 }

@@ -1,5 +1,7 @@
 <script lang="ts" setup>
-import { NButton } from "nextui-vue"
+import { Button } from "@nextui-vue/button"
+
+console.log(Button)
 
 const accordionItems = [
   {
@@ -23,11 +25,9 @@ const accordionItems = [
 <template>
   <div class="h-svh flex">
     <div class="m-auto w-[500px] h-[500px]">
-      <NButton
-        type="solid"
-      >
+      <Button type="solid">
         Test
-      </NButton>
+      </Button>
 
       <!-- <NVAccordion>
         <template

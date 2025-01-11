@@ -2,9 +2,11 @@
 import { computed, ref } from 'vue'
 import { button } from '@nextui-org/theme'
 import type { ButtonVariantProps } from '@nextui-org/theme'
-import useRipple from '@/shared/useRipple'
+import { useRipple } from '@nextui-vue/shared'
 
-const props = defineProps<ButtonVariantProps>()
+type ButtonProps = {}
+
+const props = defineProps<ButtonProps>()
 
 const buttonRef = ref<HTMLButtonElement>()
 useRipple(buttonRef)
@@ -12,9 +14,7 @@ const hover = ref(true)
 const click = ref(true)
 
 const className = computed(() => {
-  return button({
-    ...props
-  })
+  return button()
 })
 </script>
 
