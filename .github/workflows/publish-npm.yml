@@ -1,0 +1,48 @@
+name: Publish npm package
+
+permissions:
+  contents: write
+
+on:
+  push:
+    branches:
+        - 'main'
+    tags:
+        - 'v*.*.*'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    env:
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
+
+    permissions:
+        id-token: write
+
+    steps:
+      - name: 签出代码
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 安装 pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: 设置nodejs
+        uses: actions/setup-node@v4
+        with:
+          cache: 'pnpm'
+          node-version: '20'
+          registry-url: 'https://registry.npmjs.org/'
+
+      - name: 安装依赖
+        run: pnpm install
+
+      - name: 运行构建
+        run: pnpm run build
+
+      - name: 发布到npm
+        run: pnpm publish -r --provenance
