@@ -1,6 +1,6 @@
 {
   "name": "nextui-vue-project",
-  "version": "0.0.2",
+  "version": "0.0.3-beta.1",
   "private": true,
   "packageManager": "pnpm@9.0.0+",
   "scripts": {
