@@ -23,7 +23,8 @@
     "button component"
   ],
   "exports": {
-    ".": "./index.ts"
+    ".": "./index.ts",
+    "./dist": "./dist/index.js"
   },
   "scripts": {
     "build": "vite build"
