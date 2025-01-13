@@ -1,20 +1,19 @@
 <script lang="ts" setup>
 import { computed, ref } from 'vue'
 import { button } from '@nextui-org/theme'
-import type { ButtonVariantProps } from '@nextui-org/theme'
+import type { ButtonProps } from './button-types'
 import { useRipple } from '@nextui-vue/shared'
-
-type ButtonProps = {}
 
 const props = defineProps<ButtonProps>()
 
-const buttonRef = ref<HTMLButtonElement>()
-useRipple(buttonRef)
 const hover = ref(true)
 const click = ref(true)
 
+const buttonRef = ref<HTMLButtonElement>()
+useRipple(buttonRef)
+
 const className = computed(() => {
-  return button()
+  return button({ ...props })
 })
 </script>
 
@@ -32,7 +31,3 @@ const className = computed(() => {
     <slot />
   </button>
 </template>
-
-<style scoped>
-
-</style>
