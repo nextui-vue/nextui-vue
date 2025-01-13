@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 import { computed, ref } from 'vue'
 import { button } from '@nextui-org/theme'
-import type { ButtonProps } from './button-types'
 import { useRipple } from '@nextui-vue/shared'
+import type { ButtonProps } from './button-types'
 
 const props = defineProps<ButtonProps>()
 
