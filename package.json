@@ -10,7 +10,7 @@
     "clean": "rimraf -g node_modules */node_modules **/node_modules **/dist",
     "lint": "eslint . --cache",
     "lint:fix": "eslint . --cache --fix",
-    "bumpp": "bumpp"
+    "bumpp": "bumpp -r"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.24.1",
