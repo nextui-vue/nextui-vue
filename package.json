@@ -10,7 +10,8 @@
     "clean": "rimraf -g node_modules */node_modules **/node_modules **/dist",
     "lint": "eslint . --cache",
     "lint:fix": "eslint . --cache --fix",
-    "bumpp": "bumpp -r"
+    "bumpp": "bumpp -r",
+    "pub:view": "pnpm publish -r --dry-run --registry=https://registry.npmjs.org/"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.24.1",
