@@ -3,6 +3,7 @@
   "type": "module",
   "version": "1.0.0",
   "description": "NextUI Vue Playground",
+  "private": "true",
   "author": {
     "name": "hotdog",
     "email": "hotdogc1017@gmail.com",
