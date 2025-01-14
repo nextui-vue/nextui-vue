@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { Button } from "@nextui-vue/button"
+import { Button } from "@vue-nextui/button"
 
 console.log(Button)
 

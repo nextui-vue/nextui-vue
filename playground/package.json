@@ -1,5 +1,5 @@
 {
-  "name": "@nextui-vue/playground",
+  "name": "@vue-nextui/playground",
   "type": "module",
   "version": "0.0.9",
   "description": "NextUI Vue Playground",
@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "@nextui-org/theme": "^2.2.9",
-    "@nextui-vue/button": "workspace: *",
+    "@vue-nextui/button": "workspace: *",
     "nextui-vue": "workspace: *",
     "vue": "^3.4.31"
   },

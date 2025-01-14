@@ -26,6 +26,6 @@
     ".": "./src/index.ts"
   },
   "dependencies": {
-    "@nextui-vue/button": "workspace: *"
+    "@vue-nextui/button": "workspace: *"
   }
 }

@@ -1,5 +1,5 @@
 {
-  "name": "@nextui-vue/button",
+  "name": "@vue-nextui/button",
   "type": "module",
   "version": "0.0.9",
   "author": {
@@ -34,7 +34,7 @@
   },
   "dependencies": {
     "@nextui-org/theme": "^2.2.9",
-    "@nextui-vue/shared": "workspace: *"
+    "@vue-nextui/shared": "workspace: *"
   },
   "devDependencies": {
     "@types/node": "^22.10.5",

@@ -1,1 +1,1 @@
-export * from "@nextui-vue/button"
+export * from "@vue-nextui/button"

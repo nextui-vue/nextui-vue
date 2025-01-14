@@ -1,7 +1,7 @@
 # Installation
 
 ```bash
-npm add @nextui-vue/button @nextui-org/theme
+npm add @vue-nextui/button @nextui-org/theme
 ```
 
 # Configuration
@@ -28,7 +28,7 @@ module.exports = {
 
 ```vue
 <script lang="ts" setup>
-import { Button } from '@nextui-vue/button'
+import { Button } from '@vue-nextui/button'
 </script>
 
 <template>

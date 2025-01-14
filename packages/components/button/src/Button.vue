@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { computed, ref } from 'vue'
 import { button } from '@nextui-org/theme'
-import { useRipple } from '@nextui-vue/shared'
+import { useRipple } from '@vue-nextui/shared'
 
 interface Button {
   /**

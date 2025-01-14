@@ -38,7 +38,7 @@ importers:
       '@nextui-org/theme':
         specifier: ^2.2.9
         version: 2.2.9(tailwindcss@3.4.10)
-      '@nextui-vue/shared':
+      '@vue-nextui/shared':
         specifier: 'workspace: *'
         version: link:../shared
     devDependencies:
@@ -73,7 +73,7 @@ importers:
 
   packages/core:
     dependencies:
-      '@nextui-vue/button':
+      '@vue-nextui/button':
         specifier: 'workspace: *'
         version: link:../components/button
 
@@ -82,7 +82,7 @@ importers:
       '@nextui-org/theme':
         specifier: ^2.2.9
         version: 2.2.9(tailwindcss@3.4.10)
-      '@nextui-vue/button':
+      '@vue-nextui/button':
         specifier: 'workspace: *'
         version: link:../packages/components/button
       nextui-vue:
