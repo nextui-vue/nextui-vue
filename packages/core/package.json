@@ -2,6 +2,9 @@
   "name": "nextui-vue",
   "type": "module",
   "version": "0.0.9",
+  "publishConfig": {
+    "access": "public"
+  },
   "author": {
     "name": "hotdog",
     "email": "hotdogc1017@gmail.com",
