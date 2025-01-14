@@ -7,6 +7,10 @@
     "email": "hotdogc1017@gmail.com",
     "url": "https://github.com/hotdogc1017"
   },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "license": "MIT",
   "repository": {
     "url": "git+https://github.com/hotdogc1017/nextui-vue.git"
