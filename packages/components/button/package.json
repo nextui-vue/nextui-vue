@@ -33,10 +33,10 @@
     "build": "vite build"
   },
   "dependencies": {
-    "@nextui-org/theme": "^2.2.9",
     "@vue-nextui/shared": "workspace: *"
   },
   "devDependencies": {
+    "@nextui-org/theme": "^2.2.9",
     "@types/node": "^22.10.5",
     "@vitejs/plugin-vue": "^5.0.5",
     "@vue/tsconfig": "^0.5.1",

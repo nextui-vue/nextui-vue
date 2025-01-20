@@ -12,7 +12,7 @@ export default defineConfig({
       fileName: 'index',
     },
     rollupOptions: {
-      external: ['vue'],
+      external: ['vue', '@nextui-org/theme'],
     },
   },
 })
