@@ -1,6 +1,11 @@
 import DefaultTheme from 'vitepress/theme'
-import "./styles.css"
+import type { Theme } from 'vitepress'
+import { Button } from 'nextui-vue'
+import './styles.css'
 
 export default {
-    extends: DefaultTheme,
-}
+  extends: DefaultTheme,
+  enhanceApp({ app }) {
+    app.component('NButton', Button)
+  },
+} satisfies Theme

@@ -2,8 +2,8 @@
   "name": "@vue-nextui/playground",
   "type": "module",
   "version": "0.0.11",
-  "description": "NextUI Vue Playground",
   "private": "true",
+  "description": "NextUI Vue Playground",
   "author": {
     "name": "hotdog",
     "email": "hotdogc1017@gmail.com",
