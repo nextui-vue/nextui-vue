@@ -50,12 +50,13 @@ interface Button {
   disableAnimation: boolean
 }
 
+type ButtonState = "pressed" | "hover"
+
 type ButtonProps = Partial<Button>
 
 const props = defineProps<ButtonProps>()
 
-const hover = ref(true)
-const click = ref(true)
+const buttonState = ref<ButtonState | undefined>();
 
 const buttonRef = ref<HTMLButtonElement>()
 useRipple(buttonRef)
@@ -63,18 +64,26 @@ useRipple(buttonRef)
 const className = computed(() => {
   return button({ ...props })
 })
+
+function setButtonState(): () => void;
+function setButtonState(state: ButtonState): () => void;
+function setButtonState(state?: ButtonState) {
+  return () => {
+    buttonState.value = state
+  }
+}
 </script>
 
 <template>
   <button
     ref="buttonRef"
-    :data-pressed="click ? true : null"
-    :data-hover="hover ? true : null"
+    :data-pressed="buttonState === 'pressed'"
+    :data-hover="buttonState === 'hover'"
     :class="className"
-    @mouseup="click = false"
-    @mousedown="click = true"
-    @mouseenter="hover = true"
-    @mouseleave="hover = false"
+    @mouseup="setButtonState()"
+    @mousedown="setButtonState('pressed')"
+    @mouseenter="setButtonState('hover')"
+    @mouseleave="setButtonState()"
   >
     <slot />
   </button>
