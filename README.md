@@ -1,9 +1,21 @@
 # NextUI Vue
 
-English | [中文](README-zh-CN.md)
+English | [中文(old)](README-zh-CN.md)
 
-Just an interest
+A Vue Component Library.
 
-[@vue-nextui/button](packages/components/button/README.md) is now available
+[HeroUI](https://www.heroui.com/)(formerly NextUI) theme, implemented with Vue.
 
-> This is a work in progress project....
+## Components
+
+### Available
+
+- [button](packages/components/button/README.md): `Button` component
+
+### Working
+
+- [alert](https://www.heroui.com/docs/components/alert)
+
+# Contributing
+
+See [contributing docs](README-contributing.md)(Chinese language only)
