@@ -1,6 +1,7 @@
 {
   "name": "nextui-vue-create",
   "type": "module",
+  "version": "1.0.0-beta.1",
   "private": true,
   "exports": {
     ".": "./dist/index.mjs"
@@ -9,7 +10,9 @@
   "bin": {
     "nextui-vue-create": "index.js"
   },
-  "files": ["template"],
+  "files": [
+    "template"
+  ],
   "scripts": {
     "dev": "unbuild --stub",
     "build": "unbuild"
