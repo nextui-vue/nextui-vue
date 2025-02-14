@@ -12,12 +12,14 @@
     "lint": "eslint . --cache",
     "lint:fix": "eslint . --cache --fix",
     "bumpp": "bumpp -r",
+    "nvc": "nextui-vue-create",
     "pub:view": "pnpm publish -r --dry-run --registry=https://registry.npmjs.org/"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.24.1",
     "bumpp": "^9.10.0",
     "eslint": "9.5.0",
+    "nextui-vue-create": "workspace: *",
     "pnpm": "^9.8.0",
     "rimraf": "^6.0.1"
   }

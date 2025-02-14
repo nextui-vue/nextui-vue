@@ -1,0 +1,25 @@
+{
+  "name": "nextui-vue-create",
+  "type": "module",
+  "private": true,
+  "exports": {
+    ".": "./dist/index.mjs"
+  },
+  "main": "./dist/index.mjs",
+  "bin": {
+    "nextui-vue-create": "index.js"
+  },
+  "files": ["template"],
+  "scripts": {
+    "dev": "unbuild --stub",
+    "build": "unbuild"
+  },
+  "devDependencies": {
+    "@types/minimist": "^1.2.5",
+    "@types/node": "^22.10.5",
+    "@types/prompts": "^2.4.9",
+    "minimist": "^1.2.8",
+    "prompts": "^2.4.2",
+    "unbuild": "^3.3.1"
+  }
+}
