@@ -25,7 +25,11 @@ const questions: PromptObject[] = [
   },
 ]
 
-const response = (await prompts(questions)) as { name: string, override?: boolean }
+const answers = (await prompts(questions)) as { name: string, override?: boolean }
+
+const response = { ...answers, stdName: Array.from(answers.name)
+  .map((char, index) => index === 0 ? char.toLocaleUpperCase() : char)
+  .join('') }
 
 // const arv = minimist<{
 //   name: string
@@ -38,11 +42,21 @@ const response = (await prompts(questions)) as { name: string, override?: boolea
 const templateDir = path.join(fileURLToPath(import.meta.url), '../..', 'template')
 const targetDir = path.join(cwd, 'packages/components', response.name)
 
+const placeholderSymbol = '$NAME'
+
 const renamedFiles = {
   _gitignore: '.gitignore',
+  Template_vue: `${response.stdName}.vue`,
 }
 
-function isEmptyDir(path) {
+const placeholderFiles = {
+  'package.json': (content: string) => content.replaceAll(placeholderSymbol, response.name),
+  'index.ts': (content: string) => content.replaceAll(placeholderSymbol, response.stdName),
+} as const
+
+type PlaceholderFile = keyof typeof placeholderFiles
+
+function isEmptyDir(path: string) {
   if (!fsSync.existsSync(path)) {
     return true
   }
@@ -51,20 +65,45 @@ function isEmptyDir(path) {
   return !files || files?.length === 0
 }
 
+async function getPlaceholderFileContent(filepath: string) {
+  const file = Object.keys(placeholderFiles).find((placeholderFile) => {
+    return path.resolve(templateDir, placeholderFile) === filepath
+  })
+
+  if (!file) {
+    return
+  }
+
+  const fullFilepath = path.resolve(templateDir, file)
+  const content = await fs.readFile(fullFilepath, { encoding: 'utf-8' })
+  return placeholderFiles[file as PlaceholderFile]?.(content)
+}
+
+async function copyFile(sourcePath: string, destPath: string) {
+  const content = await getPlaceholderFileContent(sourcePath)
+  if (content) {
+    await fs.writeFile(destPath, content, { encoding: 'utf-8' })
+  }
+  else {
+    await fs.copyFile(sourcePath, destPath)
+  }
+}
+
 async function copyDir(source: string, target: string) {
   await fs.mkdir(target, { recursive: true })
 
   const files = await fs.readdir(source)
   for (const file of files) {
+    const renamedFile = renamedFiles[file] instanceof Function ? renamedFiles[file]() : renamedFiles[file]
     const sourcePath = path.join(source, file)
-    const targetPath = path.join(target, renamedFiles[file] || file)
+    const targetPath = path.join(target, renamedFile || file)
     const stat = await fs.stat(sourcePath)
 
     if (stat.isDirectory()) {
-      copyDir(sourcePath, targetPath)
+      await copyDir(sourcePath, targetPath)
     }
     else {
-      await fs.copyFile(sourcePath, targetPath)
+      await copyFile(sourcePath, targetPath)
     }
   }
 }

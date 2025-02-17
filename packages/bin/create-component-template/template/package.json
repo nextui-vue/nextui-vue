@@ -1,0 +1,47 @@
+{
+  "name": "@vue-nextui/$NAME",
+  "type": "module",
+  "version": "0.0.0-beta.1",
+  "author": {
+    "name": "hotdog",
+    "email": "hotdogc1017@gmail.com",
+    "url": "https://github.com/hotdogc1017"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "license": "MIT",
+  "repository": {
+    "url": "git+https://github.com/hotdogc1017/nextui-vue.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hotdogc1017/nextui-vue/issues"
+  },
+  "keywords": [
+    "nextui",
+    "vue",
+    "ui framework",
+    "tailwindcss",
+    "$NAME component"
+  ],
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@vue-nextui/shared": "workspace: *"
+  },
+  "devDependencies": {
+    "@nextui-org/theme": "^2.2.9",
+    "@types/node": "^22.10.5",
+    "@vitejs/plugin-vue": "^5.0.5",
+    "@vue/tsconfig": "^0.5.1",
+    "vite": "^5.3.4",
+    "vite-plugin-dts": "^4.5.0",
+    "vue": "^3.5.0"
+  }
+}
