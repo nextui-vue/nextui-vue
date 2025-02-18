@@ -97,6 +97,34 @@ importers:
         specifier: ^3.5.0
         version: 3.5.13(typescript@5.7.2)
 
+  packages/components/alert:
+    dependencies:
+      '@vue-nextui/shared':
+        specifier: 'workspace: *'
+        version: link:../shared
+    devDependencies:
+      '@heroui/theme':
+        specifier: ^2.4.6
+        version: 2.4.6(tailwindcss@3.4.10)
+      '@types/node':
+        specifier: ^22.10.5
+        version: 22.10.5
+      '@vitejs/plugin-vue':
+        specifier: ^5.0.5
+        version: 5.2.1(vite@5.4.14(@types/node@22.10.5))(vue@3.5.13(typescript@5.7.2))
+      '@vue/tsconfig':
+        specifier: ^0.5.1
+        version: 0.5.1
+      vite:
+        specifier: ^5.3.4
+        version: 5.4.14(@types/node@22.10.5)
+      vite-plugin-dts:
+        specifier: ^4.5.0
+        version: 4.5.0(@types/node@22.10.5)(rollup@4.34.6)(typescript@5.7.2)(vite@5.4.14(@types/node@22.10.5))
+      vue:
+        specifier: ^3.5.0
+        version: 3.5.13(typescript@5.7.2)
+
   packages/components/button:
     dependencies:
       '@vue-nextui/shared':
@@ -135,36 +163,11 @@ importers:
         specifier: ^0.5.1
         version: 0.5.1
 
-  packages/components/test:
-    dependencies:
-      '@vue-nextui/shared':
-        specifier: 'workspace: *'
-        version: link:../shared
-    devDependencies:
-      '@nextui-org/theme':
-        specifier: ^2.2.9
-        version: 2.2.9(tailwindcss@3.4.10)
-      '@types/node':
-        specifier: ^22.10.5
-        version: 22.10.5
-      '@vitejs/plugin-vue':
-        specifier: ^5.0.5
-        version: 5.2.1(vite@5.4.14(@types/node@22.10.5))(vue@3.5.13(typescript@5.7.2))
-      '@vue/tsconfig':
-        specifier: ^0.5.1
-        version: 0.5.1
-      vite:
-        specifier: ^5.3.4
-        version: 5.4.14(@types/node@22.10.5)
-      vite-plugin-dts:
-        specifier: ^4.5.0
-        version: 4.5.0(@types/node@22.10.5)(rollup@4.34.6)(typescript@5.7.2)(vite@5.4.14(@types/node@22.10.5))
-      vue:
-        specifier: ^3.5.0
-        version: 3.5.13(typescript@5.7.2)
-
   packages/core:
     dependencies:
+      '@vue-nextui/alert':
+        specifier: 'workspace: *'
+        version: link:../components/alert
       '@vue-nextui/button':
         specifier: 'workspace: *'
         version: link:../components/button
@@ -781,6 +784,14 @@ packages:
   '@eslint/object-schema@2.1.4':
     resolution: {integrity: sha512-BsWiH1yFGjXXS2yvrf5LyuoSIIbPrGUWob917o+BTKuZ7qJdxX8aJLRxs1fS9n6r7vESrq1OUqb68dANcFXuQQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  '@heroui/shared-utils@2.1.3':
+    resolution: {integrity: sha512-MNpo+jcu6xyicSRyxWgL4rNw4xH0XziUR/bhs01GydlGhfFN8n/Y4vKAWfL5xamehiEJX1N0IKAbFadt3wlGAA==}
+
+  '@heroui/theme@2.4.6':
+    resolution: {integrity: sha512-VcmeMRxL3wnKk1o6gzeQehEcXyoKyvqLYr+iRFIrMZZO1kG5bvuX+CWDVovfmLRLK1MuwuhYjm6aJvre9AZAfA==}
+    peerDependencies:
+      tailwindcss: '>=3.4.0'
 
   '@humanwhocodes/module-importer@1.0.1':
     resolution: {integrity: sha512-bxveV4V8v5Yb4ncFTT3rPSgZBOpCkjfK0y4oVVVJwIuDVBRMDXrPyXRL988i5ap9m9bnyEEjWfm5WkBmtffLfA==}
@@ -3488,6 +3499,9 @@ packages:
   tailwind-merge@1.14.0:
     resolution: {integrity: sha512-3mFKyCo/MBcgyOTlrY8T7odzZFx+w+qKSMAmdFzRvqBfLlSigU6TZnlFHK0lkMwj9Bj8OYU+9yW9lmGuS0QEnQ==}
 
+  tailwind-merge@2.6.0:
+    resolution: {integrity: sha512-P+Vu1qXfzediirmHOC3xKGAYeZtPcV9g76X+xg2FD4tYgR71ewMA35Y3sCz3zhiN/dwefRpJX0yBcgwi1fXNQA==}
+
   tailwind-variants@0.1.20:
     resolution: {integrity: sha512-AMh7x313t/V+eTySKB0Dal08RHY7ggYK0MSn/ad8wKWOrDUIzyiWNayRUm2PIJ4VRkvRnfNuyRuKbLV3EN+ewQ==}
     engines: {node: '>=16.x', pnpm: '>=7.x'}
@@ -4340,6 +4354,20 @@ snapshots:
   '@eslint/js@9.5.0': {}
 
   '@eslint/object-schema@2.1.4': {}
+
+  '@heroui/shared-utils@2.1.3': {}
+
+  '@heroui/theme@2.4.6(tailwindcss@3.4.10)':
+    dependencies:
+      '@heroui/shared-utils': 2.1.3
+      clsx: 1.2.1
+      color: 4.2.3
+      color2k: 2.0.3
+      deepmerge: 4.3.1
+      flat: 5.0.2
+      tailwind-merge: 2.6.0
+      tailwind-variants: 0.1.20(tailwindcss@3.4.10)
+      tailwindcss: 3.4.10
 
   '@humanwhocodes/module-importer@1.0.1': {}
 
@@ -7220,6 +7248,8 @@ snapshots:
   tabbable@6.2.0: {}
 
   tailwind-merge@1.14.0: {}
+
+  tailwind-merge@2.6.0: {}
 
   tailwind-variants@0.1.20(tailwindcss@3.4.10):
     dependencies:

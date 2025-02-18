@@ -48,6 +48,7 @@ export default defineConfig({
         collapsed: true,
         items: [
           { text: '按钮', link: '/components/button' },
+          { text: 'alert', link: '/components/alert' },
         ],
       },
     ],
