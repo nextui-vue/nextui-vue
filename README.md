@@ -10,11 +10,12 @@ A Vue Component Library.
 
 ### Available
 
-- [button](packages/components/button/README.md): `Button` component
+- [button](packages/components/button/README.md)
+- [alert](packages/components/alert/README.md): experimental
 
 ### Working
 
-- [alert](https://www.heroui.com/docs/components/alert)
+- [Avatar](https://www.heroui.com/docs/components/avatar)
 
 # Contributing
 
