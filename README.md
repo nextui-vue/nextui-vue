@@ -1,6 +1,6 @@
 # NextUI Vue
 
-English | [中文(old)](README-zh-CN.md)
+English | [中文(outdate)](README-zh-CN.md)
 
 A Vue Component Library.
 
