@@ -1,0 +1,34 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `zed: Open Default Settings` command
+// from the command palette
+{
+  "assistant": {
+    "version": "2",
+    "default_model": {
+      "provider": "ollama",
+      "model": "llama3.1:latest"
+    }
+  },
+  "vim_mode": false,
+  "ui_font_size": 22,
+  "buffer_font_family": "Monaco Nerd Font",
+  "buffer_font_size": 20,
+  "current_line_highlight": "line",
+  "tabs": {
+    "file_icons": true,
+    "git_status": true
+  },
+  "file_types": {
+    "vue": ["vue"]
+  },
+  "theme": {
+    "mode": "system",
+    "light": "Andromeda",
+    "dark": "One Dark"
+  }
+}
