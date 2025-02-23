@@ -6,7 +6,7 @@
   "packageManager": "pnpm@9.0.0",
   "scripts": {
     "dev": "pnpm run -C playground dev",
-    "dev:docs": "pnpm run -C docs dev",
+    "doc": "pnpm run -C docs dev",
     "build": "pnpm -r build",
     "clean": "rimraf -g node_modules */node_modules **/node_modules **/dist",
     "lint": "eslint . --cache",
