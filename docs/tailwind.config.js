@@ -1,15 +1,15 @@
-import { nextui } from "@nextui-org/theme"
+import { heroui } from '@heroui/theme'
 
 /** @type {import('tailwindcss').Config} */
 export default {
   mode: 'jit',
   content: [
     './index.html',
-    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
-      './src/**/*.{js,ts,jsx,tsx,vue}'
-    ],
+    './node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}',
+    './src/**/*.{js,ts,jsx,tsx,vue}',
+  ],
   theme: {
   },
   darkMode: 'class',
-  plugins: [nextui()],
+  plugins: [heroui()],
 }

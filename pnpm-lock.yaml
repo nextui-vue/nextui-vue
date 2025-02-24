@@ -29,9 +29,9 @@ importers:
 
   docs:
     devDependencies:
-      '@nextui-org/theme':
-        specifier: ^2.2.9
-        version: 2.2.9(tailwindcss@3.4.10)
+      '@heroui/theme':
+        specifier: ^2.4.6
+        version: 2.4.6(tailwindcss@3.4.10)
       autoprefixer:
         specifier: ^10.4.19
         version: 10.4.20(postcss@8.4.49)

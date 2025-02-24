@@ -8,7 +8,7 @@
     "dev": "vitepress dev"
   },
   "devDependencies": {
-    "@nextui-org/theme": "^2.2.9",
+    "@heroui/theme": "^2.4.6",
     "autoprefixer": "^10.4.19",
     "nextui-vue": "workspace: *",
     "postcss": "^8.4.39",
