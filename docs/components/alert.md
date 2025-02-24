@@ -32,7 +32,9 @@ import { Alert } from 'nextui-vue'
 
 ## 使用
 
-<NAlert>alert</NAlert>
+<NAlert description="Thanks for subscribing to our newsletter!">
+    <span>This is an alert</span>
+</NAlert>
 
 ::: code-group
 ```vue [示例代码]
@@ -41,7 +43,9 @@ import { Alert } from 'nextui-vue'
 </script>
 
 <template>
-    <Alert>alert</Alert>
+  <Alert description="Thanks for subscribing to our newsletter!">
+    <span>This is an alert</span>
+  </Alert>
 </template>
 ```
 :::
