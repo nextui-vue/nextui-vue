@@ -5,6 +5,7 @@
   "private": true,
   "packageManager": "pnpm@9.0.0",
   "scripts": {
+    "t": "",
     "dev": "pnpm run -C playground dev",
     "doc": "pnpm run -C docs dev",
     "build": "pnpm -r build",
