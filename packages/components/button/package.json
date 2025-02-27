@@ -28,8 +28,11 @@
   "exports": {
     ".": "./dist/index.js"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
+    "dev": "vite -w build",
     "build": "vite build"
   },
   "dependencies": {
