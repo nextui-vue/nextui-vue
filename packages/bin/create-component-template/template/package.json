@@ -32,8 +32,10 @@
     "dist"
   ],
   "scripts": {
-    "dev": "vite -w build",
-    "build": "vite build"
+    "dev:vite": "vite -w build",
+    "build:vite": "vite build",
+    "build": "rolldown -c rolldown.config.ts",
+    "dev": "rolldown --watch -c rolldown.config.ts"
   },
   "dependencies": {
     "@vue-nextui/shared": "workspace: *"
