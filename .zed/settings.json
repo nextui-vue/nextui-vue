@@ -31,6 +31,7 @@
     "light": "Andromeda",
     "dark": "One Dark"
   },
+  "autosave": "on_focus_change",
   "format_on_save": "on",
   "code_actions_on_format": {
     "source.fixAll.eslint": true,
