@@ -1,10 +1,9 @@
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 import { alert } from '@heroui/theme'
-import { alertIconPath } from './constant'
+import { defaultIconPath, successIconPath, warningIconPath } from './constant'
 
 export interface AlertProps {
-  hideIcon?: boolean
   /**
    * 警告消息的标题
    */
@@ -13,10 +12,6 @@ export interface AlertProps {
    * 警告消息的描述
    */
   description?: string
-  /**
-   * 在警告中显示的图标 - 会覆盖默认图标
-   */
-  icon?: string
   /**
    * 警告是否可见。
    * @default false
@@ -28,24 +23,21 @@ export interface AlertProps {
    */
   isDefaultVisible?: boolean
   /**
-   * 警告可见状态变化时的事件处理程序。
-   * @param isVisible 布尔值，表示是否可见
-   * @returns void
-   */
-  onVisibleChange?: (isVisible: boolean) => void
-  /**
    * 是否允许用户关闭警告
    */
   isClosable?: boolean
-  /**
-   * 关闭按钮被点击时调用的函数
-   */
-  onClose?: () => void
 }
 
 export interface AlertVariantProps {
   variant?: 'solid' | 'flat' | 'faded' | 'bordered' | undefined
-  color?: 'default' | 'primary' | 'secondary' | 'success' | 'warning' | 'danger' | undefined
+  color?:
+    | 'default'
+    | 'primary'
+    | 'secondary'
+    | 'success'
+    | 'warning'
+    | 'danger'
+    | undefined
   radius?: 'sm' | 'none' | 'md' | 'lg' | 'full' | undefined
   hideIcon?: boolean | undefined
   hideIconWrapper?: boolean | undefined
@@ -53,14 +45,50 @@ export interface AlertVariantProps {
 }
 
 const props = withDefaults(defineProps<AlertProps & AlertVariantProps>(), {
-  hideIcon: false,
-  isVisible: false,
-  isDefaultVisible: false,
-  isClosable: false,
-  onClose: () => {},
+
 })
 
-const { base, mainWrapper, title, description, alertIcon, iconWrapper } = alert({})
+const emits = defineEmits<{
+  /**
+   * 关闭按钮被点击时调用的函数
+   */
+  (e: 'close'): void
+  /**
+   * 警告可见状态变化时的事件处理程序。
+   * @param isVisible 布尔值，表示是否可见
+   * @returns void
+   */
+  (e: 'visibleChange', isVisible: boolean): void
+}>()
+
+const { base, mainWrapper, title, description, alertIcon, iconWrapper } = alert(
+  {
+    color: props.color ?? 'default',
+    variant: props.variant ?? 'flat',
+    hideIconWrapper: props.hideIconWrapper,
+  },
+)
+
+const icon = computed(() => {
+  const color = props.color
+
+  if (color === 'default' || color === 'secondary' || color === 'primary') {
+    return defaultIconPath
+  }
+  else if (color === 'success') {
+    return successIconPath
+  }
+  else if (color === 'warning' || color === 'danger') {
+    return warningIconPath
+  }
+  else {
+    return defaultIconPath
+  }
+})
+
+function onClose() {
+  emits('close')
+}
 </script>
 
 <template>
@@ -68,19 +96,24 @@ const { base, mainWrapper, title, description, alertIcon, iconWrapper } = alert(
     <slot name="startContent" />
 
     <div v-if="!props.hideIcon" :class="iconWrapper()">
-      <svg
-        fill="none" height="24"
-        viewBox="0 0 24 24"
-        width="24"
-        xmlns="http://www.w3.org/2000/svg"
-        :class="alertIcon()"
-      >
-        <path :d="alertIconPath" />
-      </svg>
+      <slot name="icon">
+        <svg
+          fill="none"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+          :class="alertIcon()"
+        >
+          <path :d="icon" />
+        </svg>
+      </slot>
     </div>
 
     <div :class="mainWrapper()">
-      <div v-if="props.title" :class="title()" />
+      <div v-if="props.title" :class="title()">
+        {{ props.title }}
+      </div>
       <slot v-else />
 
       <div v-if="props.description" :class="description()">
@@ -91,12 +124,11 @@ const { base, mainWrapper, title, description, alertIcon, iconWrapper } = alert(
 
     <slot name="endContent" />
 
-    <button v-if="props.isClosable || props.onClose" @click="props.onClose">
+    <!-- Improve: use the `Button` component instead -->
+    <button v-if="props.isClosable" @click="onClose">
       close
     </button>
   </div>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

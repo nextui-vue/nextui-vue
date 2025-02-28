@@ -13,6 +13,7 @@ export default defineConfig({
     search: {
       provider: 'local',
     },
+    outline: 'deep',
     nav: [
       { text: '首页', link: '/' },
       { text: '组件', link: '/markdown-examples' },
