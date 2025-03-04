@@ -75,24 +75,27 @@ importers:
         specifier: 'workspace: *'
         version: link:../../../components/shared
     devDependencies:
-      '@nextui-org/theme':
-        specifier: ^2.2.9
-        version: 2.2.9(tailwindcss@3.4.10)
+      '@heroui/theme':
+        specifier: ^2.4.6
+        version: 2.4.6(tailwindcss@3.4.10)
       '@types/node':
         specifier: ^22.10.5
         version: 22.10.5
       '@vitejs/plugin-vue':
         specifier: ^5.0.5
-        version: 5.2.1(vite@5.4.14(@types/node@22.10.5))(vue@3.5.13(typescript@5.7.2))
+        version: 5.2.1(vite@6.1.0(@types/node@22.10.5)(jiti@2.4.2)(yaml@2.4.5))(vue@3.5.13(typescript@5.7.2))
       '@vue/tsconfig':
         specifier: ^0.5.1
         version: 0.5.1
-      vite:
-        specifier: ^5.3.4
-        version: 5.4.14(@types/node@22.10.5)
+      rolldown:
+        specifier: 1.0.0-beta.3
+        version: 1.0.0-beta.3(typescript@5.7.2)
+      unplugin-vue:
+        specifier: ^6.0.0
+        version: 6.0.0(@types/node@22.10.5)(jiti@2.4.2)(vue@3.5.13(typescript@5.7.2))(yaml@2.4.5)
       vite-plugin-dts:
         specifier: ^4.5.0
-        version: 4.5.0(@types/node@22.10.5)(rollup@4.34.6)(typescript@5.7.2)(vite@5.4.14(@types/node@22.10.5))
+        version: 4.5.0(@types/node@22.10.5)(rollup@4.34.6)(typescript@5.7.2)(vite@6.1.0(@types/node@22.10.5)(jiti@2.4.2)(yaml@2.4.5))
       vue:
         specifier: ^3.5.0
         version: 3.5.13(typescript@5.7.2)
@@ -137,9 +140,9 @@ importers:
         specifier: 'workspace: *'
         version: link:../shared
     devDependencies:
-      '@nextui-org/theme':
-        specifier: ^2.2.9
-        version: 2.2.9(tailwindcss@3.4.10)
+      '@heroui/theme':
+        specifier: ^2.4.6
+        version: 2.4.6(tailwindcss@3.4.10)
       '@types/node':
         specifier: ^22.10.5
         version: 22.10.5
@@ -149,6 +152,12 @@ importers:
       '@vue/tsconfig':
         specifier: ^0.5.1
         version: 0.5.1
+      rolldown:
+        specifier: 1.0.0-beta.3
+        version: 1.0.0-beta.3(typescript@5.7.2)
+      unplugin-vue:
+        specifier: ^6.0.0
+        version: 6.0.0(@types/node@22.10.5)(jiti@2.4.2)(vue@3.5.13(typescript@5.7.2))(yaml@2.4.5)
       vite:
         specifier: ^5.3.4
         version: 5.3.4(@types/node@22.10.5)
@@ -168,6 +177,9 @@ importers:
       '@vue/tsconfig':
         specifier: ^0.5.1
         version: 0.5.1
+      vue:
+        specifier: ^3.5.13
+        version: 3.5.13(typescript@5.7.2)
 
   packages/core:
     dependencies:
@@ -5197,6 +5209,11 @@ snapshots:
       vite: 5.4.14(@types/node@22.10.5)
       vue: 3.5.13(typescript@5.7.2)
 
+  '@vitejs/plugin-vue@5.2.1(vite@6.1.0(@types/node@22.10.5)(jiti@2.4.2)(yaml@2.4.5))(vue@3.5.13(typescript@5.7.2))':
+    dependencies:
+      vite: 6.1.0(@types/node@22.10.5)(jiti@2.4.2)(yaml@2.4.5)
+      vue: 3.5.13(typescript@5.7.2)
+
   '@vitest/eslint-plugin@1.0.1(@typescript-eslint/utils@8.0.1(eslint@9.5.0)(typescript@5.7.2))(eslint@9.5.0)(typescript@5.7.2)':
     dependencies:
       eslint: 9.5.0
@@ -7799,6 +7816,25 @@ snapshots:
       typescript: 5.7.2
     optionalDependencies:
       vite: 5.4.14(@types/node@22.10.5)
+    transitivePeerDependencies:
+      - '@types/node'
+      - rollup
+      - supports-color
+
+  vite-plugin-dts@4.5.0(@types/node@22.10.5)(rollup@4.34.6)(typescript@5.7.2)(vite@6.1.0(@types/node@22.10.5)(jiti@2.4.2)(yaml@2.4.5)):
+    dependencies:
+      '@microsoft/api-extractor': 7.49.1(@types/node@22.10.5)
+      '@rollup/pluginutils': 5.1.4(rollup@4.34.6)
+      '@volar/typescript': 2.4.11
+      '@vue/language-core': 2.2.0(typescript@5.7.2)
+      compare-versions: 6.1.1
+      debug: 4.4.0
+      kolorist: 1.8.0
+      local-pkg: 0.5.1
+      magic-string: 0.30.17
+      typescript: 5.7.2
+    optionalDependencies:
+      vite: 6.1.0(@types/node@22.10.5)(jiti@2.4.2)(yaml@2.4.5)
     transitivePeerDependencies:
       - '@types/node'
       - rollup
