@@ -82,7 +82,7 @@ importers:
         specifier: ^22.10.5
         version: 22.10.5
       '@vitejs/plugin-vue':
-        specifier: ^5.0.5
+        specifier: ^5.2.1
         version: 5.2.1(vite@6.2.0(@types/node@22.10.5)(jiti@2.4.2)(yaml@2.4.5))(vue@3.5.13(typescript@5.7.2))
       '@vue/tsconfig':
         specifier: ^0.5.1
@@ -113,7 +113,7 @@ importers:
         specifier: ^22.10.5
         version: 22.10.5
       '@vitejs/plugin-vue':
-        specifier: ^5.0.5
+        specifier: ^5.2.1
         version: 5.2.1(vite@5.4.14(@types/node@22.10.5))(vue@3.5.13(typescript@5.7.2))
       '@vue/tsconfig':
         specifier: ^0.5.1
@@ -147,8 +147,8 @@ importers:
         specifier: ^22.10.5
         version: 22.10.5
       '@vitejs/plugin-vue':
-        specifier: ^5.0.5
-        version: 5.0.5(vite@5.4.14(@types/node@22.10.5))(vue@3.5.13(typescript@5.7.2))
+        specifier: ^5.2.1
+        version: 5.2.1(vite@5.4.14(@types/node@22.10.5))(vue@3.5.13(typescript@5.7.2))
       '@vue/tsconfig':
         specifier: ^0.5.1
         version: 0.5.1
@@ -206,8 +206,8 @@ importers:
         version: 3.4.33(typescript@5.7.2)
     devDependencies:
       '@vitejs/plugin-vue':
-        specifier: ^5.0.5
-        version: 5.0.5(vite@5.4.14(@types/node@22.10.5))(vue@3.4.33(typescript@5.7.2))
+        specifier: ^5.2.1
+        version: 5.2.1(vite@5.4.14(@types/node@22.10.5))(vue@3.4.33(typescript@5.7.2))
       '@vue/tsconfig':
         specifier: ^0.5.1
         version: 0.5.1
@@ -1605,13 +1605,6 @@ packages:
     resolution: {integrity: sha512-wXBdCyoqec+NLCl5ihitXzZXD4JAjPK3+HfskSXzfhiNFvKje0A/v1LygqKidUgIbaJtREmq/poJGbaS/0MKuQ==}
     peerDependencies:
       valibot: ^1.0.0 || ^1.0.0-beta.5 || ^1.0.0-rc
-
-  '@vitejs/plugin-vue@5.0.5':
-    resolution: {integrity: sha512-LOjm7XeIimLBZyzinBQ6OSm3UBCNVCpLkxGC0oWmm2YPzVZoxMsdvNVimLTBzpAnR9hl/yn1SHGuRfe6/Td9rQ==}
-    engines: {node: ^18.0.0 || >=20.0.0}
-    peerDependencies:
-      vite: ^5.0.0
-      vue: ^3.2.25
 
   '@vitejs/plugin-vue@5.2.1':
     resolution: {integrity: sha512-cxh314tzaWwOLqVes2gnnCtvBDcM1UMdn+iFR+UjAn411dPT3tOmqrJjbMd7koZpMAmBM/GqeV4n9ge7JSiJJQ==}
@@ -5458,15 +5451,10 @@ snapshots:
     dependencies:
       valibot: 1.0.0-beta.12(typescript@5.7.2)
 
-  '@vitejs/plugin-vue@5.0.5(vite@5.4.14(@types/node@22.10.5))(vue@3.4.33(typescript@5.7.2))':
+  '@vitejs/plugin-vue@5.2.1(vite@5.4.14(@types/node@22.10.5))(vue@3.4.33(typescript@5.7.2))':
     dependencies:
       vite: 5.4.14(@types/node@22.10.5)
       vue: 3.4.33(typescript@5.7.2)
-
-  '@vitejs/plugin-vue@5.0.5(vite@5.4.14(@types/node@22.10.5))(vue@3.5.13(typescript@5.7.2))':
-    dependencies:
-      vite: 5.4.14(@types/node@22.10.5)
-      vue: 3.5.13(typescript@5.7.2)
 
   '@vitejs/plugin-vue@5.2.1(vite@5.4.14(@types/node@22.10.5))(vue@3.5.13(typescript@5.7.2))':
     dependencies:
@@ -8045,7 +8033,7 @@ snapshots:
     dependencies:
       browserslist: 4.23.2
       escalade: 3.2.0
-      picocolors: 1.1.1
+      picocolors: 1.0.1
 
   update-browserslist-db@1.1.0(browserslist@4.23.3):
     dependencies:
