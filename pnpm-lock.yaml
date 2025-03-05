@@ -21,8 +21,8 @@ importers:
         specifier: 'workspace: *'
         version: link:packages/bin/create-component-template
       pnpm:
-        specifier: ^9.8.0
-        version: 9.8.0
+        specifier: ^9.15.0
+        version: 9.15.0
       rimraf:
         specifier: ^6.0.1
         version: 6.0.1
@@ -3237,8 +3237,8 @@ packages:
     resolution: {integrity: sha512-Nc3IT5yHzflTfbjgqWcCPpo7DaKy4FnpB0l/zCAW0Tc7jxAiuqSxHasntB3D7887LSrA93kDJ9IXovxJYxyLCA==}
     engines: {node: '>=4'}
 
-  pnpm@9.8.0:
-    resolution: {integrity: sha512-jkw1UPtQDoCNvDC7DOTdHrYU4wscVSRfIRWR7CzfnGEcq9NOE2S0L1ZL1Us5Re0PSdYdG78uyb10uGb83HIydg==}
+  pnpm@9.15.0:
+    resolution: {integrity: sha512-duI3l2CkMo7EQVgVvNZije5yevN3mqpMkU45RBVsQpmSGon5djge4QfUHxLPpLZmgcqccY8GaPoIMe1MbYulbA==}
     engines: {node: '>=18.12'}
     hasBin: true
 
@@ -7269,7 +7269,7 @@ snapshots:
 
   pluralize@8.0.0: {}
 
-  pnpm@9.8.0: {}
+  pnpm@9.15.0: {}
 
   postcss-calc@10.1.1(postcss@8.4.49):
     dependencies:
