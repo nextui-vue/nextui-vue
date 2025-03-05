@@ -21,8 +21,8 @@ importers:
         specifier: 'workspace: *'
         version: link:packages/bin/create-component-template
       pnpm:
-        specifier: ^9.15.0
-        version: 9.15.0
+        specifier: ^10.5.2
+        version: 10.5.2
       rimraf:
         specifier: ^6.0.1
         version: 6.0.1
@@ -3237,8 +3237,8 @@ packages:
     resolution: {integrity: sha512-Nc3IT5yHzflTfbjgqWcCPpo7DaKy4FnpB0l/zCAW0Tc7jxAiuqSxHasntB3D7887LSrA93kDJ9IXovxJYxyLCA==}
     engines: {node: '>=4'}
 
-  pnpm@9.15.0:
-    resolution: {integrity: sha512-duI3l2CkMo7EQVgVvNZije5yevN3mqpMkU45RBVsQpmSGon5djge4QfUHxLPpLZmgcqccY8GaPoIMe1MbYulbA==}
+  pnpm@10.5.2:
+    resolution: {integrity: sha512-2p3CjNP/QNBZIYgjWrJdMgKt2KIHr77caCIg5KACn/v/RWIQK55uRrTj+ei9U+bQXeSFRLDFfUsBeeIsdtEZmw==}
     engines: {node: '>=18.12'}
     hasBin: true
 
@@ -7269,7 +7269,7 @@ snapshots:
 
   pluralize@8.0.0: {}
 
-  pnpm@9.15.0: {}
+  pnpm@10.5.2: {}
 
   postcss-calc@10.1.1(postcss@8.4.49):
     dependencies:
@@ -8045,7 +8045,7 @@ snapshots:
     dependencies:
       browserslist: 4.23.2
       escalade: 3.2.0
-      picocolors: 1.1.1
+      picocolors: 1.0.1
 
   update-browserslist-db@1.1.0(browserslist@4.23.3):
     dependencies:
