@@ -6,7 +6,7 @@
   "packageManager": "pnpm@9.0.0",
   "scripts": {
     "dev": "vitepress dev",
-    "build": "vitepress build"
+    "build": "pnpm -w build:cmp && vitepress build"
   },
   "devDependencies": {
     "@heroui/theme": "^2.4.6",
