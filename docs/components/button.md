@@ -1,3 +1,7 @@
+<script setup>
+import { Button } from 'nextui-vue'
+</script>
+
 # Button
 允许用户通过单次轻触执行操作和选择
 
@@ -32,7 +36,7 @@ import { Button } from 'nextui-vue'
 
 ## 使用
 
-<NButton>button</NButton>
+<Button color="primary">Button</Button>
 
 ::: code-group
 ```vue [示例代码]
@@ -41,7 +45,9 @@ import { Button } from 'nextui-vue'
 </script>
 
 <template>
-  <Button>click</Button>
+  <Button color="primary">
+    button
+  </Button>
 </template>
 ```
 :::
