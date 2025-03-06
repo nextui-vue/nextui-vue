@@ -24,7 +24,7 @@
     "vue": "^3.4.31"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^5.0.5",
+    "@vitejs/plugin-vue": "^5.2.1",
     "@vue/tsconfig": "^0.5.1",
     "autoprefixer": "^10.4.19",
     "postcss": "^8.4.39",

@@ -21,8 +21,8 @@ importers:
         specifier: 'workspace: *'
         version: link:packages/bin/create-component-template
       pnpm:
-        specifier: ^9.15.0
-        version: 9.15.0
+        specifier: ^10.5.2
+        version: 10.5.2
       rimraf:
         specifier: ^6.0.1
         version: 6.0.1
@@ -30,8 +30,8 @@ importers:
   docs:
     devDependencies:
       '@heroui/theme':
-        specifier: ^2.4.6
-        version: 2.4.6(tailwindcss@3.4.10)
+        specifier: ^2.4.11
+        version: 2.4.11(tailwindcss@3.4.10)
       autoprefixer:
         specifier: ^10.4.19
         version: 10.4.20(postcss@8.4.49)
@@ -79,13 +79,13 @@ importers:
         version: link:../../../components/shared
     devDependencies:
       '@heroui/theme':
-        specifier: ^2.4.6
-        version: 2.4.6(tailwindcss@3.4.10)
+        specifier: ^2.4.11
+        version: 2.4.11(tailwindcss@3.4.10)
       '@types/node':
         specifier: ^22.10.5
         version: 22.10.5
       '@vitejs/plugin-vue':
-        specifier: ^5.0.5
+        specifier: ^5.2.1
         version: 5.2.1(vite@6.2.0(@types/node@22.10.5)(jiti@2.4.2)(yaml@2.4.5))(vue@3.5.13(typescript@5.7.2))
       '@vue/tsconfig':
         specifier: ^0.5.1
@@ -94,8 +94,8 @@ importers:
         specifier: 1.0.0-beta.3
         version: 1.0.0-beta.3(typescript@5.7.2)
       unplugin-vue:
-        specifier: ^6.0.0
-        version: 6.0.0(@types/node@22.10.5)(jiti@2.4.2)(vue@3.5.13(typescript@5.7.2))(yaml@2.4.5)
+        specifier: ^6.0.1
+        version: 6.0.1(@types/node@22.10.5)(jiti@2.4.2)(vue@3.5.13(typescript@5.7.2))(yaml@2.4.5)
       vite-plugin-dts:
         specifier: ^4.5.0
         version: 4.5.0(@types/node@22.10.5)(rollup@4.34.9)(typescript@5.7.2)(vite@6.2.0(@types/node@22.10.5)(jiti@2.4.2)(yaml@2.4.5))
@@ -110,13 +110,13 @@ importers:
         version: link:../shared
     devDependencies:
       '@heroui/theme':
-        specifier: ^2.4.6
-        version: 2.4.6(tailwindcss@3.4.10)
+        specifier: ^2.4.11
+        version: 2.4.11(tailwindcss@3.4.10)
       '@types/node':
         specifier: ^22.10.5
         version: 22.10.5
       '@vitejs/plugin-vue':
-        specifier: ^5.0.5
+        specifier: ^5.2.1
         version: 5.2.1(vite@5.4.14(@types/node@22.10.5))(vue@3.5.13(typescript@5.7.2))
       '@vue/tsconfig':
         specifier: ^0.5.1
@@ -125,8 +125,8 @@ importers:
         specifier: 1.0.0-beta.3
         version: 1.0.0-beta.3(typescript@5.7.2)
       unplugin-vue:
-        specifier: ^6.0.0
-        version: 6.0.0(@types/node@22.10.5)(jiti@2.4.2)(vue@3.5.13(typescript@5.7.2))(yaml@2.4.5)
+        specifier: ^6.0.1
+        version: 6.0.1(@types/node@22.10.5)(jiti@2.4.2)(vue@3.5.13(typescript@5.7.2))(yaml@2.4.5)
       vite:
         specifier: ^5.4.12
         version: 5.4.14(@types/node@22.10.5)
@@ -144,14 +144,14 @@ importers:
         version: link:../shared
     devDependencies:
       '@heroui/theme':
-        specifier: ^2.4.6
-        version: 2.4.6(tailwindcss@3.4.10)
+        specifier: ^2.4.11
+        version: 2.4.11(tailwindcss@3.4.10)
       '@types/node':
         specifier: ^22.10.5
         version: 22.10.5
       '@vitejs/plugin-vue':
-        specifier: ^5.0.5
-        version: 5.0.5(vite@5.4.14(@types/node@22.10.5))(vue@3.5.13(typescript@5.7.2))
+        specifier: ^5.2.1
+        version: 5.2.1(vite@5.4.14(@types/node@22.10.5))(vue@3.5.13(typescript@5.7.2))
       '@vue/tsconfig':
         specifier: ^0.5.1
         version: 0.5.1
@@ -159,8 +159,8 @@ importers:
         specifier: 1.0.0-beta.3
         version: 1.0.0-beta.3(typescript@5.7.2)
       unplugin-vue:
-        specifier: ^6.0.0
-        version: 6.0.0(@types/node@22.10.5)(jiti@2.4.2)(vue@3.5.13(typescript@5.7.2))(yaml@2.4.5)
+        specifier: ^6.0.1
+        version: 6.0.1(@types/node@22.10.5)(jiti@2.4.2)(vue@3.5.13(typescript@5.7.2))(yaml@2.4.5)
       vite:
         specifier: ^5.4.12
         version: 5.4.14(@types/node@22.10.5)
@@ -209,8 +209,8 @@ importers:
         version: 3.4.33(typescript@5.7.2)
     devDependencies:
       '@vitejs/plugin-vue':
-        specifier: ^5.0.5
-        version: 5.0.5(vite@5.4.14(@types/node@22.10.5))(vue@3.4.33(typescript@5.7.2))
+        specifier: ^5.2.1
+        version: 5.2.1(vite@5.4.14(@types/node@22.10.5))(vue@3.4.33(typescript@5.7.2))
       '@vue/tsconfig':
         specifier: ^0.5.1
         version: 0.5.1
@@ -971,11 +971,11 @@ packages:
     resolution: {integrity: sha512-BsWiH1yFGjXXS2yvrf5LyuoSIIbPrGUWob917o+BTKuZ7qJdxX8aJLRxs1fS9n6r7vESrq1OUqb68dANcFXuQQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@heroui/shared-utils@2.1.3':
-    resolution: {integrity: sha512-MNpo+jcu6xyicSRyxWgL4rNw4xH0XziUR/bhs01GydlGhfFN8n/Y4vKAWfL5xamehiEJX1N0IKAbFadt3wlGAA==}
+  '@heroui/shared-utils@2.1.7':
+    resolution: {integrity: sha512-1nx7y41P+Bsca7nDC+QFajAoFhSRGvjKhdFeopMQNTvU95L42PD7B0ThjcOretvQD0Ye2TsAEQInwsSgZ6kK/g==}
 
-  '@heroui/theme@2.4.6':
-    resolution: {integrity: sha512-VcmeMRxL3wnKk1o6gzeQehEcXyoKyvqLYr+iRFIrMZZO1kG5bvuX+CWDVovfmLRLK1MuwuhYjm6aJvre9AZAfA==}
+  '@heroui/theme@2.4.11':
+    resolution: {integrity: sha512-sy17DlHCxi5qIILkVhzsez7ZsibWo5gBvZlBETp3yHtxrRwCEHqJ00x2frPAvDf2s/xiN79rtwMf5tlA4w3Ubw==}
     peerDependencies:
       tailwindcss: '>=3.4.0'
 
@@ -1634,13 +1634,6 @@ packages:
     peerDependencies:
       valibot: ^1.0.0 || ^1.0.0-beta.5 || ^1.0.0-rc
 
-  '@vitejs/plugin-vue@5.0.5':
-    resolution: {integrity: sha512-LOjm7XeIimLBZyzinBQ6OSm3UBCNVCpLkxGC0oWmm2YPzVZoxMsdvNVimLTBzpAnR9hl/yn1SHGuRfe6/Td9rQ==}
-    engines: {node: ^18.0.0 || >=20.0.0}
-    peerDependencies:
-      vite: ^5.0.0
-      vue: ^3.2.25
-
   '@vitejs/plugin-vue@5.2.1':
     resolution: {integrity: sha512-cxh314tzaWwOLqVes2gnnCtvBDcM1UMdn+iFR+UjAn411dPT3tOmqrJjbMd7koZpMAmBM/GqeV4n9ge7JSiJJQ==}
     engines: {node: ^18.0.0 || >=20.0.0}
@@ -1832,6 +1825,11 @@ packages:
 
   acorn@8.14.0:
     resolution: {integrity: sha512-cl669nCJTZBsL97OF4kUQm5g5hC2uihk0NxY3WENAC0TYdILVkAyHymAntgxGkl7K+t0cXIrH5siy5S4XkFycA==}
+    engines: {node: '>=0.4.0'}
+    hasBin: true
+
+  acorn@8.14.1:
+    resolution: {integrity: sha512-OvQ/2pUDKmgfCg++xsTX1wGxfTaszcHVcTctW4UJB4hibJx2HXxxO5UmVgyjMa+ZDsiaf5wWLXYpRWMmBI0QHg==}
     engines: {node: '>=0.4.0'}
     hasBin: true
 
@@ -3282,8 +3280,8 @@ packages:
     resolution: {integrity: sha512-Nc3IT5yHzflTfbjgqWcCPpo7DaKy4FnpB0l/zCAW0Tc7jxAiuqSxHasntB3D7887LSrA93kDJ9IXovxJYxyLCA==}
     engines: {node: '>=4'}
 
-  pnpm@9.15.0:
-    resolution: {integrity: sha512-duI3l2CkMo7EQVgVvNZije5yevN3mqpMkU45RBVsQpmSGon5djge4QfUHxLPpLZmgcqccY8GaPoIMe1MbYulbA==}
+  pnpm@10.5.2:
+    resolution: {integrity: sha512-2p3CjNP/QNBZIYgjWrJdMgKt2KIHr77caCIg5KACn/v/RWIQK55uRrTj+ei9U+bQXeSFRLDFfUsBeeIsdtEZmw==}
     engines: {node: '>=18.12'}
     hasBin: true
 
@@ -3506,10 +3504,6 @@ packages:
 
   postcss@8.4.49:
     resolution: {integrity: sha512-OCVPnIObs4N29kxTjzLfUryOkvZEq+pf8jTF0lg8E7uETuWHA+v7j3c/xJmiqpX450191LlmZfUKkXxkTry7nA==}
-    engines: {node: ^10 || ^12 || >=14}
-
-  postcss@8.5.2:
-    resolution: {integrity: sha512-MjOadfU3Ys9KYoX0AdkBlFEF1Vx37uCCeN4ZHnmwm9FfpbsGWMZeBLMmmpY+6Ocqod7mkdZ0DT31OlbsFrLlkA==}
     engines: {node: ^10 || ^12 || >=14}
 
   postcss@8.5.3:
@@ -3832,11 +3826,17 @@ packages:
   tailwind-merge@1.14.0:
     resolution: {integrity: sha512-3mFKyCo/MBcgyOTlrY8T7odzZFx+w+qKSMAmdFzRvqBfLlSigU6TZnlFHK0lkMwj9Bj8OYU+9yW9lmGuS0QEnQ==}
 
-  tailwind-merge@2.6.0:
-    resolution: {integrity: sha512-P+Vu1qXfzediirmHOC3xKGAYeZtPcV9g76X+xg2FD4tYgR71ewMA35Y3sCz3zhiN/dwefRpJX0yBcgwi1fXNQA==}
+  tailwind-merge@2.5.4:
+    resolution: {integrity: sha512-0q8cfZHMu9nuYP/b5Shb7Y7Sh1B7Nnl5GqNr1U+n2p6+mybvRtayrQ+0042Z5byvTA8ihjlP8Odo8/VnHbZu4Q==}
 
   tailwind-variants@0.1.20:
     resolution: {integrity: sha512-AMh7x313t/V+eTySKB0Dal08RHY7ggYK0MSn/ad8wKWOrDUIzyiWNayRUm2PIJ4VRkvRnfNuyRuKbLV3EN+ewQ==}
+    engines: {node: '>=16.x', pnpm: '>=7.x'}
+    peerDependencies:
+      tailwindcss: '*'
+
+  tailwind-variants@0.3.0:
+    resolution: {integrity: sha512-ho2k5kn+LB1fT5XdNS3Clb96zieWxbStE9wNLK7D0AV64kdZMaYzAKo0fWl6fXLPY99ffF9oBJnIj5escEl/8A==}
     engines: {node: '>=16.x', pnpm: '>=7.x'}
     peerDependencies:
       tailwindcss: '*'
@@ -3960,8 +3960,8 @@ packages:
     resolution: {integrity: sha512-rBJeI5CXAlmy1pV+617WB9J63U6XcazHHF2f2dbJix4XzpUF0RS3Zbj0FGIOCAva5P/d/GBOYaACQ1w+0azUkg==}
     engines: {node: '>= 4.0.0'}
 
-  unplugin-vue@6.0.0:
-    resolution: {integrity: sha512-iuFpXWHFbyCfQneHXtOmzW/g0ar10TVMy9WjkZBR40WY+2yOHZ2nHmRodYrCAJceh7hWJxx2ungLSz0f/fWsqg==}
+  unplugin-vue@6.0.1:
+    resolution: {integrity: sha512-bQhp187nwajtvJJq0H4Sg2Ns9WYFoLOGt/d/zfHaDAZH6Ct/G1cVBgBnvrFgQj2Z82TN0NuVO+nn2pFoNgu+kg==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       vue: ^3.2.25
@@ -4047,46 +4047,6 @@ packages:
       sugarss:
         optional: true
       terser:
-        optional: true
-
-  vite@6.1.0:
-    resolution: {integrity: sha512-RjjMipCKVoR4hVfPY6GQTgveinjNuyLw+qruksLDvA5ktI1150VmcMBKmQaEWJhg/j6Uaf6dNCNA0AfdzUb/hQ==}
-    engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
-    hasBin: true
-    peerDependencies:
-      '@types/node': ^18.0.0 || ^20.0.0 || >=22.0.0
-      jiti: '>=1.21.0'
-      less: '*'
-      lightningcss: ^1.21.0
-      sass: '*'
-      sass-embedded: '*'
-      stylus: '*'
-      sugarss: '*'
-      terser: ^5.16.0
-      tsx: ^4.8.1
-      yaml: ^2.4.2
-    peerDependenciesMeta:
-      '@types/node':
-        optional: true
-      jiti:
-        optional: true
-      less:
-        optional: true
-      lightningcss:
-        optional: true
-      sass:
-        optional: true
-      sass-embedded:
-        optional: true
-      stylus:
-        optional: true
-      sugarss:
-        optional: true
-      terser:
-        optional: true
-      tsx:
-        optional: true
-      yaml:
         optional: true
 
   vite@6.2.0:
@@ -4420,7 +4380,7 @@ snapshots:
   '@babel/code-frame@7.24.7':
     dependencies:
       '@babel/highlight': 7.24.7
-      picocolors: 1.1.1
+      picocolors: 1.0.1
 
   '@babel/code-frame@7.26.2':
     dependencies:
@@ -4503,7 +4463,7 @@ snapshots:
       '@babel/helper-validator-identifier': 7.24.7
       chalk: 2.4.2
       js-tokens: 4.0.0
-      picocolors: 1.1.1
+      picocolors: 1.0.1
 
   '@babel/parser@7.24.8':
     dependencies:
@@ -4839,7 +4799,7 @@ snapshots:
   '@eslint/config-array@0.16.0':
     dependencies:
       '@eslint/object-schema': 2.1.4
-      debug: 4.3.5
+      debug: 4.4.0
       minimatch: 3.1.2
     transitivePeerDependencies:
       - supports-color
@@ -4847,7 +4807,7 @@ snapshots:
   '@eslint/eslintrc@3.1.0':
     dependencies:
       ajv: 6.12.6
-      debug: 4.3.5
+      debug: 4.4.0
       espree: 10.1.0
       globals: 14.0.0
       ignore: 5.3.1
@@ -4862,18 +4822,18 @@ snapshots:
 
   '@eslint/object-schema@2.1.4': {}
 
-  '@heroui/shared-utils@2.1.3': {}
+  '@heroui/shared-utils@2.1.7': {}
 
-  '@heroui/theme@2.4.6(tailwindcss@3.4.10)':
+  '@heroui/theme@2.4.11(tailwindcss@3.4.10)':
     dependencies:
-      '@heroui/shared-utils': 2.1.3
+      '@heroui/shared-utils': 2.1.7
       clsx: 1.2.1
       color: 4.2.3
       color2k: 2.0.3
       deepmerge: 4.3.1
       flat: 5.0.2
-      tailwind-merge: 2.6.0
-      tailwind-variants: 0.1.20(tailwindcss@3.4.10)
+      tailwind-merge: 2.5.4
+      tailwind-variants: 0.3.0(tailwindcss@3.4.10)
       tailwindcss: 3.4.10
 
   '@humanwhocodes/module-importer@1.0.1': {}
@@ -5301,7 +5261,7 @@ snapshots:
   '@stylistic/eslint-plugin-js@2.6.2(eslint@9.5.0)':
     dependencies:
       '@types/eslint': 9.6.0
-      acorn: 8.14.0
+      acorn: 8.14.1
       eslint: 9.5.0
       eslint-visitor-keys: 4.0.0
       espree: 10.1.0
@@ -5436,7 +5396,7 @@ snapshots:
       '@typescript-eslint/types': 8.0.1
       '@typescript-eslint/typescript-estree': 8.0.1(typescript@5.7.2)
       '@typescript-eslint/visitor-keys': 8.0.1
-      debug: 4.3.5
+      debug: 4.4.0
       eslint: 9.5.0
     optionalDependencies:
       typescript: 5.7.2
@@ -5457,7 +5417,7 @@ snapshots:
     dependencies:
       '@typescript-eslint/typescript-estree': 8.0.1(typescript@5.7.2)
       '@typescript-eslint/utils': 8.0.1(eslint@9.5.0)(typescript@5.7.2)
-      debug: 4.3.5
+      debug: 4.4.0
       ts-api-utils: 1.3.0(typescript@5.7.2)
     optionalDependencies:
       typescript: 5.7.2
@@ -5473,7 +5433,7 @@ snapshots:
     dependencies:
       '@typescript-eslint/types': 7.17.0
       '@typescript-eslint/visitor-keys': 7.17.0
-      debug: 4.3.5
+      debug: 4.4.0
       globby: 11.1.0
       is-glob: 4.0.3
       minimatch: 9.0.5
@@ -5488,7 +5448,7 @@ snapshots:
     dependencies:
       '@typescript-eslint/types': 8.0.1
       '@typescript-eslint/visitor-keys': 8.0.1
-      debug: 4.3.5
+      debug: 4.4.0
       globby: 11.1.0
       is-glob: 4.0.3
       minimatch: 9.0.5
@@ -5537,15 +5497,10 @@ snapshots:
     dependencies:
       valibot: 1.0.0-beta.12(typescript@5.7.2)
 
-  '@vitejs/plugin-vue@5.0.5(vite@5.4.14(@types/node@22.10.5))(vue@3.4.33(typescript@5.7.2))':
+  '@vitejs/plugin-vue@5.2.1(vite@5.4.14(@types/node@22.10.5))(vue@3.4.33(typescript@5.7.2))':
     dependencies:
       vite: 5.4.14(@types/node@22.10.5)
       vue: 3.4.33(typescript@5.7.2)
-
-  '@vitejs/plugin-vue@5.0.5(vite@5.4.14(@types/node@22.10.5))(vue@3.5.13(typescript@5.7.2))':
-    dependencies:
-      vite: 5.4.14(@types/node@22.10.5)
-      vue: 3.5.13(typescript@5.7.2)
 
   '@vitejs/plugin-vue@5.2.1(vite@5.4.14(@types/node@22.10.5))(vue@3.5.13(typescript@5.7.2))':
     dependencies:
@@ -5786,9 +5741,15 @@ snapshots:
     dependencies:
       acorn: 8.12.1
 
+  acorn-jsx@5.3.2(acorn@8.14.1):
+    dependencies:
+      acorn: 8.14.1
+
   acorn@8.12.1: {}
 
   acorn@8.14.0: {}
+
+  acorn@8.14.1: {}
 
   ajv-draft-04@1.0.0(ajv@8.13.0):
     optionalDependencies:
@@ -6415,7 +6376,7 @@ snapshots:
   eslint-plugin-import-x@3.1.0(eslint@9.5.0)(typescript@5.7.2):
     dependencies:
       '@typescript-eslint/utils': 7.17.0(eslint@9.5.0)(typescript@5.7.2)
-      debug: 4.3.5
+      debug: 4.4.0
       doctrine: 3.0.0
       eslint: 9.5.0
       eslint-import-resolver-node: 0.3.9
@@ -6434,7 +6395,7 @@ snapshots:
       '@es-joy/jsdoccomment': 0.46.0
       are-docs-informative: 0.0.2
       comment-parser: 1.4.1
-      debug: 4.3.5
+      debug: 4.4.0
       escape-string-regexp: 4.0.0
       eslint: 9.5.0
       espree: 10.1.0
@@ -6504,7 +6465,7 @@ snapshots:
 
   eslint-plugin-toml@0.11.1(eslint@9.5.0):
     dependencies:
-      debug: 4.3.5
+      debug: 4.4.0
       eslint: 9.5.0
       eslint-compat-utils: 0.5.1(eslint@9.5.0)
       lodash: 4.17.21
@@ -6554,7 +6515,7 @@ snapshots:
 
   eslint-plugin-yml@1.14.0(eslint@9.5.0):
     dependencies:
-      debug: 4.3.5
+      debug: 4.4.0
       eslint: 9.5.0
       eslint-compat-utils: 0.5.1(eslint@9.5.0)
       lodash: 4.17.21
@@ -6629,8 +6590,8 @@ snapshots:
 
   espree@9.6.1:
     dependencies:
-      acorn: 8.12.1
-      acorn-jsx: 5.3.2(acorn@8.12.1)
+      acorn: 8.14.1
+      acorn-jsx: 5.3.2(acorn@8.14.1)
       eslint-visitor-keys: 3.4.3
 
   esquery@1.6.0:
@@ -7099,7 +7060,7 @@ snapshots:
 
   micromark@2.11.4:
     dependencies:
-      debug: 4.3.5
+      debug: 4.4.0
       parse-entities: 2.0.0
     transitivePeerDependencies:
       - supports-color
@@ -7366,7 +7327,7 @@ snapshots:
 
   pluralize@8.0.0: {}
 
-  pnpm@9.15.0: {}
+  pnpm@10.5.2: {}
 
   postcss-calc@10.1.1(postcss@8.4.49):
     dependencies:
@@ -7572,12 +7533,6 @@ snapshots:
   postcss@8.4.49:
     dependencies:
       nanoid: 3.3.7
-      picocolors: 1.1.1
-      source-map-js: 1.2.1
-
-  postcss@8.5.2:
-    dependencies:
-      nanoid: 3.3.8
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
@@ -7939,11 +7894,16 @@ snapshots:
 
   tailwind-merge@1.14.0: {}
 
-  tailwind-merge@2.6.0: {}
+  tailwind-merge@2.5.4: {}
 
   tailwind-variants@0.1.20(tailwindcss@3.4.10):
     dependencies:
       tailwind-merge: 1.14.0
+      tailwindcss: 3.4.10
+
+  tailwind-variants@0.3.0(tailwindcss@3.4.10):
+    dependencies:
+      tailwind-merge: 2.5.4
       tailwindcss: 3.4.10
 
   tailwindcss@3.4.10:
@@ -8101,12 +8061,12 @@ snapshots:
 
   universalify@0.1.2: {}
 
-  unplugin-vue@6.0.0(@types/node@22.10.5)(jiti@2.4.2)(vue@3.5.13(typescript@5.7.2))(yaml@2.4.5):
+  unplugin-vue@6.0.1(@types/node@22.10.5)(jiti@2.4.2)(vue@3.5.13(typescript@5.7.2))(yaml@2.4.5):
     dependencies:
       '@vue/reactivity': 3.5.13
       debug: 4.4.0
       unplugin: 2.2.0
-      vite: 6.1.0(@types/node@22.10.5)(jiti@2.4.2)(yaml@2.4.5)
+      vite: 6.2.0(@types/node@22.10.5)(jiti@2.4.2)(yaml@2.4.5)
       vue: 3.5.13(typescript@5.7.2)
     transitivePeerDependencies:
       - '@types/node'
@@ -8124,7 +8084,7 @@ snapshots:
 
   unplugin@2.2.0:
     dependencies:
-      acorn: 8.14.0
+      acorn: 8.14.1
       webpack-virtual-modules: 0.6.2
 
   untyped@1.5.2:
@@ -8230,17 +8190,6 @@ snapshots:
       '@types/node': 22.10.5
       fsevents: 2.3.3
 
-  vite@6.1.0(@types/node@22.10.5)(jiti@2.4.2)(yaml@2.4.5):
-    dependencies:
-      esbuild: 0.24.2
-      postcss: 8.5.2
-      rollup: 4.34.6
-    optionalDependencies:
-      '@types/node': 22.10.5
-      fsevents: 2.3.3
-      jiti: 2.4.2
-      yaml: 2.4.5
-
   vite@6.2.0(@types/node@22.10.5)(jiti@2.4.2)(yaml@2.4.5):
     dependencies:
       esbuild: 0.25.0
@@ -8317,7 +8266,7 @@ snapshots:
 
   vue-eslint-parser@9.4.3(eslint@9.5.0):
     dependencies:
-      debug: 4.3.5
+      debug: 4.4.0
       eslint: 9.5.0
       eslint-scope: 7.2.2
       eslint-visitor-keys: 3.4.3
