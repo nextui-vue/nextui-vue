@@ -117,7 +117,7 @@ importers:
         version: 22.10.5
       '@vitejs/plugin-vue':
         specifier: ^5.2.1
-        version: 5.2.1(vite@5.4.14(@types/node@22.10.5))(vue@3.5.13(typescript@5.7.2))
+        version: 5.2.1(vite@6.2.0(@types/node@22.10.5)(jiti@2.4.2)(yaml@2.4.5))(vue@3.5.13(typescript@5.7.2))
       '@vue/tsconfig':
         specifier: ^0.5.1
         version: 0.5.1
@@ -128,11 +128,11 @@ importers:
         specifier: ^6.0.1
         version: 6.0.1(@types/node@22.10.5)(jiti@2.4.2)(vue@3.5.13(typescript@5.7.2))(yaml@2.4.5)
       vite:
-        specifier: ^5.4.12
-        version: 5.4.14(@types/node@22.10.5)
+        specifier: ^6.2.0
+        version: 6.2.0(@types/node@22.10.5)(jiti@2.4.2)(yaml@2.4.5)
       vite-plugin-dts:
         specifier: ^4.5.0
-        version: 4.5.0(@types/node@22.10.5)(rollup@4.34.9)(typescript@5.7.2)(vite@5.4.14(@types/node@22.10.5))
+        version: 4.5.0(@types/node@22.10.5)(rollup@4.34.9)(typescript@5.7.2)(vite@6.2.0(@types/node@22.10.5)(jiti@2.4.2)(yaml@2.4.5))
       vue:
         specifier: ^3.5.0
         version: 3.5.13(typescript@5.7.2)
@@ -151,7 +151,7 @@ importers:
         version: 22.10.5
       '@vitejs/plugin-vue':
         specifier: ^5.2.1
-        version: 5.2.1(vite@5.4.14(@types/node@22.10.5))(vue@3.5.13(typescript@5.7.2))
+        version: 5.2.1(vite@6.2.0(@types/node@22.10.5)(jiti@2.4.2)(yaml@2.4.5))(vue@3.5.13(typescript@5.7.2))
       '@vue/tsconfig':
         specifier: ^0.5.1
         version: 0.5.1
@@ -162,11 +162,11 @@ importers:
         specifier: ^6.0.1
         version: 6.0.1(@types/node@22.10.5)(jiti@2.4.2)(vue@3.5.13(typescript@5.7.2))(yaml@2.4.5)
       vite:
-        specifier: ^5.4.12
-        version: 5.4.14(@types/node@22.10.5)
+        specifier: ^6.2.0
+        version: 6.2.0(@types/node@22.10.5)(jiti@2.4.2)(yaml@2.4.5)
       vite-plugin-dts:
         specifier: ^4.5.0
-        version: 4.5.0(@types/node@22.10.5)(rollup@4.34.9)(typescript@5.7.2)(vite@5.4.14(@types/node@22.10.5))
+        version: 4.5.0(@types/node@22.10.5)(rollup@4.34.9)(typescript@5.7.2)(vite@6.2.0(@types/node@22.10.5)(jiti@2.4.2)(yaml@2.4.5))
       vue:
         specifier: ^3.5.0
         version: 3.5.13(typescript@5.7.2)
@@ -210,7 +210,7 @@ importers:
     devDependencies:
       '@vitejs/plugin-vue':
         specifier: ^5.2.1
-        version: 5.2.1(vite@5.4.14(@types/node@22.10.5))(vue@3.4.33(typescript@5.7.2))
+        version: 5.2.1(vite@6.2.0(@types/node@22.10.5)(jiti@2.4.2)(yaml@2.4.5))(vue@3.4.33(typescript@5.7.2))
       '@vue/tsconfig':
         specifier: ^0.5.1
         version: 0.5.1
@@ -224,8 +224,8 @@ importers:
         specifier: ^3.4.6
         version: 3.4.10
       vite:
-        specifier: ^5.4.12
-        version: 5.4.14(@types/node@22.10.5)
+        specifier: ^6.2.0
+        version: 6.2.0(@types/node@22.10.5)(jiti@2.4.2)(yaml@2.4.5)
 
 packages:
 
@@ -1260,7 +1260,6 @@ packages:
     resolution: {integrity: sha512-88I+D3TeKItrw+Y/2ud4Tw0+3CxQ2kLgu3QvrogZ0OfkmX/DEppehus7L3TS2Q4lpB+hYyxhkQiYPJ6Mf5/dPg==}
     cpu: [arm]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-arm-musleabihf@4.34.6':
     resolution: {integrity: sha512-wM4ztnutBqYFyvNeR7Av+reWI/enK9tDOTKNF+6Kk2Q96k9bwhDDOlnCUNRPvromlVXo04riSliMBs/Z7RteEg==}
@@ -1272,7 +1271,6 @@ packages:
     resolution: {integrity: sha512-3qyfWljSFHi9zH0KgtEPG4cBXHDFhwD8kwg6xLfHQ0IWuH9crp005GfoUUh/6w9/FWGBwEHg3lxK1iHRN1MFlA==}
     cpu: [arm]
     os: [linux]
-    libc: [musl]
 
   '@rollup/rollup-linux-arm64-gnu@4.34.6':
     resolution: {integrity: sha512-9RyprECbRa9zEjXLtvvshhw4CMrRa3K+0wcp3KME0zmBe1ILmvcVHnypZ/aIDXpRyfhSYSuN4EPdCCj5Du8FIA==}
@@ -1284,7 +1282,6 @@ packages:
     resolution: {integrity: sha512-6TZjPHjKZUQKmVKMUowF3ewHxctrRR09eYyvT5eFv8w/fXarEra83A2mHTVJLA5xU91aCNOUnM+DWFMSbQ0Nxw==}
     cpu: [arm64]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-arm64-musl@4.34.6':
     resolution: {integrity: sha512-qTmklhCTyaJSB05S+iSovfo++EwnIEZxHkzv5dep4qoszUMX5Ca4WM4zAVUMbfdviLgCSQOu5oU8YoGk1s6M9Q==}
@@ -1296,7 +1293,6 @@ packages:
     resolution: {integrity: sha512-LD2fytxZJZ6xzOKnMbIpgzFOuIKlxVOpiMAXawsAZ2mHBPEYOnLRK5TTEsID6z4eM23DuO88X0Tq1mErHMVq0A==}
     cpu: [arm64]
     os: [linux]
-    libc: [musl]
 
   '@rollup/rollup-linux-loongarch64-gnu@4.34.6':
     resolution: {integrity: sha512-4Qmkaps9yqmpjY5pvpkfOerYgKNUGzQpFxV6rnS7c/JfYbDSU0y6WpbbredB5cCpLFGJEqYX40WUmxMkwhWCjw==}
@@ -1308,7 +1304,6 @@ packages:
     resolution: {integrity: sha512-dRAgTfDsn0TE0HI6cmo13hemKpVHOEyeciGtvlBTkpx/F65kTvShtY/EVyZEIfxFkV5JJTuQ9tP5HGBS0hfxIg==}
     cpu: [loong64]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-powerpc64le-gnu@4.34.6':
     resolution: {integrity: sha512-Zsrtux3PuaxuBTX/zHdLaFmcofWGzaWW1scwLU3ZbW/X+hSsFbz9wDIp6XvnT7pzYRl9MezWqEqKy7ssmDEnuQ==}
@@ -1320,7 +1315,6 @@ packages:
     resolution: {integrity: sha512-PHcNOAEhkoMSQtMf+rJofwisZqaU8iQ8EaSps58f5HYll9EAY5BSErCZ8qBDMVbq88h4UxaNPlbrKqfWP8RfJA==}
     cpu: [ppc64]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-riscv64-gnu@4.34.6':
     resolution: {integrity: sha512-aK+Zp+CRM55iPrlyKiU3/zyhgzWBxLVrw2mwiQSYJRobCURb781+XstzvA8Gkjg/hbdQFuDw44aUOxVQFycrAg==}
@@ -1332,7 +1326,6 @@ packages:
     resolution: {integrity: sha512-Z2i0Uy5G96KBYKjeQFKbbsB54xFOL5/y1P5wNBsbXB8yE+At3oh0DVMjQVzCJRJSfReiB2tX8T6HUFZ2k8iaKg==}
     cpu: [riscv64]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-s390x-gnu@4.34.6':
     resolution: {integrity: sha512-WoKLVrY9ogmaYPXwTH326+ErlCIgMmsoRSx6bO+l68YgJnlOXhygDYSZe/qbUJCSiCiZAQ+tKm88NcWuUXqOzw==}
@@ -1344,7 +1337,6 @@ packages:
     resolution: {integrity: sha512-U+5SwTMoeYXoDzJX5dhDTxRltSrIax8KWwfaaYcynuJw8mT33W7oOgz0a+AaXtGuvhzTr2tVKh5UO8GVANTxyQ==}
     cpu: [s390x]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-x64-gnu@4.34.6':
     resolution: {integrity: sha512-Sht4aFvmA4ToHd2vFzwMFaQCiYm2lDFho5rPcvPBT5pCdC+GwHG6CMch4GQfmWTQ1SwRKS0dhDYb54khSrjDWw==}
@@ -1356,7 +1348,6 @@ packages:
     resolution: {integrity: sha512-FwBHNSOjUTQLP4MG7y6rR6qbGw4MFeQnIBrMe161QGaQoBQLqSUEKlHIiVgF3g/mb3lxlxzJOpIBhaP+C+KP2A==}
     cpu: [x64]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-x64-musl@4.34.6':
     resolution: {integrity: sha512-zmmpOQh8vXc2QITsnCiODCDGXFC8LMi64+/oPpPx5qz3pqv0s6x46ps4xoycfUiVZps5PFn1gksZzo4RGTKT+A==}
@@ -1368,7 +1359,6 @@ packages:
     resolution: {integrity: sha512-cYRpV4650z2I3/s6+5/LONkjIz8MBeqrk+vPXV10ORBnshpn8S32bPqQ2Utv39jCiDcO2eJTuSlPXpnvmaIgRA==}
     cpu: [x64]
     os: [linux]
-    libc: [musl]
 
   '@rollup/rollup-win32-arm64-msvc@4.34.6':
     resolution: {integrity: sha512-3/q1qUsO/tLqGBaD4uXsB6coVGB3usxw3qyeVb59aArCgedSF66MPdgRStUd7vbZOsko/CgVaY5fo2vkvPLWiA==}
@@ -4380,7 +4370,7 @@ snapshots:
   '@babel/code-frame@7.24.7':
     dependencies:
       '@babel/highlight': 7.24.7
-      picocolors: 1.0.1
+      picocolors: 1.1.1
 
   '@babel/code-frame@7.26.2':
     dependencies:
@@ -4463,7 +4453,7 @@ snapshots:
       '@babel/helper-validator-identifier': 7.24.7
       chalk: 2.4.2
       js-tokens: 4.0.0
-      picocolors: 1.0.1
+      picocolors: 1.1.1
 
   '@babel/parser@7.24.8':
     dependencies:
@@ -5497,15 +5487,15 @@ snapshots:
     dependencies:
       valibot: 1.0.0-beta.12(typescript@5.7.2)
 
-  '@vitejs/plugin-vue@5.2.1(vite@5.4.14(@types/node@22.10.5))(vue@3.4.33(typescript@5.7.2))':
-    dependencies:
-      vite: 5.4.14(@types/node@22.10.5)
-      vue: 3.4.33(typescript@5.7.2)
-
   '@vitejs/plugin-vue@5.2.1(vite@5.4.14(@types/node@22.10.5))(vue@3.5.13(typescript@5.7.2))':
     dependencies:
       vite: 5.4.14(@types/node@22.10.5)
       vue: 3.5.13(typescript@5.7.2)
+
+  '@vitejs/plugin-vue@5.2.1(vite@6.2.0(@types/node@22.10.5)(jiti@2.4.2)(yaml@2.4.5))(vue@3.4.33(typescript@5.7.2))':
+    dependencies:
+      vite: 6.2.0(@types/node@22.10.5)(jiti@2.4.2)(yaml@2.4.5)
+      vue: 3.4.33(typescript@5.7.2)
 
   '@vitejs/plugin-vue@5.2.1(vite@6.2.0(@types/node@22.10.5)(jiti@2.4.2)(yaml@2.4.5))(vue@3.5.13(typescript@5.7.2))':
     dependencies:
@@ -8104,7 +8094,7 @@ snapshots:
     dependencies:
       browserslist: 4.23.2
       escalade: 3.2.0
-      picocolors: 1.0.1
+      picocolors: 1.1.1
 
   update-browserslist-db@1.1.0(browserslist@4.23.3):
     dependencies:
@@ -8142,25 +8132,6 @@ snapshots:
     dependencies:
       '@types/unist': 3.0.3
       vfile-message: 4.0.2
-
-  vite-plugin-dts@4.5.0(@types/node@22.10.5)(rollup@4.34.9)(typescript@5.7.2)(vite@5.4.14(@types/node@22.10.5)):
-    dependencies:
-      '@microsoft/api-extractor': 7.49.1(@types/node@22.10.5)
-      '@rollup/pluginutils': 5.1.4(rollup@4.34.9)
-      '@volar/typescript': 2.4.11
-      '@vue/language-core': 2.2.0(typescript@5.7.2)
-      compare-versions: 6.1.1
-      debug: 4.4.0
-      kolorist: 1.8.0
-      local-pkg: 0.5.1
-      magic-string: 0.30.17
-      typescript: 5.7.2
-    optionalDependencies:
-      vite: 5.4.14(@types/node@22.10.5)
-    transitivePeerDependencies:
-      - '@types/node'
-      - rollup
-      - supports-color
 
   vite-plugin-dts@4.5.0(@types/node@22.10.5)(rollup@4.34.9)(typescript@5.7.2)(vite@6.2.0(@types/node@22.10.5)(jiti@2.4.2)(yaml@2.4.5)):
     dependencies:
