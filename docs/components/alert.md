@@ -81,7 +81,7 @@ import { Alert } from 'nextui-vue'
 
 ### 变体
 
-<div style="display: grid; row-gap: 1rem;">
+<div style="display: grid; row-gap: 1rem; margin-top: 1rem;">
   <Alert
    v-for="variant in ['solid', 'bordered', 'flat', 'faded']"
    :key="variant"
@@ -189,6 +189,18 @@ import { Alert } from 'nextui-vue'
   variant="faded"
 />
 
+::: code-group
+```vue [示例代码]
+<Alert
+  hideIcon
+  color="success"
+  description="Thanks for subscribing to our newsletter!"
+  title="This is an alert"
+  variant="faded"
+/>
+```
+:::
+
 ### 不带图标容器
 
 您可以通过将 `hideIconWrapper` 属性设置为 `true` 来隐藏图标容器。
@@ -200,3 +212,15 @@ import { Alert } from 'nextui-vue'
   title="Bordered Alert"
   variant="bordered"
 />
+
+::: code-group
+```vue [示例代码]
+<Alert
+  hideIconWrapper
+  color="secondary"
+  description="This is a bordered variant alert"
+  title="Bordered Alert"
+  variant="bordered"
+/>
+```
+:::
