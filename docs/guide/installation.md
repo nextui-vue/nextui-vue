@@ -1,44 +1,66 @@
 # 安装
+全局安装、按需安装、配置
 
-## 主题
-安装HeroUI的主题依赖。
+## 全局安装
+可以使你在`nextui-vue`命名空间下使用所有组件。
 
 ::: code-group
 ```bash [npm]
-npm add @heroui/theme
-```
-```bash [pnpm]
-pnpm add @heroui/theme
-```
-```bash [yarn]
-yarn add @heroui/theme
-```
-```bash [bun]
-bun add @heroui/theme
-```
-
-由于NextUI使用了[tailwindcss]()，因此还需要作为开发依赖安装它。
-
-> [!INFO]
-> 可以参考tailwindcss官方的[安装步骤]()
-
-## 按需安装(**推荐**)
-组件以`@vue-nextui/*`的格式可作为依赖被安装
-
-## 全局安装
-```bash
 npm install nextui-vue
 ```
-组件在命名空间`nextui-vue`下被具名导出
+```bash [pnpm]
+pnpm install nextui-vue
+```
+```bash [yarn]
+yarn install nextui-vue
+```
+```bash [bun]
+bun install nextui-vue
+```
+:::
 
-以[button组件](/components/button)举例, 在Vue文件中使用:
+## 按需安装
+仅安装你需要的组件，请参考每个组件的文档以了解如何安装。
 
-```vue
-<script lang="ts" setup>
-import { Button } from 'nextui-vue'
-</script>
+::: tip
+使用按需安装前请确保你已经完成了[主题配置](#主题配置)。
+:::
 
-<template>
-  <Button>Click me</Button>
-</template>
+## 主题配置
+安装HeroUI主题。
+
+::: code-group
+```bash [npm]
+npm install @heroui/theme
+```
+```bash [pnpm]
+pnpm install @heroui/theme
+```
+```bash [yarn]
+yarn install @heroui/theme
+```
+```bash [bun]
+bun install @heroui/theme
+```
+:::
+
+由于HeroUI基于TailwindCSS，因为你还需要安装它，参考[TailwindCSS的安装步骤](https://tailwindcss.com/docs/installation)。
+
+然后在你的`tailwind.config.js`文件中添加如下代码：
+
+```js{2,6,7,8,12,13}
+// tailwind.config.js
+const { heroui } = require('@heroui/theme')
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    './node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}'
+  ],
+  theme: {
+    extend: {},
+  },
+  darkMode: 'class',
+  plugins: [heroui()]
+}
 ```

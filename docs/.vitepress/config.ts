@@ -1,65 +1,62 @@
-import { defineConfig } from "vitepress";
+import { defineConfig } from 'vitepress'
+import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "NextUI Vue",
-  description: "基于NextUI Theme构建的Vue组件库",
-  head: [["link", { rel: "icon", href: "/logo.png" }]],
+  title: 'NextUI Vue',
+  description: '基于HeroUI Theme构建的Vue3组件库',
+  head: [['link', { rel: 'icon', href: '/logo.png' }]],
   ignoreDeadLinks: true,
 
-  themeConfig: {
-    logo: "/logo.png",
-    search: {
-      provider: "local",
+  markdown: {
+    config(md) {
+      md.use(groupIconMdPlugin)
     },
-    outline: "deep",
+  },
+  vite: {
+    plugins: [
+      groupIconVitePlugin(),
+    ],
+  },
+
+  themeConfig: {
+    logo: '/logo.png',
+    search: {
+      provider: 'local',
+    },
+    outline: 'deep',
     nav: [
-      { text: "首页", link: "/" },
-      { text: "组件", link: "/markdown-examples" },
-      {
-        text: "相关链接",
-        items: [
-          {
-            text: "NextUI",
-            link: "https://nextui.org/",
-          },
-          {
-            text: "Radix Vue",
-            link: "https://www.radix-vue.com/",
-          },
-          {
-            text: "IKUNUI",
-            link: "https://laine001.github.io/ikun-ui/",
-          },
-        ],
-      },
+      { text: '指南', link: '/guide/introduction' },
+      { text: '组件', link: '/components/button' },
+      { text: 'HeroUI', link: 'https://heroui.com/' },
     ],
 
     sidebar: [
       {
-        text: "起步",
+        text: '指南',
+        collapsed: false,
         items: [
-          { text: "安装", link: "/guide/installation" },
-          { text: "配置", link: "/guide/configuration" },
+          { text: '介绍', link: '/guide/introduction' },
+          { text: '安装', link: '/guide/installation' },
         ],
       },
       {
-        text: "组件",
-        collapsed: true,
+        text: '组件',
+        collapsed: false,
         items: [
-          { text: "按钮", link: "/components/button" },
-          { text: "alert", link: "/components/alert" },
+          { text: 'Button', link: '/components/button' },
+          { text: 'Alert', link: '/components/alert' },
         ],
       },
     ],
 
     socialLinks: [
-      { icon: "github", link: "https://github.com/hotdogc1017/nextui-vue" },
+      { icon: 'github', link: 'https://github.com/nextui-vue/nextui-vue' },
     ],
 
     footer: {
-      message: "MIT Licensed",
-      copyright: "©hotdogc1017",
+      message: 'MIT Licensed',
+      copyright: '©hotdogc1017',
     },
   },
-});
+})

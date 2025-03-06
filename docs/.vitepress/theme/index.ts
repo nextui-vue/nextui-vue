@@ -2,6 +2,7 @@ import DefaultTheme from 'vitepress/theme'
 import type { Theme } from 'vitepress'
 import { Alert, Button } from 'nextui-vue'
 import './styles.css'
+import 'virtual:group-icons.css'
 
 export default {
   extends: DefaultTheme,

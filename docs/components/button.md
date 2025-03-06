@@ -23,10 +23,10 @@ bun add @vue-nextui/button
 ## 导入
 ::: code-group
 ```js [按需导入]
-import { button } from '@vue-nextui/button'
+import { Button } from '@vue-nextui/button'
 ```
 ```js [全局导入]
-import { button } from 'nextui-vue'
+import { Button } from 'nextui-vue'
 ```
 :::
 

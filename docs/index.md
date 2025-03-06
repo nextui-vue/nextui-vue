@@ -2,30 +2,34 @@
 layout: home
 
 title: NextUI Vue
-titleTemplate: NextUI风格的Vue组件库
+titleTemplate: 基于HeroUI Theme的Vue3组件库
 
+head:
+  - - meta
+    - name: description
+      content: 基于HeroUI Theme的Vue3组件库
+  - - meta
+    - name: keywords
+      content: Vue Vue3 HeroUI NextUI 组件库 Component Library
 hero:
   name: "NextUI Vue"
-  text: "精美的Vue组件库"
+  text: "Vue 3组件库"
   image:
     src: /logo.png
     alt: NextUI Vue
-  tagline: NextUI Theme风格, 基于Radix Vue构建
+  tagline: HeroUI风格, 使用Vue3实现
   actions:
     - theme: brand
       text: ⚡ 快速开始
-      link: /markdown-examples
+      link: /guide/installation
     - theme: alt
       text: 这是什么?
-      link: /api-examples
-    - theme: alt
-      text: 👀 在GitHub中查看
-      link: "https://github.com/hotdogc1017/nextui-vue"
+      link: /guide/introduction
 
 features:
   - icon: ✨
-    title: 令人惊叹的样式
-    details: 完全继承了NextUI的精美样式
+    title: 精美且现代化
+    details: 基于HeroUI的主题样式
   - icon: 🛠️
     title: 专为Vue打造
     details: 使用Vue3实现
