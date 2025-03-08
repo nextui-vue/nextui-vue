@@ -18,7 +18,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@nextui-org/theme": "^2.2.9",
+    "@nextui-org/theme": "^2.4.5",
     "@vue-nextui/button": "workspace: *",
     "nextui-vue": "workspace: *",
     "vue": "^3.4.31"
