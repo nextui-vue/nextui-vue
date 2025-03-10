@@ -46,6 +46,10 @@ bun install @heroui/theme
 
 由于HeroUI基于TailwindCSS，因为你还需要安装它，参考[TailwindCSS的安装步骤](https://tailwindcss.com/docs/installation)。
 
+:::warning
+仅支持TailwindCSS V3及以下的版本，**不支持**V4，[相关issue](https://github.com/nextui-vue/nextui-vue/issues/27)。
+:::
+
 然后在你的`tailwind.config.js`文件中添加如下代码：
 
 ```js{2,6,7,8,12,13}
