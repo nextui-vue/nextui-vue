@@ -48,8 +48,8 @@ importers:
         specifier: ^1.3.1
         version: 1.6.3(@algolia/client-search@5.20.1)(@types/node@22.10.5)(postcss@8.4.49)(search-insights@2.17.3)(typescript@5.7.2)
       vitepress-plugin-group-icons:
-        specifier: ^1.3.6
-        version: 1.3.6
+        specifier: ^1.3.7
+        version: 1.3.7
 
   packages/bin/create-component-template:
     devDependencies:
@@ -3769,8 +3769,8 @@ packages:
       yaml:
         optional: true
 
-  vitepress-plugin-group-icons@1.3.6:
-    resolution: {integrity: sha512-MzUAuMZ43f51dfBKYowW7yv/A2DxIjtN50d8Dcj31nU9RB6GuYBJ48E/Ze88U0bEn4wlnrjMXFh2j2e0rYmGug==}
+  vitepress-plugin-group-icons@1.3.7:
+    resolution: {integrity: sha512-2pS7KATeAPXTVOiXF0cU9Jh8TiMWuLn7uzQr1RkYG8fmILvUfue60w2WtloOfrAenByzYSQ724A4aQzUCgVfqw==}
 
   vitepress@1.6.3:
     resolution: {integrity: sha512-fCkfdOk8yRZT8GD9BFqusW3+GggWYZ/rYncOfmgcDtP3ualNHCAg+Robxp2/6xfH1WwPHtGpPwv7mbA3qomtBw==}
@@ -7536,7 +7536,7 @@ snapshots:
       jiti: 2.4.2
       yaml: 2.4.5
 
-  vitepress-plugin-group-icons@1.3.6:
+  vitepress-plugin-group-icons@1.3.7:
     dependencies:
       '@iconify-json/logos': 1.2.4
       '@iconify-json/vscode-icons': 1.2.16
