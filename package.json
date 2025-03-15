@@ -20,7 +20,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "^2.24.1",
     "bumpp": "^10.1.0",
-    "eslint": "9.5.0",
+    "eslint": "9.22.0",
     "nextui-vue-create": "workspace: *",
     "pnpm": "^10.6.3",
     "rimraf": "^6.0.1"
