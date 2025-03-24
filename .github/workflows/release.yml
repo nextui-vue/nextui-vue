@@ -31,4 +31,4 @@ jobs:
       - name: 生成changelog
         run: npx changelogithub
         env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          GITHUB_TOKEN: ${{secrets.GITHUB_SELF_TOKEN}}
