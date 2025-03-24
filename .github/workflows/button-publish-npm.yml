@@ -12,7 +12,7 @@ on:
     branches:
       - publish/button
     paths:
-      - "packages/component/package.json"
+      - "packages/components/button/package.json"
 
 jobs:
   test:
