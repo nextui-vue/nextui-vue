@@ -9,7 +9,7 @@ on:
 
 defaults:
   run:
-    working-directory: "packages/components/${{ github.event.inputs.component }}"
+    working-directory: "packages/components/${{ inputs.component }}"
 
 jobs:
   print:
@@ -18,6 +18,9 @@ jobs:
       NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
     steps:
+      - name: Print the work directory
+        run: echo "packages/components/${{ inputs.component }}"
+
       - name: 签出代码
         uses: actions/checkout@v4
         with:
