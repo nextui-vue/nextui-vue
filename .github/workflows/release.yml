@@ -7,7 +7,9 @@ permissions:
 on:
   push:
     tags:
-      - 'v*.*.*'
+      - "v*.*.*"
+    branches:
+      - main
 
 jobs:
   release:
@@ -22,8 +24,8 @@ jobs:
       - name: 设置nodejs
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          registry-url: 'https://registry.npmjs.org/'
+          node-version: "20"
+          registry-url: "https://registry.npmjs.org/"
 
       - name: 生成changelog
         run: npx changelogithub

@@ -8,7 +8,9 @@ permissions:
 on:
   push:
     tags:
-        - 'v*.*.*'
+      - "v*.*.*"
+    branches:
+      - main
 
 jobs:
   publish:
@@ -29,9 +31,9 @@ jobs:
       - name: 设置nodejs
         uses: actions/setup-node@v4
         with:
-          cache: 'pnpm'
-          node-version: '20'
-          registry-url: 'https://registry.npmjs.org/'
+          cache: "pnpm"
+          node-version: "20"
+          registry-url: "https://registry.npmjs.org/"
 
       - name: 安装依赖
         run: pnpm install
