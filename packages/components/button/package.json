@@ -24,7 +24,8 @@
     "ui framework",
     "tailwindcss",
     "button component",
-    "heroui"
+    "heroui",
+    "button"
   ],
   "exports": {
     ".": "./dist/index.js"
