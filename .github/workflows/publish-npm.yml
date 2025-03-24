@@ -11,6 +11,8 @@ on:
       - "v*.*.*"
     branches:
       - main
+    paths:
+      - "package.json"
 
 jobs:
   publish:
@@ -42,4 +44,4 @@ jobs:
         run: pnpm run build
 
       - name: 发布到npm
-        run: pnpm publish --no-git-checks -r --provenance
+        run: pnpm publish --no-git-checks --provenance
