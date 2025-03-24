@@ -1,0 +1,21 @@
+name: Publish the Alert npm package
+
+permissions:
+  contents: write
+  id-token: write
+  actions: write
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+    branches:
+      - publish/alert
+    paths:
+      - "packages/components/alert/package.json"
+
+jobs:
+  test:
+    uses: ./.github/workflows/component-publish-npm.yml
+    with:
+      component: "alert"
