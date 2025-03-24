@@ -1,0 +1,19 @@
+name: Publish the Button npm package
+
+permissions:
+  contents: write
+  id-token: write
+  actions: write
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+    branches:
+      - publish/button
+
+jobs:
+  test:
+    uses: ./component-publish-npm.yml
+    with:
+      component: "button"

@@ -1,0 +1,15 @@
+name: "Publish a component npm package"
+
+on:
+  workflow_call:
+    inputs:
+      component:
+        required: true
+        type: string
+
+jobs:
+  print:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print the component name
+        run: echo "Component name is ${{ inputs.component }}"
