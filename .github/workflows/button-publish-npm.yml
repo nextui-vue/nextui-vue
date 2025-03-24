@@ -11,6 +11,8 @@ on:
       - "v*.*.*"
     branches:
       - publish/button
+    paths:
+      - "packages/component/package.json"
 
 jobs:
   test:

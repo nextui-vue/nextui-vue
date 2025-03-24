@@ -23,7 +23,8 @@
     "vue",
     "ui framework",
     "tailwindcss",
-    "button component"
+    "button component",
+    "heroui"
   ],
   "exports": {
     ".": "./dist/index.js"
