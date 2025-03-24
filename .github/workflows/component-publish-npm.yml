@@ -7,10 +7,6 @@ on:
         required: true
         type: string
 
-defaults:
-  run:
-    working-directory: "packages/components/${{ inputs.component }}"
-
 jobs:
   print:
     runs-on: ubuntu-latest
@@ -38,9 +34,12 @@ jobs:
 
       - name: 安装依赖
         run: pnpm install
+        working-directory: "packages/components/${{ inputs.component }}"
 
       - name: 运行构建
         run: pnpm run build
+        working-directory: "packages/components/${{ inputs.component }}"
 
       - name: 发布到npm
         run: pnpm publish --no-git-checks -r --provenance
+        working-directory: "packages/components/${{ inputs.component }}"
