@@ -30,8 +30,8 @@ importers:
   docs:
     devDependencies:
       '@heroui/theme':
-        specifier: ^2.4.11
-        version: 2.4.11(tailwindcss@3.4.10)
+        specifier: ^2.4.12
+        version: 2.4.12(tailwindcss@3.4.10)
       autoprefixer:
         specifier: ^10.4.21
         version: 10.4.21(postcss@8.5.3)
@@ -79,8 +79,8 @@ importers:
         version: link:../../../components/shared
     devDependencies:
       '@heroui/theme':
-        specifier: ^2.4.11
-        version: 2.4.11(tailwindcss@3.4.10)
+        specifier: ^2.4.12
+        version: 2.4.12(tailwindcss@3.4.10)
       '@types/node':
         specifier: ^22.13.11
         version: 22.13.11
@@ -110,8 +110,8 @@ importers:
         version: link:../shared
     devDependencies:
       '@heroui/theme':
-        specifier: ^2.4.11
-        version: 2.4.11(tailwindcss@3.4.10)
+        specifier: ^2.4.12
+        version: 2.4.12(tailwindcss@3.4.10)
       '@types/node':
         specifier: ^22.13.11
         version: 22.13.11
@@ -144,8 +144,8 @@ importers:
         version: link:../shared
     devDependencies:
       '@heroui/theme':
-        specifier: ^2.4.11
-        version: 2.4.11(tailwindcss@3.4.10)
+        specifier: ^2.4.12
+        version: 2.4.12(tailwindcss@3.4.10)
       '@types/node':
         specifier: ^22.13.11
         version: 22.13.11
@@ -1074,8 +1074,8 @@ packages:
   '@heroui/shared-utils@2.1.7':
     resolution: {integrity: sha512-1nx7y41P+Bsca7nDC+QFajAoFhSRGvjKhdFeopMQNTvU95L42PD7B0ThjcOretvQD0Ye2TsAEQInwsSgZ6kK/g==}
 
-  '@heroui/theme@2.4.11':
-    resolution: {integrity: sha512-sy17DlHCxi5qIILkVhzsez7ZsibWo5gBvZlBETp3yHtxrRwCEHqJ00x2frPAvDf2s/xiN79rtwMf5tlA4w3Ubw==}
+  '@heroui/theme@2.4.12':
+    resolution: {integrity: sha512-sm4DOBhJW88U9h0dfXwX3eA6w125jUi/OfFZtV1zUIyXBPF3c1Va23XO6XmGxDTCgBT4iBwpGBoyHbSYpAnaVg==}
     peerDependencies:
       tailwindcss: '>=3.4.0'
 
@@ -4768,7 +4768,7 @@ snapshots:
 
   '@heroui/shared-utils@2.1.7': {}
 
-  '@heroui/theme@2.4.11(tailwindcss@3.4.10)':
+  '@heroui/theme@2.4.12(tailwindcss@3.4.10)':
     dependencies:
       '@heroui/shared-utils': 2.1.7
       clsx: 1.2.1
@@ -7704,7 +7704,7 @@ snapshots:
 
   tailwind-variants@0.3.0(tailwindcss@3.4.10):
     dependencies:
-      tailwind-merge: 2.5.4
+      tailwind-merge: 2.6.0
       tailwindcss: 3.4.10
 
   tailwindcss@3.4.10:
