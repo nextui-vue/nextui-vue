@@ -8,14 +8,10 @@ permissions:
 on:
   push:
     tags:
-      - "v*.*.*"
-    branches:
-      - publish/button
-    paths:
-      - "packages/components/button/package.json"
+      - "@vue-nextui/button@*.*.*"
 
 jobs:
   test:
-    uses: ./.github/workflows/component-publish-npm.yml
+    uses: ./.github/workflows/test-publish-npm.yml
     with:
       component: "button"
