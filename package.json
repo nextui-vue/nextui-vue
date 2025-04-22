@@ -1,7 +1,7 @@
 {
   "name": "nextui-vue-project",
   "type": "module",
-  "version": "0.0.12",
+  "version": "0.0.13-beta.1",
   "private": true,
   "packageManager": "pnpm@9.0.0",
   "scripts": {
@@ -14,7 +14,7 @@
     "lint": "eslint . --cache",
     "lint:fix": "eslint . --cache --fix",
     "bumpp": "bumpp -r",
-    "bumpp:button": "bumpp -C packages/components/button --tag '@vue-nextui/button@' --sign",
+    "bump:button": "bumpp -C packages/components/button --tag '@vue-nextui/button@' --sign",
     "nvc": "nextui-vue-create",
     "pub:view": "pnpm publish -r --dry-run --registry=https://registry.npmjs.org/"
   },
