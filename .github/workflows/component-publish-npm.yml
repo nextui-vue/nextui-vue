@@ -1,16 +1,16 @@
 name: "Publish"
 
-permissions:
-  contents: write
-  id-token: write
-  actions: write
-
 on:
   workflow_call:
     inputs:
       component:
         required: true
         type: string
+
+defaults:
+  run:
+    shell: bash
+    working-directory: "packages/components/${{ inputs.component }}"
 
 jobs:
   publish:
@@ -36,17 +36,9 @@ jobs:
 
       - name: 安装依赖
         run: pnpm install
-        working-directory: "packages/components/${{ inputs.component }}"
 
       - name: 运行构建
         run: pnpm run build
-        working-directory: "packages/components/${{ inputs.component }}"
-
-      - name: whoami
-        run: npm whoami
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: 发布到npm
-        run: pnpm publish --no-git-checks --provenance --access=public
-        working-directory: "packages/components/${{ inputs.component }}"
+        run: pnpm publish --no-git-checks --provenance
