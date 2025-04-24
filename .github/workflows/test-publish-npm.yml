@@ -16,8 +16,6 @@ jobs:
         with:
           node-version: "20.x"
           registry-url: "https://registry.npmjs.org"
-      - run: npm ci
-        working-directory: "packages/components/alert"
 
       - run: npm publish --provenance --access public
         working-directory: "packages/components/alert"
