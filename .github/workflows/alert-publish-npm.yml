@@ -1,3 +1,5 @@
+name: "Alert Component"
+
 permissions:
   contents: write
   id-token: write
