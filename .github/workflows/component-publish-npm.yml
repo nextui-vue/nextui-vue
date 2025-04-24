@@ -19,6 +19,8 @@ jobs:
       NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
     steps:
+      - name: whoami
+        uses: npm whoami
       - name: 签出代码
         uses: actions/checkout@v4
         with:
