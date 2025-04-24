@@ -45,5 +45,3 @@ jobs:
       - name: 发布到npm
         run: pnpm publish --no-git-checks --provenance --access=public
         working-directory: "packages/components/${{ inputs.component }}"
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
