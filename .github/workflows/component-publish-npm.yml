@@ -43,7 +43,7 @@ jobs:
         working-directory: "packages/components/${{ inputs.component }}"
 
       - name: whoami
-        uses: npm whoami
+        run: npm whoami
 
       - name: 发布到npm
         run: pnpm publish --no-git-checks --provenance --access=public
