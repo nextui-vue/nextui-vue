@@ -36,7 +36,7 @@
     "build:vite": "vite build",
     "build": "rolldown -c rolldown.config.ts",
     "dev": "rolldown --watch -c rolldown.config.ts",
-    "bump": "bump --tag '@vue-nextui/alert@' --sign"
+    "bump": "bumpp --tag '@vue-nextui/alert@' --sign"
   },
   "dependencies": {
     "@vue-nextui/shared": "workspace: *"
