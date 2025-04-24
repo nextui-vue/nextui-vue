@@ -37,7 +37,8 @@
     "dev:vite": "vite -w build",
     "build:vite": "vite build",
     "build": "rolldown -c rolldown.config.ts",
-    "dev": "rolldown --watch -c rolldown.config.ts"
+    "dev": "rolldown --watch -c rolldown.config.ts",
+    "bump": "bump --tag '@vue-nextui/button@' --sign"
   },
   "dependencies": {
     "@vue-nextui/shared": "workspace: *"

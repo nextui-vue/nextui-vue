@@ -8,11 +8,7 @@ permissions:
 on:
   push:
     tags:
-      - "v*.*.*"
-    branches:
-      - publish/button
-    paths:
-      - "packages/components/button/package.json"
+      - "@vue-nextui/button@*"
 
 jobs:
   test:

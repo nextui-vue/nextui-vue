@@ -13,7 +13,7 @@
     "clean": "rimraf -g **/node_modules **/dist",
     "lint": "eslint . --cache",
     "lint:fix": "eslint . --cache --fix",
-    "bumpp": "bumpp -r",
+    "bump:button": "pnpm -C packages/components/button run bump",
     "nvc": "nextui-vue-create",
     "pub:view": "pnpm publish -r --dry-run --registry=https://registry.npmjs.org/"
   },
