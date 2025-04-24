@@ -38,5 +38,5 @@ jobs:
         working-directory: "packages/components/${{ inputs.component }}"
 
       - name: 发布到npm
-        run: pnpm publish --no-git-checks --provenance
+        run: npm publish --no-git-checks --provenance --access=public
         working-directory: "packages/components/${{ inputs.component }}"
