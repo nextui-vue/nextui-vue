@@ -44,6 +44,8 @@ jobs:
 
       - name: whoami
         run: npm whoami
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: 发布到npm
         run: pnpm publish --no-git-checks --provenance --access=public
