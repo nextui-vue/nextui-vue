@@ -11,7 +11,7 @@ on:
       - "@vue-nextui/alert@*"
 
 jobs:
-  test:
+  alert:
     uses: ./.github/workflows/component-publish-npm.yml
     with:
       component: "alert"
