@@ -8,11 +8,7 @@ permissions:
 on:
   push:
     tags:
-      - "v*.*.*"
-    branches:
-      - publish/alert
-    paths:
-      - "packages/components/alert/package.json"
+      - "@vue-nextui/alert@*"
 
 jobs:
   test:
