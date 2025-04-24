@@ -5,6 +5,11 @@ permissions:
   id-token: write
   actions: write
 
+defaults:
+  run:
+    shell: bash
+    working-directory: "packages/components/alert"
+
 on:
   push:
     tags:

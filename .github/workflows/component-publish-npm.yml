@@ -7,11 +7,6 @@ on:
         required: true
         type: string
 
-defaults:
-  run:
-    shell: bash
-    working-directory: "packages/components/${{ inputs.component }}"
-
 jobs:
   publish:
     runs-on: ubuntu-latest
