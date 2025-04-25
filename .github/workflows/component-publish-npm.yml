@@ -22,8 +22,8 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: 安装 pnpm
-        uses: pnpm/action-setup@v4
+      # - name: 安装 pnpm
+      #   uses: pnpm/action-setup@v4
 
       - name: 设置nodejs
         uses: actions/setup-node@v4
@@ -33,10 +33,10 @@ jobs:
           registry-url: "https://registry.npmjs.org"
 
       - name: 安装依赖
-        run: pnpm install
+        run: npm install
 
       - name: 运行构建
-        run: pnpm run build
+        run: npm run build
 
       - name: 发布到npm
-        run: "pnpm publish --no-git-checks --provenance --otp=${{ secrets.NPM_TOKEN }}"
+        run: "npm publish --no-git-checks"
