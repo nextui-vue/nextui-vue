@@ -39,4 +39,4 @@ jobs:
         run: pnpm run build
 
       - name: 发布到npm
-        run: pnpm publish --no-git-checks --provenance
+        run: "pnpm publish --no-git-checks --provenance --otp=${{ secrets.NPM_TOKEN }}"
