@@ -1,17 +1,20 @@
-name: "Publish"
+name: "Alert Component"
+
+permissions:
+  contents: write
+  id-token: write
+  actions: write
 
 on:
-  workflow_call:
-    inputs:
-      component:
-        required: true
-        type: string
+  push:
+    tags:
+      - "@vue-nextui/alert@*"
 
 jobs:
   publish:
     defaults:
       run:
-        working-directory: "packages/components/${{ inputs.component }}"
+        working-directory: "packages/components/alert"
     runs-on: ubuntu-latest
     permissions:
       contents: read
