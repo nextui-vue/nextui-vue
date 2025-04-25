@@ -38,9 +38,6 @@
     "dev": "rolldown --watch -c rolldown.config.ts",
     "bump": "bumpp --tag '@vue-nextui/alert@' --sign"
   },
-  "dependencies": {
-    "@vue-nextui/shared": "workspace: *"
-  },
   "devDependencies": {
     "@heroui/theme": "^2.4.11",
     "@types/node": "^22.13.11",
