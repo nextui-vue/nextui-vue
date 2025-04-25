@@ -28,7 +28,7 @@ jobs:
       - name: 设置nodejs
         uses: actions/setup-node@v4
         with:
-          cache: "pnpm"
+          # cache: "pnpm"
           node-version: "20"
           registry-url: "https://registry.npmjs.org"
 
