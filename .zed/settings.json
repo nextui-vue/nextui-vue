@@ -16,7 +16,8 @@
   },
   "vim_mode": false,
   "ui_font_size": 22,
-  "buffer_font_family": "Monaco Nerd Font",
+  "buffer_font_family": "Ubuntu Sans",
+  "ui_font_family": "Ubuntu Sans",
   "buffer_font_size": 20,
   "current_line_highlight": "line",
   "tabs": {
@@ -28,7 +29,7 @@
   },
   "theme": {
     "mode": "system",
-    "light": "Andromeda",
+    "light": "Ayu Light",
     "dark": "One Dark"
   },
   "autosave": "on_focus_change",
@@ -37,6 +38,18 @@
     "source.fixAll.eslint": true,
     "source.organizeImports": false
   },
+  "formatter": {
+    "external": {
+      "command": "eslint",
+      "arguments": ["--stdin-filename", "{buffer_path}"]
+    }
+  },
+  // "languages": {
+  //   "Vue.js": {
+  //     "format_on_save": "on",
+  //     "formatter": {}
+  //   }
+  // },
   "lsp": {
     "eslint": {
       "settings": {
