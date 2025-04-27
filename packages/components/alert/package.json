@@ -32,21 +32,16 @@
     "dist"
   ],
   "scripts": {
-    "dev:vite": "vite -w build",
-    "build:vite": "vite build",
-    "build": "rolldown -c rolldown.config.ts",
-    "dev": "rolldown --watch -c rolldown.config.ts",
+    "build": "tsdown",
+    "dev": "tsdown --watch",
     "bump": "bumpp --tag '@vue-nextui/alert@' --sign"
   },
   "devDependencies": {
     "@heroui/theme": "^2.4.11",
     "@types/node": "^22.13.11",
-    "@vitejs/plugin-vue": "^5.2.3",
     "@vue/tsconfig": "^0.7.0",
-    "rolldown": "1.0.0-beta.7",
+    "tsdown": "^0.9.8",
     "unplugin-vue": "^6.0.1",
-    "vite": "^6.2.3",
-    "vite-plugin-dts": "^4.5.0",
     "vue": "^3.5.13"
   }
 }
