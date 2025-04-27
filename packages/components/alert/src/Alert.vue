@@ -2,7 +2,6 @@
 import { computed } from "vue";
 import { alert } from "@heroui/theme";
 import { defaultIconPath, successIconPath, warningIconPath } from "./constant";
-
 export interface AlertProps {
     /**
      * 警告消息的标题
