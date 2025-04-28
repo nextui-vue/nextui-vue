@@ -35,7 +35,7 @@ function ripple(event: MouseEvent) {
       height: ['0', `${radius}px`],
     },
     {
-      duration: 400,
+      duration: 450,
       easing: 'ease-in',
       fill: 'forwards',
     },
