@@ -61,6 +61,7 @@ interface Button {
    * 是否禁用动画效果
    */
   disableAnimation: boolean
+  spinnerPlacement: "start" | "end"
 }
 
 type ButtonState = 'pressed' | 'hover'
@@ -68,6 +69,12 @@ type ButtonState = 'pressed' | 'hover'
 type ButtonProps = Partial<Button>
 
 const props = defineProps<ButtonProps>()
+const slots = defineSlots<{
+  default(): any
+  startContent(): any
+  endContent(): any
+  spinner(): any
+}>()
 
 const buttonState = ref<ButtonState | undefined>()
 
@@ -96,6 +103,9 @@ function setButtonState(state?: ButtonState) {
     @mouseenter="setButtonState('hover')"
     @mouseleave="setButtonState()"
   >
-    <slot />
+      <slot name="startContent" />
+      <slot name="spinner" />
+      <slot />
+      <slot name="endContent" />
   </button>
 </template>
