@@ -1,5 +1,4 @@
 packages:
-  - 'packages/components'
-  - 'packages/core'
+  - packages/**
   - playground
   - docs
