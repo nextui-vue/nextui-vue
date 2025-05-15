@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress'
 import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons'
+import { componentViewMarkdownPlugin } from 'vitepress-plugin-vue-component-view'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -11,6 +12,7 @@ export default defineConfig({
   markdown: {
     config(md) {
       md.use(groupIconMdPlugin)
+      md.use(componentViewMarkdownPlugin)
     },
   },
   vite: {
