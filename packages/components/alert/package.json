@@ -37,7 +37,7 @@
     "bump": "bumpp --tag '@vue-nextui/alert@' --sign"
   },
   "devDependencies": {
-    "@heroui/theme": "^2.4.11",
+    "@heroui/theme": "^2.4.18",
     "@types/node": "^22.15.26",
     "@vue/tsconfig": "^0.7.0",
     "tsdown": "^0.9.8",
