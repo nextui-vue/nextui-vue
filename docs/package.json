@@ -9,7 +9,7 @@
     "build": "pnpm -w build && vitepress build"
   },
   "devDependencies": {
-    "@heroui/theme": "^2.4.11",
+    "@heroui/theme": "^2.4.19",
     "autoprefixer": "^10.4.21",
     "nextui-vue": "workspace: *",
     "postcss": "^8.5.3",
