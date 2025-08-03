@@ -17,7 +17,6 @@ export default defineConfig({
   },
   vite: {
     plugins: [
-      // @ts-expect-error ignore
       groupIconVitePlugin(),
     ],
   },
