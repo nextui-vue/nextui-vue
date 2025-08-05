@@ -1,7 +1,7 @@
 {
   "name": "@vue-nextui/button",
   "type": "module",
-  "version": "0.0.12",
+  "version": "0.0.13-beta.1",
   "author": {
     "name": "hotdog",
     "email": "hotdogc1017@gmail.com",
@@ -12,9 +12,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "license": "MIT",
-  "repository": {
-    "url": "git+https://github.com/hotdogc1017/nextui-vue.git"
-  },
+  "repository": "https://github.com/hotdogc1017/nextui-vue",
   "bugs": {
     "url": "https://github.com/hotdogc1017/nextui-vue/issues"
   },
@@ -36,7 +34,7 @@
   "scripts": {
     "build": "tsdown --minify",
     "dev": "tsdown -w",
-    "bump": "bumpp --tag '@vue-nextui/button@' --sign"
+    "bump": "bumpp --tag @vue-nextui/button@ --sign"
   },
   "dependencies": {
     "@vue-nextui/shared": "workspace: *"
