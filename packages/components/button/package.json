@@ -34,8 +34,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsdown -c rolldown.config.ts",
-    "dev": "tsdown --watch -c rolldown.config.ts",
+    "build": "tsdown --minify",
+    "dev": "tsdown -w",
     "bump": "bump --tag '@vue-nextui/button@' --sign"
   },
   "dependencies": {

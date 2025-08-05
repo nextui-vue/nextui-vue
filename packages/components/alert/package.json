@@ -32,8 +32,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsdown",
-    "dev": "tsdown --watch",
+    "build": "tsdown --minify",
+    "dev": "tsdown -w",
     "bump": "bumpp --tag '@vue-nextui/alert@' --sign"
   },
   "devDependencies": {
