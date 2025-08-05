@@ -12,9 +12,9 @@
     "registry": "https://registry.npmjs.org/"
   },
   "license": "MIT",
-  "repository": "https://github.com/hotdogc1017/nextui-vue",
+  "repository": "https://github.com/nextui-vue/nextui-vue",
   "bugs": {
-    "url": "https://github.com/hotdogc1017/nextui-vue/issues"
+    "url": "https://github.com/nextui-vue/nextui-vue/issues"
   },
   "keywords": [
     "nextui",
