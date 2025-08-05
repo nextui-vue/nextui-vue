@@ -1,9 +1,8 @@
 name: Publish the Button npm package
 
 permissions:
-  contents: write
   id-token: write
-  actions: write
+  contents: read
 
 on:
   push:
@@ -11,7 +10,7 @@ on:
       - "@vue-nextui/button@*"
 
 jobs:
-  test:
-    uses: ./.github/workflows/component-publish-npm.yml
+  button:
+    uses: ./.github/workflows/publish.yml
     with:
       component: "button"

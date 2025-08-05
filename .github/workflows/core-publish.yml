@@ -1,40 +1,47 @@
+name: Publish Core
+
 on:
-  workflow_call:
-    inputs:
-      component:
-        required: true
-        type: string
+  push:
+    tags:
+      - "nextui-vue@*"
+
+permissions:
+  id-token: write
+  contents: read
 
 jobs:
   publish:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: "packages/components/${{ inputs.component }}"
+        working-directory: "packages/core"
     env:
       NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
     steps:
-      - name: 签出代码
+      - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: 安装 pnpm
+      - name: Setup pnpm
         uses: pnpm/action-setup@v4
 
-      - name: 设置nodejs
+      - name: Setup nodejs
         uses: actions/setup-node@v4
         with:
           cache: "pnpm"
           node-version: "20"
           registry-url: "https://registry.npmjs.org"
 
-      - name: 安装依赖
+      - name: Install dependencies
         run: pnpm install
 
-      - name: 运行构建
+      - name: Build
         run: pnpm run build
 
-      - name: 发布到npm
-        run: pnpm publish --no-git-checks --provenance --access=public
+      - name: Update npm
+        run: npm install -g npm@latest
+
+      - name: Publish to npm
+        run: npm publish --no-git-checks --provenance --access=public
