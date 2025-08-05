@@ -44,4 +44,4 @@ jobs:
         run: npm install -g npm@latest
 
       - name: Publish to npm
-        run: npm publish --no-git-checks --provenance --access=public
+        run: npm publish --tag latest
