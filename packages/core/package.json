@@ -38,6 +38,6 @@
     "@vue-nextui/button": "workspace: *"
   },
   "devDependencies": {
-    "tsdown": "^0.13.2"
+    "tsdown": "^0.13.3"
   }
 }
