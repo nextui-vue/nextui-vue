@@ -1,7 +1,7 @@
 {
   "name": "nextui-vue",
   "type": "module",
-  "version": "0.0.12",
+  "version": "0.0.13-beta.1",
   "publishConfig": {
     "access": "public"
   },
@@ -38,6 +38,7 @@
     "@vue-nextui/button": "workspace: *"
   },
   "devDependencies": {
+    "bumpp": "^10.2.2",
     "tsdown": "^0.13.3"
   }
 }
