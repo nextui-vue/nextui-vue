@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.0.12",
   "private": true,
-  "packageManager": "pnpm@10.10.0",
+  "packageManager": "pnpm@10.14.0",
   "scripts": {
     "dev": "pnpm --parallel --filter \"./packages/components/*\" dev",
     "build": "pnpm --filter \"./packages/components/*\" build",
