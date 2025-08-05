@@ -1,4 +1,4 @@
-name: Publish the Button npm package
+name: Publish Button
 
 permissions:
   id-token: write

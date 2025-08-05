@@ -1,4 +1,4 @@
-name: Publish the Alert npm package
+name: Publish Alert
 
 permissions:
   id-token: write
