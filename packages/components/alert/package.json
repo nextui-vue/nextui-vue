@@ -12,9 +12,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "license": "MIT",
-  "repository": {
-    "url": "git+https://github.com/nextui-vue/nextui-vue.git"
-  },
+  "repository": "https://github.com/nextui-vue/nextui-vue",
   "bugs": {
     "url": "https://github.com/nextui-vue/nextui-vue/issues"
   },
@@ -34,7 +32,7 @@
   "scripts": {
     "build": "tsdown --minify",
     "dev": "tsdown -w",
-    "bump": "bumpp --tag '@vue-nextui/alert@' --sign"
+    "bump": "bumpp --tag @vue-nextui/alert@ --sign"
   },
   "devDependencies": {
     "@heroui/theme": "^2.4.11",
