@@ -11,10 +11,7 @@
     "url": "https://github.com/hotdogc1017"
   },
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/hotdogc1017/nextui-vue.git"
-  },
+  "repository": "https://github.com/nextui-vue/nextui-vue",
   "bugs": {
     "url": "https://github.com/hotdogc1017/nextui-vue/issues"
   },
