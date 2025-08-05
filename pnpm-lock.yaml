@@ -168,6 +168,9 @@ importers:
         specifier: 'workspace: *'
         version: link:../components/button
     devDependencies:
+      bumpp:
+        specifier: ^10.2.2
+        version: 10.2.2
       tsdown:
         specifier: ^0.13.3
         version: 0.13.3(typescript@5.7.2)
