@@ -167,6 +167,10 @@ importers:
       '@vue-nextui/button':
         specifier: 'workspace: *'
         version: link:../components/button
+    devDependencies:
+      tsdown:
+        specifier: ^0.13.2
+        version: 0.13.2(typescript@5.7.2)
 
   playground:
     dependencies:
