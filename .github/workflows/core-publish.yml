@@ -3,7 +3,7 @@ name: Publish Core
 on:
   push:
     tags:
-      - "nextui-vue@*"
+      - "v*.*.*"
 
 permissions:
   id-token: write

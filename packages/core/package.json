@@ -28,7 +28,7 @@
   "scripts": {
     "build": "tsdown --minify",
     "dev": "tsdown -w",
-    "bump": "bumpp --tag nextui-vue@ --sign"
+    "bump": "bumpp --tag v --sign"
   },
   "dependencies": {
     "@vue-nextui/alert": "workspace: *",
