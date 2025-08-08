@@ -1,8 +1,7 @@
 {
-  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  // "extends": "@vue/tsconfig/tsconfig.dom.json",
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "."
   },
-  "files": ["./index.ts"],
-  "include": ["./src/**/*", "./src/**/*.vue"]
+  "include": ["src/**/*.{js,ts,tsx,jsx,vue}"]
 }

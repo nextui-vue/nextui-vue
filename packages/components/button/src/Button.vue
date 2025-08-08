@@ -1,94 +1,58 @@
-<script lang="ts" setup>
-import { computed, ref } from 'vue'
-import { button } from '@heroui/theme'
-import { useRipple } from '@vue-nextui/shared'
+<script lang="ts">
+import type { ButtonProps as Props } from "./use-button";
+import { type HTMLNextUIVueProps } from "@vue-nextui/shared";
 
-interface Button {
-  /**
-   * 按钮的变体样式
-   */
-  variant:
-    | 'solid'
-    | 'bordered'
-    | 'light'
-    | 'flat'
-    | 'faded'
-    | 'shadow'
-    | 'ghost'
+export interface ButtonProps extends HTMLNextUIVueProps<"button"> {
+  isLoading?: boolean;
+  disableRipple?: boolean;
+  spinnerPlacement?: "start" | "end";
 
-  /**
-   * 按钮的尺寸
-   */
-  size: 'sm' | 'md' | 'lg'
+  /* Button variants */
+  variant?: Props["variant"];
+  size?: Props["size"];
+  color?: Props["color"];
+  radius?: Props["radius"];
+  fullWidth?: Props["fullWidth"];
+  isDisabled?: Props["isDisabled"];
+  isIconOnly?: Props["isIconOnly"];
+  disableAnimation?: Props["disableAnimation"];
 
-  /**
-   * 按钮的颜色
-   */
-  color:
-    | 'default'
-    | 'primary'
-    | 'secondary'
-    | 'success'
-    | 'warning'
-    | 'danger'
-
-  /**
-   * 按钮的圆角样式
-   */
-  radius: 'none' | 'sm' | 'md' | 'lg' | 'full'
-
-  /**
-   * 是否占满父容器宽度
-   */
-  fullWidth: boolean
-
-  /**
-   * 是否禁用按钮
-   */
-  isDisabled: boolean
-
-  /**
-   * 是否在按钮组中
-   */
-  isInGroup: boolean
-
-  /**
-   * 是否仅为图标按钮
-   */
-  isIconOnly: boolean
-
-  /**
-   * 是否禁用动画效果
-   */
-  disableAnimation: boolean
-  spinnerPlacement: "start" | "end"
+  /* Button aria */
+  role?: Props["role"]; // unsupported, just placeholder
 }
 
-type ButtonState = 'pressed' | 'hover'
+type ButtonState = "pressed" | "hover";
+</script>
 
-type ButtonProps = Partial<Button>
+<script lang="ts" setup>
+import { computed, ref, type Component } from "vue";
+import { button } from "@heroui/theme";
+import { useRipple } from "@vue-nextui/shared";
 
-const props = defineProps<ButtonProps>()
+const props = withDefaults(defineProps<ButtonProps>(), {
+  disableRipple: false,
+  disableAnimation: false,
+  spinnerPlacement: "start",
+  color: "primary",
+});
+
 const slots = defineSlots<{
-  default(): any
-  startContent(): any
-  endContent(): any
-  spinner(): any
-}>()
+  default(): Component;
+  startContent(): Component;
+  endContent(): Component;
+  spinner(): Component;
+}>();
 
-const buttonState = ref<ButtonState | undefined>()
-
-const buttonRef = ref<HTMLButtonElement>()
-useRipple(buttonRef)
+const buttonState = ref<ButtonState | undefined>();
+const buttonRef = ref<HTMLButtonElement>();
+useRipple(buttonRef);
 
 const className = computed(() => {
-  return button({ ...props })
-})
+  return button({ ...props });
+});
 
-function setButtonState(): void
-function setButtonState(state: ButtonState): void
 function setButtonState(state?: ButtonState) {
-  buttonState.value = state
+  buttonState.value = state;
 }
 </script>
 
@@ -103,9 +67,9 @@ function setButtonState(state?: ButtonState) {
     @mouseenter="setButtonState('hover')"
     @mouseleave="setButtonState()"
   >
-      <slot name="startContent" />
-      <slot name="spinner" />
-      <slot />
-      <slot name="endContent" />
+    <slot name="startContent" />
+    <slot name="spinner" />
+    <slot />
+    <slot name="endContent" />
   </button>
 </template>
