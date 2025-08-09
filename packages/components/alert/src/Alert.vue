@@ -1,19 +1,28 @@
 <script lang="ts" setup>
+import { AlertProps } from "./use-alert";
+
 import { computed } from "vue";
-import { type AlertProps } from "./use-alert";
 import { useAlert } from "./use-alert";
 import { defaultIconPath, successIconPath, warningIconPath } from "./constant";
-import { Button } from "@vue-nextui/button";
+// import { Button } from "@vue-nextui/button";
 
 const props = withDefaults(defineProps<AlertProps>(), {});
+
+const slots = defineSlots();
 
 const emits = defineEmits<{
   (e: "close"): void;
   (e: "visibleChange", isVisible: boolean): void;
 }>();
 
-const { base, mainWrapper, title, description, alertIcon, iconWrapper } =
-  useAlert(props);
+const {
+  baseProps,
+  mainWrapperProps,
+  titleProps,
+  descriptionProps,
+  alertIconProps,
+  iconWrapperProps,
+} = useAlert(props);
 
 const icon = computed(() => {
   const color = props.color;
@@ -35,10 +44,10 @@ function onClose() {
 </script>
 
 <template>
-  <div :class="base()">
+  <div v-bind="baseProps">
     <slot name="startContent" />
 
-    <div v-if="!props.hideIcon" :class="iconWrapper()">
+    <div v-if="!props.hideIcon" v-bind="iconWrapperProps">
       <slot name="icon">
         <svg
           fill="none"
@@ -46,28 +55,30 @@ function onClose() {
           viewBox="0 0 24 24"
           width="24"
           xmlns="http://www.w3.org/2000/svg"
-          :class="alertIcon()"
+          v-bind="alertIconProps"
         >
           <path :d="icon" />
         </svg>
       </slot>
     </div>
 
-    <div :class="mainWrapper()">
-      <div v-if="props.title" :class="title()">
-        {{ props.title }}
+    <div v-bind="mainWrapperProps">
+      <div v-bind="titleProps">
+        <slot name="title">
+          {{ props.title }}
+        </slot>
       </div>
-      <slot v-else />
 
-      <div v-if="props.description" :class="description()">
-        {{ props.description }}
+      <div v-bind="descriptionProps">
+        <slot name="description">
+          {{ props.description }}
+        </slot>
       </div>
-      <slot v-else name="description" />
     </div>
 
     <slot name="endContent" />
 
-    <Button v-if="props.isClosable" @click="onClose">close</Button>
+    <!-- <Button v-if="props.isClosable" @click="onClose">close</Button> -->
   </div>
 </template>
 

@@ -1,21 +1,26 @@
 import type {
   AlertSlots,
-  AlertVariantProps,
+  AlertVariantProps as _AlertVariantProps,
   SlotsToClasses,
 } from "@heroui/theme";
+import type { HTMLNextUIVueProps } from "@vue-nextui/shared";
+import type { MaybeRef, Reactive } from "vue";
 
-import { ref, computed, watchEffect, toValue, type MaybeRef } from "vue";
+import {
+  ref,
+  computed,
+  watch,
+  toValue,
+  toRefs,
+  mergeProps,
+  useSlots,
+} from "vue";
+import { pureObject } from "@vue-nextui/shared";
 import { alert } from "@heroui/theme";
 import { mapPropsVariants } from "@heroui/system";
-import {
-  clsx,
-  dataAttr,
-  isEmpty,
-  objectToDeps,
-  mergeProps,
-} from "@heroui/shared-utils";
+import { dataAttr, isEmpty } from "@heroui/shared-utils";
 
-export interface AlertProps {
+export interface AlertDefineProps extends /* @vue-ignore */ HTMLNextUIVueProps {
   title?: string;
   description?: string;
   isVisible?: boolean;
@@ -38,44 +43,96 @@ export interface AlertProps {
    * ```
    */
   classNames?: SlotsToClasses<AlertSlots>;
-
-  /* Alert variants */
-  variant?: AlertVariantProps["variant"];
-  color?: AlertVariantProps["color"];
-  radius?: AlertVariantProps["radius"];
-  hideIcon?: AlertVariantProps["hideIcon"];
-  hideIconWrapper?: AlertVariantProps["hideIconWrapper"];
-  hasContent?: AlertVariantProps["hasContent"];
 }
 
-export function useAlert(
-  originalProps: MaybeRef<AlertProps>,
-  slots: Record<string, any>,
-) {
-  const slotsProps = ref<Record<AlertSlots, string>>();
+/**
+ * Alert variants
+ */
+export interface AlertVariantProps {
+  variant?: _AlertVariantProps["variant"];
+  color?: _AlertVariantProps["color"];
+  radius?: _AlertVariantProps["radius"];
+  hideIcon?: _AlertVariantProps["hideIcon"];
+  hideIconWrapper?: _AlertVariantProps["hideIconWrapper"];
+  hasContent?: _AlertVariantProps["hasContent"];
+}
 
-  function updateSlotsProps(variantProps: AlertVariantProps) {
+export type AlertProps = AlertDefineProps & AlertVariantProps;
+
+export function useAlert(originalProps: MaybeRef<AlertProps>) {
+  const children = { ...useSlots() };
+  const defineProps = ref<AlertDefineProps>();
+  const variantProps = ref<AlertVariantProps>();
+
+  const slotsProps = computed(() => {
+    const {
+      title,
+      description,
+      isClosable,
+      isVisible: isVisibleProp,
+      isDefaultVisible,
+      class: className,
+      classNames,
+    } = defineProps.value ?? {};
+
+    const isVisible = isVisibleProp ?? isDefaultVisible ?? true;
+
     const slots = alert({
       hasContent: !isEmpty(description) || !isEmpty(children),
-      ...variantProps,
+      ...pureObject(variantProps.value ?? {}),
     });
-  }
 
-  const [props, variantProps] = mapPropsVariants(
-    toValue(originalProps),
-    alert.variantKeys,
+    const baseProps = {
+      "data-visible": dataAttr(isVisible),
+      "data-closeable": dataAttr(isClosable),
+      "data-has-title": dataAttr(!isEmpty(title)),
+      "data-has-description": dataAttr(!isEmpty(description)),
+      class: slots.base(
+        mergeProps({ class: classNames?.base }, { class: className }),
+      ),
+    };
+
+    const mainWrapperProps = {
+      class: slots.mainWrapper({ class: classNames?.mainWrapper }),
+    };
+    const descriptionProps = {
+      class: slots.description({ class: classNames?.description }),
+    };
+    const titleProps = {
+      class: slots.title({ class: classNames?.title }),
+    };
+    const alertIconProps = {
+      class: slots.alertIcon({ class: classNames?.alertIcon }),
+    };
+
+    const iconWrapperProps = {
+      class: slots.iconWrapper({ class: classNames?.iconWrapper }),
+    };
+    return {
+      baseProps,
+      mainWrapperProps,
+      descriptionProps,
+      titleProps,
+      alertIconProps,
+      iconWrapperProps,
+    };
+  });
+
+  watch(
+    originalProps,
+    (originalProps) => {
+      const [props, _variantProps] = mapPropsVariants(
+        toValue(originalProps),
+        alert.variantKeys,
+      );
+
+      defineProps.value = props;
+      variantProps.value = _variantProps;
+    },
+    {
+      immediate: true,
+    },
   );
 
-  const {
-    title,
-    description,
-    isClosable,
-    isVisible: isVisibleProp,
-    isDefaultVisible,
-    classNames,
-  } = props;
-
-  const isVisible = ref(isVisibleProp ?? isDefaultVisible ?? true);
-
-  return {};
+  return { ...toRefs(toValue(slotsProps)) };
 }
