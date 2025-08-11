@@ -1,0 +1,7 @@
+{
+    "lsp": {
+        "eslint": {
+            "enable_lsp_tasks": false
+        }
+    }
+}
