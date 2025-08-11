@@ -1,7 +1,7 @@
 {
   "name": "@vue-nextui/button",
   "type": "module",
-  "version": "0.0.13-beta.5",
+  "version": "0.0.14",
   "author": {
     "name": "hotdog",
     "email": "hotdogc1017@gmail.com",
@@ -34,17 +34,21 @@
   "scripts": {
     "build": "tsdown --minify",
     "dev": "tsdown -w",
-    "bump": "bumpp --tag @vue-nextui/button@ --sign"
+    "bump": "npm run build && bumpp --tag @vue-nextui/button@ --sign"
   },
   "dependencies": {
     "@vue-nextui/shared": "workspace: *"
   },
   "devDependencies": {
-    "@heroui/theme": "^2.4.11",
-    "@types/node": "^22.15.26",
-    "@vue/tsconfig": "^0.7.0",
-    "tsdown": "^0.13.3",
-    "unplugin-vue": "^6.0.1",
-    "vue": "^3.5.13"
+    "@heroui/shared-utils": "catalog:prod",
+    "@heroui/system": "catalog:prod",
+    "@heroui/theme": "catalog:prod",
+    "@heroui/use-aria-button": "catalog:prod",
+    "@types/node": "catalog:prod",
+    "@vue-nextui/shared": "workspace:*",
+    "@vue/tsconfig": "catalog:prod",
+    "@vueuse/core": "catalog:prod",
+    "unplugin-vue": "catalog:prod",
+    "vue": "catalog:prod"
   }
 }
