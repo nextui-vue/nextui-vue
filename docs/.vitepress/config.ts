@@ -4,6 +4,8 @@ import {
   groupIconVitePlugin,
 } from "vitepress-plugin-group-icons";
 import { componentViewMarkdownPlugin } from "vitepress-plugin-vue-component-view";
+import { tabsMarkdownPlugin } from "vitepress-plugin-tabs";
+import { npmCommandsMarkdownPlugin } from "vitepress-plugin-npm-commands";
 import tailwindcss from "@tailwindcss/vite";
 
 // https://vitepress.dev/reference/site-config
@@ -15,8 +17,10 @@ export default defineConfig({
 
   markdown: {
     config(md) {
-      md.use(groupIconMdPlugin);
       md.use(componentViewMarkdownPlugin);
+      md.use(tabsMarkdownPlugin);
+      md.use(npmCommandsMarkdownPlugin);
+      md.use(groupIconMdPlugin);
     },
   },
   vite: {
