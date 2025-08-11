@@ -44,4 +44,4 @@ jobs:
         run: npm install -g npm@latest
 
       - name: Publish to npm
-        run: npm publish --tag latest
+        run: pnpm publish --tag latest
