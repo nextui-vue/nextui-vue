@@ -15,6 +15,9 @@
   "bugs": {
     "url": "https://github.com/hotdogc1017/nextui-vue/issues"
   },
+  "files": [
+    "dist"
+  ],
   "keywords": [
     "nextui",
     "vue",
@@ -26,16 +29,12 @@
     ".": "./src/index.ts"
   },
   "scripts": {
-    "build": "tsdown --minify",
+    "build": "tsdown --dts --minify",
     "dev": "tsdown -w",
-    "bump": "bumpp --tag v --sign"
+    "bump": "npm run build && bumpp --tag v --sign"
   },
   "dependencies": {
     "@vue-nextui/alert": "workspace: *",
     "@vue-nextui/button": "workspace: *"
-  },
-  "devDependencies": {
-    "bumpp": "^10.2.2",
-    "tsdown": "^0.13.3"
   }
 }
