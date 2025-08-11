@@ -1,7 +1,7 @@
 {
   "name": "@vue-nextui/button",
   "type": "module",
-  "version": "0.0.13-beta.5",
+  "version": "0.0.14",
   "author": {
     "name": "hotdog",
     "email": "hotdogc1017@gmail.com",
@@ -34,7 +34,7 @@
   "scripts": {
     "build": "tsdown --minify",
     "dev": "tsdown -w",
-    "bump": "bumpp --tag @vue-nextui/button@ --sign"
+    "bump": "npm run build && bumpp --tag @vue-nextui/button@ --sign"
   },
   "dependencies": {
     "@vue-nextui/shared": "workspace: *"

@@ -66,7 +66,6 @@ export function useButton(
         spinnerPlacement = "start",
       } = { ...originalProps, ...attrs };
 
-      console.log(className);
       const isInGroup = false;
       const isDisabled = isDisabledProp || isLoading;
 
