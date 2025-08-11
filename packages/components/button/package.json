@@ -34,7 +34,7 @@
   "scripts": {
     "build": "tsdown --minify",
     "dev": "tsdown -w",
-    "bump": "bumpp --tag @vue-nextui/button@ --sign"
+    "bump": "npm run build && bumpp --tag @vue-nextui/button@ --sign"
   },
   "dependencies": {
     "@vue-nextui/shared": "workspace: *"
