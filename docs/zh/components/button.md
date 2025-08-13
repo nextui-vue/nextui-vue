@@ -26,7 +26,7 @@ bun add @vue-nextui/button
 :::
 
 > [!NOTE]
-> 如果你使用[全局安装](/guide/installation#全局安装)的方式，可忽略此安装步骤
+> 如果你使用[全局安装](/zh/guide/installation#全局安装)的方式，可忽略此安装步骤
 
 ## 导入
 ::: code-group
@@ -123,7 +123,7 @@ import { Button } from 'nextui-vue'
 传递 `isLoading` 属性以在按钮内显示 `Spinner` 组件。
 
 :::warning
-Work in process
+正在开发中
 :::
 
 您还可以通过将自定义组件传递给`spinner`插槽来自定义加载spinner。
@@ -262,4 +262,69 @@ Work in process
 </Button>
 :::
 
-###
+## 数据属性
+
+`Button` 在 `base` 元素上具有以下属性：
+
+- **data-hover**:
+  当按钮被悬停时。基于 [useElementHover](https://vueuse.org/core/useElementHover/#useelementhover)
+- **data-focus**:
+  当按钮被聚焦时。基于 [useFocus](https://vueuse.org/core/useFocus/#usefocus)。
+- **data-focus-visible**: 目前尚不支持，默认为 `false`。
+- **data-disabled**:
+  当按钮被禁用时。基于 `isDisabled` 属性。
+- **data-pressed**:
+  当按钮被按下时。基于 [useMousePressed](https://vueuse.org/core/useMousePressed/#usemousepressed)
+- **data-loading**:
+  当按钮正在加载时。基于 `isLoading` 属性。
+
+## 无障碍访问
+
+:::info
+某些功能可能不够完善，如果您发现任何问题，请提交 issue
+:::
+
+- Button 具有 `button` 角色（目前尚不支持，计划支持）。
+- 支持 <Kbd>Space</Kbd> 和 <Kbd>Enter</Kbd> 键的键盘事件。
+- 鼠标和触摸事件处理，以及按下状态管理。
+- 键盘焦点管理和跨浏览器标准化。
+
+:heart:来自 HeroUI：我们推荐阅读这篇[博客文章](https://react-spectrum.adobe.com/blog/building-a-button-part-1.html)，了解构建在各种设备和交互方法下都能良好工作的按钮的复杂性。
+
+## API
+
+### Button 属性
+
+| 名称 | 类型 | 默认值 | 描述 |
+| --- | --- | --- | --- |
+| variant | `"solid" \| "bordered" \| "light" \| "flat" \| "faded" \| "shadow" \| "ghost"` | `"solid"` | 按钮外观样式。 |
+| color | `"default" \| "primary" \| "secondary" \| "success" \| "warning" \| "danger"` | `"default"` | 按钮颜色主题。 |
+| size | `"sm" \| "md" \| "lg"` | `"md"` | 按钮大小 |
+| radius | `"none" \| "sm" \| "md" \| "lg" \| "full"` | `"md"` | 按钮边框圆角。 |
+| spinnerPlacement | `"start" \| "end"` | `"start"` | 加载器位置。 |
+| fullWidth | `boolean` | `false` | 按钮是否应占据其父元素的全宽。 |
+| isIconOnly | `boolean` | `false` | 按钮是否应具有相同的宽度和高度。 |
+| isDisabled | `boolean` | `false` | 按钮是否被禁用。 |
+| isLoading | `boolean` | `false` | 按钮是否正在加载。 |
+| disableRipple | `boolean` | `false` | 按钮是否应在按下时显示涟漪效果。 |
+| disableAnimation | `boolean` | `false` | 按钮是否应显示动画。 |
+
+
+### Button 插槽
+| 名称 | 作用域 | 描述 |
+| --- | --- | --- |
+| default | - | 默认插槽。 |
+| startContent | - | 开始内容插槽。 |
+| endContent | - | 结束内容插槽。 |
+| spinner | - | 加载器插槽。 |
+
+### Button 事件 (开发中)
+| 名称 | 类型 | 默认值 |
+| --- | --- | --- |
+| press | `(e: PressEvent) => void` | - |
+| pressStart | `(e: PressEvent) => void` | - |
+| pressEnd | `(e: PressEvent) => void` | - |
+| pressChange | `(isPressed: boolean) => void` | - |
+| pressUp | `(e: PressEvent) => void` | - |
+| keyDown | `(e: KeyboardEvent) => void` | - |
+| keyUp | `(e: KeyboardEvent) => void` | - |
