@@ -122,11 +122,40 @@ import { Button } from 'nextui-vue'
 正在开发中
 :::
 
-您还可以通过将自定义组件传递给`spinner`插槽来自定义加载spinner。
-
+你还可以通过将自定义组件传递给`spinner`插槽来自定义加载spinner。
 
 ::: component-view
-<Button isLoading color="secondary">
+<Button color="secondary" isLoading>
+  <template #spinner>
+      <svg
+          class="animate-spin h-5 w-5 text-current"
+          fill="none"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+      >
+          <circle
+              class="opacity-25"
+              cx="12"
+              cy="12"
+              r="10"
+              stroke="currentColor"
+              strokeWidth="4"
+          />
+          <path
+              class="opacity-75"
+              d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+              fill="currentColor"
+          />
+      </svg>
+  </template>
+  Loading
+</Button>
+:::
+
+`spinner`插槽默认显示在按钮的开始位置，你也可以在按钮的结束位置显示自定义组件，通过指定`spinnerPlacement`来实现。
+
+::: component-view
+<Button color="secondary" spinnerPlacement="end" isLoading>
   <template #spinner>
       <svg
           class="animate-spin h-5 w-5 text-current"
@@ -154,7 +183,7 @@ import { Button } from 'nextui-vue'
 :::
 
 ### 带图标
-您可以通过传递`startContent`或`endContent`插槽来添加图标。
+你可以通过传递`startContent`或`endContent`插槽来添加图标。
 
 ::: component-view
 <div className="flex gap-4 items-center">
@@ -206,7 +235,7 @@ import { Button } from 'nextui-vue'
 :::
 
 ### 仅图标
-您还可以通过将`isIconOnly`属性和所需的图标作为默认子元素传递来显示不带文本的按钮。
+你还可以通过将`isIconOnly`属性和所需的图标作为默认子元素传递来显示不带文本的按钮。
 
 ::: component-view
 <div className="flex gap-4 items-center">
@@ -247,13 +276,31 @@ import { Button } from 'nextui-vue'
 :::
 
 ### 自定义样式
-您可以通过将自定义 Tailwind CSS 类传递给组件槽来自定义 Button 组件。
+你可以通过将自定义 Tailwind CSS 类传递给组件槽来自定义 Button 组件。
 
 ::: component-view
 <Button
   class="bg-gradient-to-tr from-pink-500 to-yellow-500 bg-sky-500 text-white shadow-lg"
   radius="full"
 >
+  Button
+</Button>
+:::
+
+### 禁用Ripple
+按钮按下时将不会出现涟漪效果
+
+::: component-view
+<Button disableRipple>
+  Button
+</Button>
+:::
+
+### 禁用动画
+按钮按下时将不会出现动画效果
+
+::: component-view
+<Button disableAnimation>
   Button
 </Button>
 :::
@@ -277,7 +324,7 @@ import { Button } from 'nextui-vue'
 ## 无障碍访问
 
 :::info
-某些功能可能不够完善，如果您发现任何问题，请提交 issue
+某些功能可能不够完善，如果你发现任何问题，请提交 issue
 :::
 
 - Button 具有 `button` 角色（目前尚不支持，计划支持）。
