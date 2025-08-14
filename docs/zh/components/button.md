@@ -5,10 +5,6 @@ import { Button } from 'nextui-vue'
 # Button
 允许用户通过单次轻触执行操作和选择
 
-::: warning
-目前Button组件在vitepress上的显示有些问题，查看[相关issue](https://github.com/nextui-vue/nextui-vue/issues/141#issuecomment-3175796835)了解上下文信息
-:::
-
 ## 安装
 ::: code-group
 ```sh [npm]
