@@ -19,10 +19,10 @@ export interface ButtonVariantProps {
   size?: _ButtonVariantProps["size"];
   color?: _ButtonVariantProps["color"];
   radius?: _ButtonVariantProps["radius"];
-  fullWidth?: _ButtonVariantProps["fullWidth"];
-  isDisabled?: _ButtonVariantProps["isDisabled"];
-  isIconOnly?: _ButtonVariantProps["isIconOnly"];
-  disableAnimation?: _ButtonVariantProps["disableAnimation"];
+  fullWidth?: boolean;
+  isDisabled?: boolean;
+  isIconOnly?: boolean;
+  disableAnimation?: boolean;
 }
 
 export interface ButtonAriaProps {}
