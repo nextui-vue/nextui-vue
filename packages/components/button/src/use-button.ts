@@ -37,11 +37,12 @@ export function useButton(
 ) {
   const attrs = useAttrs();
   const bindedProps = ref<object>();
+  const disableRipple = ref<boolean>(false);
   const { focused: isFocused } = useFocus(buttonRef);
   const { pressed: isPressed } = useMousePressed({ target: buttonRef });
   const isHovered = useElementHover(buttonRef);
 
-  useRipple(buttonRef);
+  useRipple(buttonRef, { disabled: disableRipple });
 
   watch(
     [
@@ -66,6 +67,7 @@ export function useButton(
         spinnerPlacement = "start",
       } = { ...originalProps, ...attrs };
 
+      disableRipple.value = disableRippleProp || disableAnimation;
       const isInGroup = false;
       const isDisabled = isDisabledProp || isLoading;
 
