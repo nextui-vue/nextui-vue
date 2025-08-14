@@ -3,7 +3,7 @@ import { Button } from 'nextui-vue'
 </script>
 
 # Button
-允许用户通过单次轻触执行操作和选择
+允许用户通过单次轻触执行操作和选择。
 
 ## 安装
 ::: code-group
