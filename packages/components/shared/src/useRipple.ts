@@ -1,5 +1,9 @@
-import { onBeforeMount, ref } from "vue";
-import { type MaybeRefOrGetter, useEventListener } from "@vueuse/core";
+import { onMounted, ref, isRef, watch, type MaybeRef } from "vue";
+import {
+  type MaybeRefOrGetter,
+  useEventListener,
+  useMounted,
+} from "@vueuse/core";
 
 const rippleElement = ref();
 
@@ -48,11 +52,28 @@ function ripple(event: MouseEvent) {
 
 export function useRipple(
   target: MaybeRefOrGetter<HTMLElement | null | undefined>,
+  options?: { disabled?: MaybeRef<boolean> },
 ) {
-  onBeforeMount(() => {
+  const isMounted = useMounted();
+  if (isMounted) {
     rippleElement.value = document.createElement("span");
-  });
-  useEventListener(target, "click", ripple);
+  }
+
+  const { disabled = false } = options || {};
+  const cleanup = ref<ReturnType<typeof useEventListener>>();
+
+  const disabledSource = isRef(disabled) ? disabled : ref(disabled);
+  watch(
+    disabledSource,
+    (value) => {
+      if (value) {
+        cleanup.value?.();
+      } else {
+        cleanup.value = useEventListener(target, "click", ripple);
+      }
+    },
+    { immediate: true },
+  );
 }
 
 export default useRipple;
