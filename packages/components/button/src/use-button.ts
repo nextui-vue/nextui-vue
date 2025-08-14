@@ -64,7 +64,6 @@ export function useButton(
         disableAnimation = false,
         isDisabled: isDisabledProp = false,
         isIconOnly = false,
-        spinnerPlacement = "start",
       } = { ...originalProps, ...attrs };
 
       disableRipple.value = disableRippleProp || disableAnimation;

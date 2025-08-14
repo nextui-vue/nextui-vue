@@ -3,7 +3,10 @@ import { useButton, type ButtonProps } from "./use-button";
 
 import { computed, ref, type Component } from "vue";
 
-const props = withDefaults(defineProps<ButtonProps>(), {});
+const props = withDefaults(defineProps<ButtonProps>(), {
+  spinnerPlacement: "start",
+  isLoading: false,
+});
 
 defineSlots<{
   default(): Component;
@@ -19,8 +22,12 @@ const bind = useButton(props, buttonRef);
 <template>
   <button ref="buttonRef" v-bind="bind">
     <slot name="startContent" />
-    <slot name="spinner" />
+    <slot
+      v-if="isLoading && props.spinnerPlacement === 'start'"
+      name="spinner"
+    />
     <slot />
+    <slot v-if="isLoading && props.spinnerPlacement === 'end'" name="spinner" />
     <slot name="endContent" />
   </button>
 </template>
