@@ -1,7 +1,7 @@
 {
   "name": "@vue-nextui/button",
   "type": "module",
-  "version": "0.0.15",
+  "version": "1.0.0-beta.1",
   "author": {
     "name": "hotdog",
     "email": "hotdogc1017@gmail.com",
