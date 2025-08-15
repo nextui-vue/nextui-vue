@@ -10,13 +10,13 @@
     "dev": "vite"
   },
   "devDependencies": {
-    "@tailwindcss/vite": "^4.1.12",
-    "@types/node": "^24.3.0",
-    "@vitejs/plugin-vue": "^6.0.1",
+    "@tailwindcss/vite": "catalog:prod",
+    "@types/node": "catalog:prod",
+    "@vitejs/plugin-vue": "catalog:prod",
     "@vue/repl": "^4.6.3",
-    "@vueuse/core": "^13.6.0",
-    "tailwindcss": "^4.1.12",
-    "vite": "^7.1.2",
-    "vue": "^3.5.18"
+    "@vueuse/core": "catalog:prod",
+    "tailwindcss": "catalog:prod",
+    "vite": "catalog:prod",
+    "vue": "catalog:prod"
   }
 }
