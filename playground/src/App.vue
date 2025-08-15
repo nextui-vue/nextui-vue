@@ -1,48 +1,103 @@
-<script lang="ts" setup>
-import { Button } from "@vue-nextui/button"
+<script setup lang="ts">
+import { ref, watch, watchEffect } from "vue";
+import { useDark } from "@vueuse/core";
+import { Repl } from "@vue/repl";
+import Monaco from "@vue/repl/monaco-editor";
 
-console.log(Button)
+const loading = ref(false);
+const replRef = ref<InstanceType<typeof Repl>>();
 
-const accordionItems = [
-  {
-    value: '第一项',
-    title: '标题1',
-    content: '内容内容内容内容内容内容内容',
-  },
-  {
-    value: '第二项',
-    title: '标题2',
-    content: '内容内容内容内容内容内容内容',
-  },
-  {
-    value: '第三项',
-    title: '标题3',
-    content: '内容内容内容内容内容内容内容',
-  },
-]
+const AUTO_SAVE_KEY = "auto-save-state";
+function getAutoSaveState() {
+    return JSON.parse(localStorage.getItem(AUTO_SAVE_KEY) || "true");
+}
+function setAutoSaveState(value: boolean) {
+    localStorage.setItem(AUTO_SAVE_KEY, JSON.stringify(value));
+}
+
+const autoSave = ref(getAutoSaveState());
+
+const previewOptions = {
+    headHTML: `
+    <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime"><\/script>
+    <script>
+      window.__unocss = {
+        rules: [],
+        presets: [],
+      }
+    <\/script>
+  `,
+};
+
+const dark = useDark();
+
+const theme = new URLSearchParams(location.search).get("theme");
+if (theme === "dark") {
+    dark.value = true;
+}
+
+const handleKeydown = (evt: KeyboardEvent) => {
+    if ((evt.ctrlKey || evt.metaKey) && evt.code === "KeyS") {
+        evt.preventDefault();
+        return;
+    }
+};
+
+// persist state
+// watchEffect(() =>
+//     history.replaceState(
+//         {},
+//         "",
+//         `${location.origin}${location.pathname}#${store.serialize()}`,
+//     ),
+// );
+
+const refreshPreview = () => {
+    replRef.value?.reload();
+};
+
+watch(autoSave, setAutoSaveState);
 </script>
 
 <template>
-  <div class="h-svh flex">
-    <div class="m-auto w-[500px] h-[500px]">
-      <Button type="solid">
-        Test
-      </Button>
-
-      <!-- <NVAccordion>
-        <template
-          v-for="(item, index) in accordionItems"
-          :key="index"
-        >
-          <NVAccordionItem v-bind="item">
-            <span>{{ item.content }}</span>
-          </NVAccordionItem>
-        </template>
-      </NVAccordion> -->
+    <div v-if="!loading" antialiased>
+        <!-- <Header :store="store" @refresh="refreshPreview" /> -->
+        <Repl
+            ref="replRef"
+            v-model="autoSave"
+            :theme="dark ? 'dark' : 'light'"
+            :preview-theme="true"
+            :editor="Monaco"
+            :preview-options="previewOptions"
+            :clear-console="false"
+            @keydown="handleKeydown"
+        />
     </div>
-  </div>
+    <template v-else>
+        <div class="h-100vh">Loading...</div>
+    </template>
 </template>
 
-<style scoped>
+<style>
+body {
+    --at-apply: m-none text-13px;
+    font-family:
+        -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+        Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    --base: #444;
+    --nav-height: 50px;
+}
 
+.vue-repl {
+    height: calc(100vh - var(--nav-height)) !important;
+}
+
+.dark .vue-repl,
+.vue-repl {
+    --color-branding: var(--el-color-primary) !important;
+}
+
+.dark body {
+    background-color: #1a1a1a;
+}
 </style>

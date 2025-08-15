@@ -1,34 +1,22 @@
 {
-  "name": "@vue-nextui/playground",
+  "name": "nextui-vue-playground",
   "type": "module",
-  "version": "0.0.12",
-  "private": "true",
+  "private": true,
+  "author": "hotdogc1017@gmail.com",
   "description": "NextUI Vue Playground",
-  "author": {
-    "name": "hotdog",
-    "email": "hotdogc1017@gmail.com",
-    "url": "https://x.com/hotdog__1017"
-  },
   "license": "MIT",
-  "main": "main.ts",
+  "packageManager": "pnpm@10.14.0",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "dependencies": {
-    "@nextui-org/theme": "^2.4.5",
-    "@vue-nextui/button": "workspace: *",
-    "nextui-vue": "workspace: *",
-    "vue": "^3.5.13"
+    "dev": "vite"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^5.2.3",
-    "@vue/tsconfig": "^0.7.0",
-    "autoprefixer": "^10.4.21",
-    "postcss": "^8.5.3",
-    "tailwindcss": "^3.4.6",
-    "vite": "^6.2.3"
+    "@tailwindcss/vite": "^4.1.12",
+    "@types/node": "^24.3.0",
+    "@vitejs/plugin-vue": "^6.0.1",
+    "@vue/repl": "^4.6.3",
+    "@vueuse/core": "^13.6.0",
+    "tailwindcss": "^4.1.12",
+    "vite": "^7.1.2",
+    "vue": "^3.5.18"
   }
 }
