@@ -3,7 +3,7 @@ import {
   groupIconMdPlugin,
   groupIconVitePlugin,
 } from "vitepress-plugin-group-icons";
-import { componentViewMarkdownPlugin } from "vitepress-plugin-vue-component-view";
+import { componentViewMarkdownPlugin } from "vitepress-plugin-component";
 import { tabsMarkdownPlugin } from "vitepress-plugin-tabs";
 import { npmCommandsMarkdownPlugin } from "vitepress-plugin-npm-commands";
 import tailwindcss from "@tailwindcss/vite";
@@ -62,8 +62,8 @@ export default defineConfig({
     },
     zh: {
       label: "简体中文",
+      lang: "zh",
       link: "/zh/",
-      lang: "zh-CN",
       title: "NextUI Vue",
       description: "基于HeroUI Theme构建的Vue3组件库",
       themeConfig: {

@@ -100,6 +100,9 @@ importers:
       vitepress:
         specifier: latest
         version: 1.6.4(patch_hash=9d52474c1dc7ca0ada4efc9215b91519ad4dfae4f97690a0de2945fbca3244f4)(@algolia/client-search@5.35.0)(@types/node@22.17.0)(lightningcss@1.30.1)(postcss@8.5.6)(search-insights@2.17.3)(terser@5.43.1)(typescript@5.9.2)
+      vitepress-plugin-component:
+        specifier: latest
+        version: 1.0.0
       vitepress-plugin-group-icons:
         specifier: ^1.3.7
         version: 1.6.1(markdown-it@14.1.0)(vite@5.4.19(@types/node@22.17.0)(lightningcss@1.30.1)(terser@5.43.1))
@@ -109,9 +112,6 @@ importers:
       vitepress-plugin-tabs:
         specifier: ^0.7.1
         version: 0.7.1(vitepress@1.6.4(patch_hash=9d52474c1dc7ca0ada4efc9215b91519ad4dfae4f97690a0de2945fbca3244f4)(@algolia/client-search@5.35.0)(@types/node@22.17.0)(lightningcss@1.30.1)(postcss@8.5.6)(search-insights@2.17.3)(terser@5.43.1)(typescript@5.9.2))(vue@3.5.18(typescript@5.9.2))
-      vitepress-plugin-vue-component-view:
-        specifier: latest
-        version: 0.3.1
 
   packages/bin/create-component-template:
     devDependencies:
@@ -3258,6 +3258,9 @@ packages:
       yaml:
         optional: true
 
+  vitepress-plugin-component@1.0.0:
+    resolution: {integrity: sha512-lSfSxFvC/lkX411HgHIb3NJG0f3IxKs55sw+RrpBaDqcRbQrQYMG6iWtg51Z9fQ+bx+e+bXO+d4zbUfWWFW+zA==}
+
   vitepress-plugin-group-icons@1.6.1:
     resolution: {integrity: sha512-eoFlFAhAy/yTZDbaIgA/nMbjVYXkf8pz8rr75MN2VCw7yH60I3cw6bW5EuwddAeafZtBqbo8OsEGU7TIWFiAjg==}
     peerDependencies:
@@ -3275,9 +3278,6 @@ packages:
     peerDependencies:
       vitepress: ^1.0.0
       vue: ^3.5.0
-
-  vitepress-plugin-vue-component-view@0.3.1:
-    resolution: {integrity: sha512-CQDptm5ZcQ3JSgkQErAcOh7hML/Mbfr7FP3vxGKUS8dRxE9TmmGU0h1dajoRRCz6SlKa/iB6pkLwZzWekPVQVA==}
 
   vitepress@1.6.4:
     resolution: {integrity: sha512-+2ym1/+0VVrbhNyRoFFesVvBvHAVMZMK0rw60E3X/5349M1GuVdKeazuksqopEdvkKwKGs21Q729jX81/bkBJg==}
@@ -6244,6 +6244,8 @@ snapshots:
       terser: 5.43.1
       yaml: 2.8.0
 
+  vitepress-plugin-component@1.0.0: {}
+
   vitepress-plugin-group-icons@1.6.1(markdown-it@14.1.0)(vite@5.4.19(@types/node@22.17.0)(lightningcss@1.30.1)(terser@5.43.1)):
     dependencies:
       '@iconify-json/logos': 1.2.4
@@ -6265,8 +6267,6 @@ snapshots:
     dependencies:
       vitepress: 1.6.4(patch_hash=9d52474c1dc7ca0ada4efc9215b91519ad4dfae4f97690a0de2945fbca3244f4)(@algolia/client-search@5.35.0)(@types/node@22.17.0)(lightningcss@1.30.1)(postcss@8.5.6)(search-insights@2.17.3)(terser@5.43.1)(typescript@5.9.2)
       vue: 3.5.18(typescript@5.9.2)
-
-  vitepress-plugin-vue-component-view@0.3.1: {}
 
   vitepress@1.6.4(patch_hash=9d52474c1dc7ca0ada4efc9215b91519ad4dfae4f97690a0de2945fbca3244f4)(@algolia/client-search@5.35.0)(@types/node@22.17.0)(lightningcss@1.30.1)(postcss@8.5.6)(search-insights@2.17.3)(terser@5.43.1)(typescript@5.9.2):
     dependencies:
