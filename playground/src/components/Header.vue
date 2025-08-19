@@ -40,7 +40,7 @@ const toggleDark = useToggle(dark);
           ><Icon icon="material-symbols:refresh" width="24" height="24"
         /></Button>
         <Button
-          title="Refresh sandbox"
+          title="Toggle theme"
           color="default"
           variant="light"
           size="sm"
