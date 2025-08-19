@@ -48,7 +48,7 @@ catalogs:
 
 patchedDependencies:
   '@vue/repl':
-    hash: 26f31855c5c81c820b12e4738708407fcac724b93588ea994171a7da35571d95
+    hash: 86097ebfd4de79b7984b94c1b8cdda7de694d3d6045d56e6ed6eb6c9b37faa8f
     path: patches/@vue__repl.patch
   vitepress:
     hash: 9d52474c1dc7ca0ada4efc9215b91519ad4dfae4f97690a0de2945fbca3244f4
@@ -267,7 +267,7 @@ importers:
         version: 6.0.1(vite@7.1.2(@types/node@22.17.0)(jiti@2.5.1)(lightningcss@1.30.1)(terser@5.43.1)(yaml@2.8.0))(vue@3.5.18(typescript@5.9.2))
       '@vue/repl':
         specifier: ^4.6.3
-        version: 4.6.3(patch_hash=26f31855c5c81c820b12e4738708407fcac724b93588ea994171a7da35571d95)
+        version: 4.6.3(patch_hash=86097ebfd4de79b7984b94c1b8cdda7de694d3d6045d56e6ed6eb6c9b37faa8f)
       '@vueuse/core':
         specifier: catalog:prod
         version: 11.3.0(vue@3.5.18(typescript@5.9.2))
@@ -4656,7 +4656,7 @@ snapshots:
     dependencies:
       '@vue/shared': 3.5.18
 
-  '@vue/repl@4.6.3(patch_hash=26f31855c5c81c820b12e4738708407fcac724b93588ea994171a7da35571d95)': {}
+  '@vue/repl@4.6.3(patch_hash=86097ebfd4de79b7984b94c1b8cdda7de694d3d6045d56e6ed6eb6c9b37faa8f)': {}
 
   '@vue/runtime-core@3.5.18':
     dependencies:
