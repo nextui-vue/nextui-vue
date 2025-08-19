@@ -33,7 +33,8 @@
     "dev": "tsdown -w",
     "bump": "npm run build && bumpp --tag v --sign"
   },
-  "dependencies": {
+  "devDependencies": {
+    "unplugin-vue": "catalog:prod",
     "@vue-nextui/alert": "workspace: *",
     "@vue-nextui/button": "workspace: *"
   }
