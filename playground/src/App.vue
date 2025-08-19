@@ -4,9 +4,12 @@ import { useDark } from "@vueuse/core";
 import { Repl } from "@vue/repl";
 import Monaco from "@vue/repl/monaco-editor";
 import { Header } from "./components";
+import { useStore } from "./composables";
 
 const loading = ref(false);
 const replRef = ref<InstanceType<typeof Repl>>();
+
+const store = useStore();
 
 const AUTO_SAVE_KEY = "auto-save-state";
 function getAutoSaveState() {
@@ -20,13 +23,7 @@ const autoSave = ref(getAutoSaveState());
 
 const previewOptions = {
   headHTML: `
-    <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime"><\/script>
-    <script>
-      window.__unocss = {
-        rules: [],
-        presets: [],
-      }
-    <\/script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"><\/script>
   `,
 };
 
@@ -43,15 +40,6 @@ const handleKeydown = (evt: KeyboardEvent) => {
     return;
   }
 };
-
-// persist state
-// watchEffect(() =>
-//     history.replaceState(
-//         {},
-//         "",
-//         `${location.origin}${location.pathname}#${store.serialize()}`,
-//     ),
-// );
 
 const refreshPreview = () => {
   replRef.value?.reload();
@@ -71,6 +59,7 @@ watch(autoSave, setAutoSaveState);
       :editor="Monaco"
       :preview-options="previewOptions"
       :clear-console="false"
+      :store="store"
       @keydown="handleKeydown"
     />
   </div>

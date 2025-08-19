@@ -8,7 +8,6 @@ const emits = defineEmits<{
 }>();
 
 const dark = useDark();
-console.log(dark.value);
 const toggleDark = useToggle(dark);
 </script>
 
