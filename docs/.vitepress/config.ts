@@ -38,6 +38,10 @@ export default defineConfig({
         nav: [
           { text: "Guide", link: "/en/guide/introduction" },
           { text: "Components", link: "/en/components/button" },
+          {
+            text: "Playground[WIP]",
+            link: "https://github.com/nextui-vue/nextui-vue/pull/156",
+          },
           { text: "HeroUI", link: "https://heroui.com/" },
         ],
         sidebar: [
@@ -70,6 +74,10 @@ export default defineConfig({
         nav: [
           { text: "指南", link: "/zh/guide/introduction" },
           { text: "组件", link: "/zh/components/button" },
+          {
+            text: "演练场[开发中]",
+            link: "https://github.com/nextui-vue/nextui-vue/pull/156",
+          },
           { text: "HeroUI", link: "https://heroui.com/" },
         ],
         sidebar: [
