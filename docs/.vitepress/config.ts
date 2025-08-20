@@ -25,11 +25,6 @@ export default defineConfig({
   },
   vite: {
     plugins: [groupIconVitePlugin(), tailwindcss()],
-    build: {
-      rollupOptions: {
-        external: ["vue"],
-      },
-    },
   },
 
   locales: {

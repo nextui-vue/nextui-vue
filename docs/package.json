@@ -6,7 +6,8 @@
   "packageManager": "pnpm@9.0.0",
   "scripts": {
     "dev": "vitepress dev",
-    "build": "pnpm -w build:core && vitepress build"
+    "build": "pnpm -w build:core && vitepress build",
+    "preview": "pnpm build && vitepress preview"
   },
   "devDependencies": {
     "@heroui/theme": "catalog:prod",
