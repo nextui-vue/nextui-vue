@@ -17,7 +17,7 @@ import {
 } from "vue";
 import { pureObject } from "@vue-nextui/shared";
 import { alert } from "@heroui/theme";
-import { mapPropsVariants } from "@heroui/system";
+import { mapPropsVariants } from "@vue-nextui/shared";
 import { dataAttr, isEmpty } from "@heroui/shared-utils";
 
 export interface AlertDefineProps extends /* @vue-ignore */ HTMLNextUIVueProps {
