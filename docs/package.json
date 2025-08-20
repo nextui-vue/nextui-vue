@@ -6,13 +6,13 @@
   "packageManager": "pnpm@9.0.0",
   "scripts": {
     "dev": "vitepress dev",
-    "build": "pnpm -w build && vitepress build"
+    "build": "pnpm -w build:core && vitepress build"
   },
   "devDependencies": {
     "@heroui/theme": "catalog:prod",
-    "@tailwindcss/vite": "^4.1.11",
-    "@vue-nextui/core": "workspace: *",
-    "tailwindcss": "^4",
+    "@tailwindcss/vite": "catalog:prod",
+    "@vue-nextui/core": "workspace:*",
+    "tailwindcss": "catalog:prod",
     "vitepress": "latest",
     "vitepress-plugin-group-icons": "^1.3.7",
     "vitepress-plugin-npm-commands": "^0.8.1",
