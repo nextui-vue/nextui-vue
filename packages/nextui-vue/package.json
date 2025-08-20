@@ -1,0 +1,49 @@
+{
+  "name": "nextui-vue",
+  "type": "module",
+  "version": "0.0.15",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.com/"
+  },
+  "author": {
+    "name": "hotdog",
+    "email": "hotdogc1017@gmail.com",
+    "url": "https://github.com/hotdogc1017"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/nextui-vue/nextui-vue",
+  "bugs": {
+    "url": "https://github.com/hotdogc1017/nextui-vue/issues"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "nextui",
+    "vue",
+    "ui",
+    "ui framework",
+    "tailwindcss"
+  ],
+  "exports": {
+    ".": "./dist/index.js",
+    "./styles": "./dist/index.css"
+  },
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "pnpm -w build:cmp && pnpm build:only",
+    "build:only": "vite build --minify",
+    "dev": "vite build -w",
+    "bump": "pnpm build && bumpp --tag v --sign"
+  },
+  "devDependencies": {
+    "@heroui/theme": "catalog:prod",
+    "@tailwindcss/vite": "catalog:prod",
+    "@vitejs/plugin-vue": "catalog:prod",
+    "@vue-nextui/core": "workspace: *",
+    "tailwindcss": "catalog:prod",
+    "vite": "catalog:prod",
+    "vite-plugin-dts": "^4.5.4"
+  }
+}
