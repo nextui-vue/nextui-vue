@@ -29,9 +29,9 @@
     ".": "./src/index.ts"
   },
   "scripts": {
-    "build": "tsdown --dts --minify",
+    "build": "pnpm -w build:cmp && tsdown --dts --minify",
     "dev": "tsdown -w",
-    "bump": "npm run build && bumpp --tag v --sign"
+    "bump": "pnpm build && bumpp --tag v --sign"
   },
   "devDependencies": {
     "unplugin-vue": "catalog:prod",
