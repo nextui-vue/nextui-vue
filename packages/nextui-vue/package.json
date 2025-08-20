@@ -32,7 +32,7 @@
   },
   "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "pnpm -w build:cmp && pnpm build:only",
+    "build": "pnpm -w build && pnpm build:only",
     "build:only": "vite build --minify",
     "dev": "vite build -w",
     "bump": "pnpm build && bumpp --tag v --sign"
