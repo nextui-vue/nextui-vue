@@ -11,7 +11,7 @@
   "devDependencies": {
     "@heroui/theme": "catalog:prod",
     "@tailwindcss/vite": "^4.1.11",
-    "nextui-vue": "workspace: *",
+    "@vue-nextui/core": "workspace: *",
     "tailwindcss": "^4",
     "vitepress": "latest",
     "vitepress-plugin-group-icons": "^1.3.7",
