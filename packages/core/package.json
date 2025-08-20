@@ -1,9 +1,10 @@
 {
-  "name": "nextui-vue",
+  "name": "@vue-nextui/core",
   "type": "module",
   "version": "0.0.15",
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.com/"
   },
   "author": {
     "name": "hotdog",
@@ -25,13 +26,12 @@
     "ui framework",
     "tailwindcss"
   ],
-  "exports": {
-    ".": "./src/index.ts"
-  },
+  "exports": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "build": "pnpm -w build:cmp && tsdown --dts --minify",
     "dev": "tsdown -w",
-    "bump": "pnpm build && bumpp --tag v --sign"
+    "bump": "pnpm build && bumpp --tag @vue-nextui/core@ --sign"
   },
   "devDependencies": {
     "unplugin-vue": "catalog:prod",
