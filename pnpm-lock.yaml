@@ -241,7 +241,7 @@ importers:
       '@heroui-vue/alert':
         specifier: 'workspace: *'
         version: link:../components/alert
-      '@vue-nextui/button':
+      '@heroui-vue/button':
         specifier: 'workspace: *'
         version: link:../components/button
       unplugin-vue:

@@ -7,7 +7,7 @@ permissions:
 on:
   push:
     tags:
-      - "@vue-nextui/button@*"
+      - "@heroui-vue/button@*"
 
 jobs:
   button:

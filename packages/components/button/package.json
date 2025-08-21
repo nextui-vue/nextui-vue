@@ -1,5 +1,5 @@
 {
-  "name": "@vue-nextui/button",
+  "name": "@heroui-vue/button",
   "type": "module",
   "version": "1.0.0-beta.2",
   "author": {
@@ -34,7 +34,7 @@
   "scripts": {
     "build": "tsdown --minify",
     "dev": "tsdown -w",
-    "bump": "npm run build && bumpp --tag @vue-nextui/button@ --sign"
+    "bump": "npm run build && bumpp --tag @heroui-vue/button@ --sign"
   },
   "dependencies": {
     "@heroui-vue/shared": "workspace: *"

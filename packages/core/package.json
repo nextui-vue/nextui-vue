@@ -40,6 +40,6 @@
   "devDependencies": {
     "unplugin-vue": "catalog:prod",
     "@heroui-vue/alert": "workspace: *",
-    "@vue-nextui/button": "workspace: *"
+    "@heroui-vue/button": "workspace: *"
   }
 }
