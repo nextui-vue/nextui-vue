@@ -1,5 +1,5 @@
 {
-  "name": "@vue-nextui/core",
+  "name": "@heroui-vue/core",
   "type": "module",
   "version": "0.0.16-beta.5",
   "publishConfig": {
@@ -35,7 +35,7 @@
   "scripts": {
     "build": "pnpm -w build:cmp && tsdown --dts --minify",
     "dev": "tsdown -w",
-    "bump": "pnpm build && bumpp --tag @vue-nextui/core@ --sign"
+    "bump": "pnpm build && bumpp --tag @heroui-vue/core@ --sign"
   },
   "devDependencies": {
     "unplugin-vue": "catalog:prod",
