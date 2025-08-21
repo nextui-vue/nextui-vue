@@ -1,5 +1,5 @@
 <script setup>
-import { Button } from '@vue-nextui/core/raw'
+import { Button } from '@heroui-vue/core/raw'
 </script>
 
 # Button

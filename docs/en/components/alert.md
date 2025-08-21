@@ -1,5 +1,5 @@
 <script setup>
-import { Alert } from '@vue-nextui/core/raw'
+import { Alert } from '@heroui-vue/core/raw'
 </script>
 
 # Alert
