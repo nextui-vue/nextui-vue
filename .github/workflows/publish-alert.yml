@@ -7,7 +7,7 @@ permissions:
 on:
   push:
     tags:
-      - "@vue-nextui/alert@*"
+      - "@heroui-vue/alert@*"
 
 jobs:
   alert:

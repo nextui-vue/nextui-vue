@@ -1,5 +1,5 @@
 {
-  "name": "@vue-nextui/alert",
+  "name": "@heroui-vue/alert",
   "type": "module",
   "version": "1.0.0-beta.30",
   "author": {
@@ -32,7 +32,7 @@
   "scripts": {
     "build": "tsdown --minify",
     "dev": "tsdown -w",
-    "bump": "bumpp --tag @vue-nextui/alert@ --sign"
+    "bump": "bumpp --tag @heroui-vue/alert@ --sign"
   },
   "devDependencies": {
     "@heroui/shared-utils": "catalog:prod",
@@ -40,7 +40,7 @@
     "@heroui/theme": "catalog:prod",
     "@heroui/use-aria-button": "catalog:prod",
     "@types/node": "catalog:prod",
-    "@vue-nextui/shared": "workspace:*",
+    "@heroui-vue/shared": "workspace:*",
     "@vue/tsconfig": "catalog:prod",
     "unplugin-vue": "catalog:prod",
     "vue": "catalog:prod"

@@ -136,7 +136,7 @@ importers:
 
   packages/bin/create-component-template/template:
     dependencies:
-      '@vue-nextui/shared':
+      '@heroui-vue/shared':
         specifier: 'workspace: *'
         version: link:../../../components/shared
     devDependencies:
@@ -161,6 +161,9 @@ importers:
 
   packages/components/alert:
     devDependencies:
+      '@heroui-vue/shared':
+        specifier: workspace:*
+        version: link:../shared
       '@heroui/shared-utils':
         specifier: catalog:prod
         version: 2.1.10
@@ -176,9 +179,6 @@ importers:
       '@types/node':
         specifier: catalog:prod
         version: 22.17.0
-      '@vue-nextui/shared':
-        specifier: workspace:*
-        version: link:../shared
       '@vue/tsconfig':
         specifier: catalog:prod
         version: 0.7.0(typescript@5.9.2)(vue@3.5.18(typescript@5.9.2))
@@ -191,7 +191,7 @@ importers:
 
   packages/components/button:
     dependencies:
-      '@vue-nextui/shared':
+      '@heroui-vue/shared':
         specifier: 'workspace: *'
         version: link:../shared
     devDependencies:
@@ -238,7 +238,7 @@ importers:
 
   packages/core:
     devDependencies:
-      '@vue-nextui/alert':
+      '@heroui-vue/alert':
         specifier: 'workspace: *'
         version: link:../components/alert
       '@vue-nextui/button':

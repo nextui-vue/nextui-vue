@@ -37,7 +37,7 @@
     "bump": "npm run build && bumpp --tag @vue-nextui/button@ --sign"
   },
   "dependencies": {
-    "@vue-nextui/shared": "workspace: *"
+    "@heroui-vue/shared": "workspace: *"
   },
   "devDependencies": {
     "@heroui/shared-utils": "catalog:prod",
@@ -45,7 +45,7 @@
     "@heroui/theme": "catalog:prod",
     "@heroui/use-aria-button": "catalog:prod",
     "@types/node": "catalog:prod",
-    "@vue-nextui/shared": "workspace:*",
+    "@heroui-vue/shared": "workspace:*",
     "@vue/tsconfig": "catalog:prod",
     "@vueuse/core": "catalog:prod",
     "unplugin-vue": "catalog:prod",
