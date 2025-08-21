@@ -1,4 +1,4 @@
-name: Publish NextUI Vue
+name: Publish HeroUI Vue
 
 on:
   push:
@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: "packages/nextui-vue"
+        working-directory: "packages/heroui-vue"
 
     steps:
       - name: Checkout
