@@ -10,7 +10,7 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "NextUI Vue",
+  title: "HeroUI Vue",
   description: "Vue 3 Component Library based on HeroUI Theme",
   head: [["link", { rel: "icon", href: "/logo.png" }]],
   ignoreDeadLinks: true,
@@ -32,7 +32,7 @@ export default defineConfig({
       label: "English",
       lang: "en",
       link: "/en/",
-      title: "NextUI Vue",
+      title: "HeroUI Vue",
       description: "Vue 3 Component Library based on HeroUI Theme",
       themeConfig: {
         nav: [
@@ -68,7 +68,7 @@ export default defineConfig({
       label: "简体中文",
       lang: "zh",
       link: "/zh/",
-      title: "NextUI Vue",
+      title: "HeroUI Vue",
       description: "基于HeroUI Theme构建的Vue3组件库",
       themeConfig: {
         nav: [

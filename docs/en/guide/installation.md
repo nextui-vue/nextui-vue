@@ -4,22 +4,22 @@ Global installation, on-demand installation, configuration
 ## Global Installation
 ::: code-group
 ```bash [npm]
-npm install nextui-vue tailwindcss @heroui/theme
+npm install heroui-vue tailwindcss @heroui/theme
 ```
 ```bash [pnpm]
-pnpm install nextui-vue tailwindcss @heroui/theme
+pnpm install heroui-vue tailwindcss @heroui/theme
 ```
 ```bash [yarn]
-yarn install nextui-vue tailwindcss @heroui/theme
+yarn install heroui-vue tailwindcss @heroui/theme
 ```
 ```bash [bun]
-bun install nextui-vue tailwindcss @heroui/theme
+bun install heroui-vue tailwindcss @heroui/theme
 ```
 :::
 
-You can use all components under the `nextui-vue` namespace.
+You can use all components under the `heroui-vue` namespace.
 
-nextui-vue does not bundle the `@heroui/theme` dependency and it depends on `tailwindcss`, so you must install them together.
+heroui-vue does not bundle the `@heroui/theme` dependency and it depends on `tailwindcss`, so you must install them together.
 
 ## On-Demand Installation
 You can also install only the components you need. Please refer to each component's documentation to learn how to install them.
@@ -29,7 +29,7 @@ Make sure you have completed the [Configuration](#configuration) before using on
 :::
 
 ## Configuration
-nextui-vue supports the latest version of TailwindCSS (currently V4) by default, and also provides limited support for V3 and below.
+heroui-vue supports the latest version of TailwindCSS (currently V4) by default, and also provides limited support for V3 and below.
 
 ### TailwindCSS
 TailwindCSS can be configured in two different ways: **with** a tailwind.config.js file and **without** a tailwind.config.js file.

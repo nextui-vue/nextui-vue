@@ -4,7 +4,7 @@ import { AlertProps } from "./use-alert";
 import { computed } from "vue";
 import { useAlert } from "./use-alert";
 import { defaultIconPath, successIconPath, warningIconPath } from "./constant";
-// import { Button } from "@vue-nextui/button";
+// import { Button } from "@heroui-vue/button";
 
 const props = withDefaults(defineProps<AlertProps>(), {});
 

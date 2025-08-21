@@ -8,16 +8,16 @@ Temporary notifications that provide concise feedback about actions or events
 ## Installation
 ::: code-group
 ```sh [npm]
-npm add @vue-nextui/alert
+npm add @heroui-vue/alert
 ```
 ```sh [pnpm]
-pnpm add @vue-nextui/alert
+pnpm add @heroui-vue/alert
 ```
 ```sh [yarn]
-yarn add @vue-nextui/alert
+yarn add @heroui-vue/alert
 ```
 ```sh [bun]
-bun add @vue-nextui/alert
+bun add @heroui-vue/alert
 ```
 :::
 
@@ -27,10 +27,10 @@ bun add @vue-nextui/alert
 ## Import
 ::: code-group
 ```js [On-demand import]
-import { Alert } from '@vue-nextui/alert'
+import { Alert } from '@heroui-vue/alert'
 ```
 ```js [Global import]
-import { Alert } from 'nextui-vue'
+import { Alert } from 'heroui-vue'
 ```
 :::
 
@@ -41,7 +41,7 @@ import { Alert } from 'nextui-vue'
 ::: code-group
 ```vue [Example]
 <script setup lang="ts">
-import { Alert } from 'nextui-vue'
+import { Alert } from 'heroui-vue'
 </script>
 
 <template>
@@ -63,7 +63,7 @@ Alert has 6 color variants to convey different meanings.
 ::: code-group
 ```vue [Example]
 <script setup lang="ts">
-import { Alert } from 'nextui-vue'
+import { Alert } from 'heroui-vue'
 </script>
 
 <template>
@@ -92,7 +92,7 @@ import { Alert } from 'nextui-vue'
 ::: code-group
 ```vue [Example]
 <script setup lang="ts">
-import { Alert } from 'nextui-vue'
+import { Alert } from 'heroui-vue'
 </script>
 
 <template>
@@ -143,7 +143,7 @@ By default, the Alert component displays a corresponding icon based on the `colo
 ::: code-group
 ```vue [Example]
 <script setup lang="ts">
-import { Alert } from 'nextui-vue'
+import { Alert } from 'heroui-vue'
 </script>
 
 <template>

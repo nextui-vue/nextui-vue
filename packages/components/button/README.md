@@ -1,26 +1,26 @@
 # Installation
 
 ```bash
-npm add @vue-nextui/button @nextui-org/theme
+npm add @heroui-vue/button @heroui-org/theme
 ```
 
 # Configuration
 
 ```ts
 // tailwind.config.js
-const { nextui } = require('@nextui-org/theme')
+const { heroui } = require('@heroui-org/theme')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     // ...
-    './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}'
+    './node_modules/@heroui-org/theme/dist/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
     extend: {},
   },
   darkMode: 'class',
-  plugins: [nextui()]
+  plugins: [heroui()]
 }
 ```
 
@@ -28,7 +28,7 @@ module.exports = {
 
 ```vue
 <script lang="ts" setup>
-import { Button } from '@vue-nextui/button'
+import { Button } from '@heroui-vue/button'
 </script>
 
 <template>

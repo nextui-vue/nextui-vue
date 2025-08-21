@@ -1,7 +1,7 @@
 ---
 layout: home
 
-title: NextUI Vue
+title: HeroUI Vue
 titleTemplate: Vue 3 Component Library based on HeroUI Theme
 
 head:
@@ -10,13 +10,13 @@ head:
       content: Vue 3 Component Library based on HeroUI Theme
   - - meta
     - name: keywords
-      content: Vue Vue3 HeroUI NextUI Component Library UI Components
+      content: Vue Vue3 HeroUI heroui Component Library UI Components
 hero:
-  name: "NextUI Vue"
+  name: "HeroUI Vue"
   text: "Vue 3 Component Library"
   image:
     src: /logo.png
-    alt: NextUI Vue
+    alt: HeroUI Vue
   tagline: HeroUI style, built with Vue 3
   actions:
     - theme: brand

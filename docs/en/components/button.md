@@ -8,16 +8,16 @@ Allows users to perform actions and make choices with a single tap
 ## Installation
 ::: code-group
 ```sh [npm]
-npm add @vue-nextui/button
+npm add @heroui-vue/button
 ```
 ```sh [pnpm]
-pnpm add @vue-nextui/button
+pnpm add @heroui-vue/button
 ```
 ```sh [yarn]
-yarn add @vue-nextui/button
+yarn add @heroui-vue/button
 ```
 ```sh [bun]
-bun add @vue-nextui/button
+bun add @heroui-vue/button
 ```
 :::
 
@@ -27,10 +27,10 @@ bun add @vue-nextui/button
 ## Import
 ::: code-group
 ```js [On-demand import]
-import { Button } from '@vue-nextui/button'
+import { Button } from '@heroui-vue/button'
 ```
 ```js [Global import]
-import { Button } from 'nextui-vue'
+import { Button } from 'heroui-vue'
 ```
 :::
 

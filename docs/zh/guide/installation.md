@@ -4,22 +4,22 @@
 ## 全局安装
 ::: code-group
 ```bash [npm]
-npm install nextui-vue tailwindcss @heroui/theme
+npm install heroui-vue tailwindcss @heroui/theme
 ```
 ```bash [pnpm]
-pnpm install nextui-vue tailwindcss @heroui/theme
+pnpm install heroui-vue tailwindcss @heroui/theme
 ```
 ```bash [yarn]
-yarn install nextui-vue tailwindcss @heroui/theme
+yarn install heroui-vue tailwindcss @heroui/theme
 ```
 ```bash [bun]
-bun install nextui-vue tailwindcss @heroui/theme
+bun install heroui-vue tailwindcss @heroui/theme
 ```
 :::
 
-你可以在`nextui-vue`命名空间下使用所有组件。
+你可以在`heroui-vue`命名空间下使用所有组件。
 
-nextui-vue并不内置`@heroui/theme`主题依赖，且它依赖`tailwindcss`，因此你必须一同安装它们。
+heroui-vue并不内置`@heroui/theme`主题依赖，且它依赖`tailwindcss`，因此你必须一同安装它们。
 
 ## 按需安装
 你也可以仅安装你需要的组件，请参考每个组件的文档以了解如何安装。
@@ -29,7 +29,7 @@ nextui-vue并不内置`@heroui/theme`主题依赖，且它依赖`tailwindcss`，
 :::
 
 ## 配置
-nextui-vue默认支持最新版本的TailwindCSS（当前是V4），且对V3及以下的版本也提供有限的支持。
+heroui-vue默认支持最新版本的TailwindCSS（当前是V4），且对V3及以下的版本也提供有限的支持。
 
 ### TailwindCSS
 可通过两种不同的方式来配置TailwindCSS，即**有**tailwind.config.js文件和**无**tailwind.config.js文件。
