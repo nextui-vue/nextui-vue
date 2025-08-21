@@ -1,3 +1,3 @@
 import "./index.css";
 
-export * from "@vue-nextui/core";
+export * from "@heroui-vue/core";

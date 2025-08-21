@@ -41,7 +41,7 @@
     "@heroui/theme": "catalog:prod",
     "@tailwindcss/vite": "catalog:prod",
     "@vitejs/plugin-vue": "catalog:prod",
-    "@vue-nextui/core": "workspace: *",
+    "@heroui-vue/core": "workspace: *",
     "tailwindcss": "catalog:prod",
     "vite": "catalog:prod",
     "vite-plugin-dts": "^4.5.4"
