@@ -1,6 +1,6 @@
 <p align="center">
     <a href="">
-        <img src="https://raw.githubusercontent.com/nextui-vue/nextui-vue/refs/heads/main/docs/public/logo.png" alt="NextUI Vue" width="200">
+        <img src="https://raw.githubusercontent.com/heroui-vue/heroui-vue/refs/heads/main/docs/public/logo.png" alt="heroui-vue Vue" width="200">
         <h1 align="center">HeroUI Vue</h1>
     </a>
 </p>
