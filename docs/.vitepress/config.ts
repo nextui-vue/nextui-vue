@@ -40,7 +40,7 @@ export default defineConfig({
           { text: "Components", link: "/en/components/button" },
           {
             text: "Playground[WIP]",
-            link: "https://github.com/nextui-vue/nextui-vue/pull/156",
+            link: "https://github.com/heroui-vue/heroui-vue/pull/156",
           },
           { text: "HeroUI", link: "https://heroui.com/" },
         ],
@@ -76,7 +76,7 @@ export default defineConfig({
           { text: "组件", link: "/zh/components/button" },
           {
             text: "演练场[开发中]",
-            link: "https://github.com/nextui-vue/nextui-vue/pull/156",
+            link: "https://github.com/heroui-vue/heroui-vue/pull/156",
           },
           { text: "HeroUI", link: "https://heroui.com/" },
         ],
@@ -110,7 +110,7 @@ export default defineConfig({
     outline: "deep",
 
     socialLinks: [
-      { icon: "github", link: "https://github.com/nextui-vue/nextui-vue" },
+      { icon: "github", link: "https://github.com/heroui-vue/heroui-vue" },
     ],
 
     footer: {

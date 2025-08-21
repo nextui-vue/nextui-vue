@@ -12,10 +12,10 @@
   },
   "license": "MIT",
   "repository": {
-    "url": "git+https://github.com/hotdogc1017/nextui-vue.git"
+    "url": "git+https://github.com/heroui-vue/heroui-vue.git"
   },
   "bugs": {
-    "url": "https://github.com/hotdogc1017/nextui-vue/issues"
+    "url": "https://github.com/heroui-vue/heroui-vue/issues"
   },
   "keywords": [
     "nextui",

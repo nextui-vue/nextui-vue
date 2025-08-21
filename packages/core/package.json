@@ -12,9 +12,9 @@
     "url": "https://github.com/hotdogc1017"
   },
   "license": "MIT",
-  "repository": "https://github.com/nextui-vue/nextui-vue",
+  "repository": "https://github.com/heroui-vue/heroui-vue",
   "bugs": {
-    "url": "https://github.com/hotdogc1017/nextui-vue/issues"
+    "url": "https://github.com/heroui-vue/heroui-vue/issues"
   },
   "files": [
     "dist",
