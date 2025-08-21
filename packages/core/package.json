@@ -1,7 +1,7 @@
 {
   "name": "@vue-nextui/core",
   "type": "module",
-  "version": "0.0.16-beta.3",
+  "version": "0.0.16-beta.4",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.com/"
