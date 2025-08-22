@@ -7,5 +7,6 @@ export default defineConfig({
   external: ["vue"],
   dts: {
     vue: true,
+    sourcemap: true,
   },
 });
