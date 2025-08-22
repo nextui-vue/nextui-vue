@@ -1,7 +1,7 @@
 {
-  "name": "@heroui-vue/core",
+  "name": "heroui-vue",
   "type": "module",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
@@ -17,8 +17,7 @@
     "url": "https://github.com/heroui-vue/heroui-vue/issues"
   },
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
   "keywords": [
     "heroui",
@@ -29,18 +28,23 @@
   ],
   "exports": {
     ".": "./dist/index.js",
-    "./raw": "./src/index.ts"
+    "./plugin": "./dist/heroui.js"
   },
   "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "pnpm -w build:cmp && pnpm build:only",
+    "build": "pnpm -w build && pnpm build:only",
     "build:only": "tsdown --minify",
     "dev": "tsdown -w",
-    "bump": "pnpm build && bumpp --tag @heroui-vue/core@ --sign"
+    "bump": "pnpm build && bumpp --tag v --sign"
   },
   "devDependencies": {
+    "@heroui/theme": "catalog:prod",
+    "@tailwindcss/vite": "catalog:prod",
+    "@vitejs/plugin-vue": "catalog:prod",
+    "@heroui-vue/core": "workspace: *",
+    "tailwindcss": "catalog:prod",
+    "vite": "catalog:prod",
     "unplugin-vue": "catalog:prod",
-    "@heroui-vue/alert": "workspace: *",
-    "@heroui-vue/button": "workspace: *"
+    "vite-plugin-dts": "^4.5.4"
   }
 }

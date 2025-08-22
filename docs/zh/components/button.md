@@ -1,5 +1,5 @@
 <script setup>
-import { Button } from 'nextui-vue'
+import { Button } from '@heroui-vue/core/raw'
 </script>
 
 # Button
@@ -8,16 +8,16 @@ import { Button } from 'nextui-vue'
 ## 安装
 ::: code-group
 ```sh [npm]
-npm add @vue-nextui/button
+npm add @heroui-vue/button
 ```
 ```sh [pnpm]
-pnpm add @vue-nextui/button
+pnpm add @heroui-vue/button
 ```
 ```sh [yarn]
-yarn add @vue-nextui/button
+yarn add @heroui-vue/button
 ```
 ```sh [bun]
-bun add @vue-nextui/button
+bun add @heroui-vue/button
 ```
 :::
 
@@ -27,10 +27,10 @@ bun add @vue-nextui/button
 ## 导入
 ::: code-group
 ```js [按需导入]
-import { Button } from '@vue-nextui/button'
+import { Button } from '@heroui-vue/button'
 ```
 ```js [全局导入]
-import { Button } from 'nextui-vue'
+import { Button } from 'heroui-vue'
 ```
 :::
 

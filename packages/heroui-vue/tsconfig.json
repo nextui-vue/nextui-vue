@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    // See https://www.typescriptlang.org/tsconfig/#allowSyntheticDefaultImports
+    "allowSyntheticDefaultImports": true,
+    "composite": true,
+    "isolatedDeclarations": true
+  },
+  "include": ["./src/**/*"]
+}

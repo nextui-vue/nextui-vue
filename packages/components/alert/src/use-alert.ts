@@ -3,7 +3,7 @@ import type {
   AlertVariantProps as _AlertVariantProps,
   SlotsToClasses,
 } from "@heroui/theme";
-import type { HTMLNextUIVueProps } from "@vue-nextui/shared";
+import type { HTMLHeroVueUIProps } from "@heroui-vue/shared";
 import type { MaybeRef, Reactive } from "vue";
 
 import {
@@ -15,12 +15,12 @@ import {
   mergeProps,
   useSlots,
 } from "vue";
-import { pureObject } from "@vue-nextui/shared";
+import { pureObject } from "@heroui-vue/shared";
 import { alert } from "@heroui/theme";
-import { mapPropsVariants } from "@heroui/system";
+import { mapPropsVariants } from "@heroui-vue/shared";
 import { dataAttr, isEmpty } from "@heroui/shared-utils";
 
-export interface AlertDefineProps extends /* @vue-ignore */ HTMLNextUIVueProps {
+export interface AlertDefineProps extends /* @vue-ignore */ HTMLHeroVueUIProps {
   title?: string;
   description?: string;
   isVisible?: boolean;

@@ -1,70 +1,92 @@
 # Installation
-Global installation, on-demand installation, configuration
+Quick installation configuration and usage
 
 ## Global Installation
-Allows you to use all components under the `nextui-vue` namespace.
+You can use all components under the `heroui-vue` namespace.
 
 ::: code-group
 ```bash [npm]
-npm install nextui-vue
+npm install heroui-vue tailwindcss
 ```
 ```bash [pnpm]
-pnpm install nextui-vue
+pnpm install heroui-vue tailwindcss
 ```
 ```bash [yarn]
-yarn install nextui-vue
+yarn install heroui-vue tailwindcss
 ```
 ```bash [bun]
-bun install nextui-vue
+bun install heroui-vue tailwindcss
 ```
 :::
+
+HeroUI Vue has a built-in `@heroui/theme` with default configuration and exports plugins for configuring TailwindCSS.
 
 ## On-Demand Installation
-Install only the components you need. Please refer to each component's documentation to learn how to install them.
+You can also install only the components you need. Please refer to each component's documentation to learn how to install them. But make sure you have completed the [Configuration](#configuration) before using on-demand installation.
+
+## Configuration
+HeroUI Vue supports TailwindCSS V4 by default and also provides limited support for V3.
 
 ::: tip
-Make sure you have completed the [Theme Configuration](#theme-configuration) before using on-demand installation.
+
+Here is a [template project](https://github.com/heroui-vue/template-heroui-vue) you can refer to see how it's configured.
+
 :::
 
-## Theme Configuration
-Install the HeroUI theme.
+### TailwindCSS
+TailwindCSS can be configured in two different ways: **with** a `tailwind.config.js` file and **without** a `tailwind.config.js` file.
 
-::: code-group
-```bash [npm]
-npm install @heroui/theme
-```
-```bash [pnpm]
-pnpm install @heroui/theme
-```
-```bash [yarn]
-yarn install @heroui/theme
-```
-```bash [bun]
-bun install @heroui/theme
-```
-:::
+#### With tailwind.config.js file
+If you prefer to configure TailwindCSS through a `tailwind.config.js` file, you can configure it like this:
 
-Since HeroUI is based on TailwindCSS, you also need to install it. Refer to [TailwindCSS installation steps](https://tailwindcss.com/docs/installation).
-
-:::warning
-Only TailwindCSS V3 and below are supported, V4 is **not supported**, [related issue](https://github.com/nextui-vue/nextui-vue/issues/27).
-:::
-
-Then add the following code to your `tailwind.config.js` file:
-
-```js{2,6,7,8,12,13}
+```js{2,6,7,8,9,10}
 // tailwind.config.js
-const { heroui } = require('@heroui/theme')
+import herouiVue from 'heroui-vue/plugin'
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}'
+    "./node_modules/heroui-vue/dist/index.js"
   ],
-  theme: {
-    extend: {},
-  },
   darkMode: 'class',
-  plugins: [heroui()]
+  plugins: [herouiVue]
 }
+```
+
+::: details Benefits of using `tailwind.config.js`
+Configuring TailwindCSS through a `tailwind.config.js` file has several benefits:
+
+- Reduced migration cost. Keeping the `tailwind.config.js` file allows you to use TailwindCSS V4.
+- Intuitive. No need to understand the configuration details of the new TailwindCSS, you can configure it completely based on past experience, but there are [some limitations](https://tailwindcss.com/docs/functions-and-directives#config-directive).
+- Compatibility. Some libraries may not have adapted to the new version of TailwindCSS yet, but can still be used in the old version, and keeping the `tailwind.config.js` file reserves space for future adaptation.
+:::
+
+#### Without tailwind.config.js file
+If your entry file contains a CSS import, assuming the name is `index.css`, configure it as follows:
+
+```css
+/* index.css */
+@import "tailwindcss";
+@source "./node_modules/heroui-vue/dist/index.js";
+@plugin "heroui-vue/plugin";
+@custom-variant dark (&:is(.dark *));
+```
+
+### Vite
+If your project uses Vite, you need to install the official `@tailwindcss/vite` plugin and use it in your vite configuration file.
+
+#### Install plugin
+```sh
+npm install @tailwindcss/vite // [!=npm auto]
+```
+
+#### Configure vite
+```ts{3,6}
+// vite.config.ts
+import { defineConfig } from "vite";
+import tailwindcss from "@tailwindcss/vite";
+
+export default defineConfig({
+  plugins: [tailwindcss()],
+});
 ```

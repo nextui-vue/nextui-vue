@@ -1,87 +1,74 @@
 # 安装
-全局安装、按需安装、配置
+快速安装配置并使用
 
 ## 全局安装
+你可以在 `heroui-vue` 命名空间下使用所有组件。
+
 ::: code-group
 ```bash [npm]
-npm install nextui-vue tailwindcss @heroui/theme
+npm install heroui-vue tailwindcss
 ```
 ```bash [pnpm]
-pnpm install nextui-vue tailwindcss @heroui/theme
+pnpm install heroui-vue tailwindcss
 ```
 ```bash [yarn]
-yarn install nextui-vue tailwindcss @heroui/theme
+yarn install heroui-vue tailwindcss
 ```
 ```bash [bun]
-bun install nextui-vue tailwindcss @heroui/theme
+bun install heroui-vue tailwindcss
 ```
 :::
 
-你可以在`nextui-vue`命名空间下使用所有组件。
-
-nextui-vue并不内置`@heroui/theme`主题依赖，且它依赖`tailwindcss`，因此你必须一同安装它们。
+HeroUI Vue内置了一个具有默认配置的 `@heroui/theme`，并导出了用于配置TailwindCSS的插件。
 
 ## 按需安装
-你也可以仅安装你需要的组件，请参考每个组件的文档以了解如何安装。
-
-::: tip
-使用按需安装前请确保你已经完成了[配置](#配置)。
-:::
+你也可以仅安装你需要的组件，请参考每个组件的文档以了解如何安装。但使用按需安装前请确保你已经完成了[配置](#配置)。
 
 ## 配置
-nextui-vue默认支持最新版本的TailwindCSS（当前是V4），且对V3及以下的版本也提供有限的支持。
+Heroui Vue默认支持TailwindCSS V4，且对V3也提供有限的支持。
+
+::: tip
+
+这里有一个[模板项目](https://github.com/heroui-vue/template-heroui-vue)，可以参考它是如何配置的。
+
+:::
 
 ### TailwindCSS
-可通过两种不同的方式来配置TailwindCSS，即**有**tailwind.config.js文件和**无**tailwind.config.js文件。
+可通过两种不同的方式来配置TailwindCSS，即**有** `tailwind.config.js` 文件和**无** `tailwind.config.js`文件。
 
-#### 有tailwind.config.js文件（推荐）
-如果你更喜欢通过`tailwind.config.js`文件来配置TailwindCSS，可以这样配置：
+#### 有tailwind.config.js文件
+如果你更喜欢通过 `tailwind.config.js` 文件来配置TailwindCSS，可以这样配置：
 
 ```js{2,6,7,8,9,10}
 // tailwind.config.js
-import { heroui } from '@heroui/theme'
+import herouiVue from 'heroui-vue/plugin'
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}'
+    "./node_modules/heroui-vue/dist/index.js"
   ],
   darkMode: 'class',
-  plugins: [heroui()]
+  plugins: [herouiVue]
 }
 ```
 
-::: details 为什么推荐`tailwind.config.js`?
-通过`tailwind.config.js`文件来配置TailwindCSS有几个好处：
+::: details 使用 `tailwind.config.js` 的好处
+通过 `tailwind.config.js` 文件来配置TailwindCSS有几个好处：
 
-- 降低迁移成本。保留`tailwind.config.js`文件也可以使用新版的TailwindCSS。
-- 符合直觉。不需要了解新版TailwindCSS的配置细节，完全可以按照以往的经验来配置，但是有[一些限制](https://tailwindcss.com/docs/functions-and-directives#config-directive)。
-- 兼容性。一些库可能还没有适配新版TailwindCSS，但是仍然可以在旧版本中使用，而保留`tailwind.config.js`文件也为后续库的适配预留了空间。
+- 降低迁移成本。保留 `tailwind.config.js` 文件也可以使用TailwindCSS V4。
+- 符合直觉。在不需要了解新版TailwindCSS配置细节的情况下，仍然可以按照以往的经验进行配置，但是有[一些限制](https://tailwindcss.com/docs/functions-and-directives#config-directive)。
+- 兼容性。一些库可能还没有适配新版TailwindCSS，但是仍然可以在旧版本中使用，保留`tailwind.config.js`文件为未来留下了适配空间。
 :::
 
 #### 无tailwind.config.js文件
-通过指令来配置TailwindCSS，这也是官方推荐的配置方式。
-
-首先在根目录下创建一个`heroui.ts`文件，用来导出HeroUI的TailwindCSS插件:
-
-```ts
-// heroui.ts
-import { heroui } from "@heroui/theme";
-
-export default heroui(); // 别忘记调用`heroui`函数
-```
-
-然后在根目录下创建一个css文件，假设名称是`index.css`，导入插件并且配置TailwindCSS:
-
-::: tip
-你也可以在已有的css文件中配置TailwindCSS，并且确保导入的文件路径正确。
-:::
+如果你的入口文件中包含了一个css导入，假设名称是`index.css`，则按如下配置:
 
 ```css
 /* index.css */
 @import "tailwindcss";
-@source "../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}";
-@plugin "./heroui.ts";
+@source "./node_modules/heroui-vue/dist/index.js";
+@plugin "heroui-vue/plugin";
 @custom-variant dark (&:is(.dark *));
 ```
 

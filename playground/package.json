@@ -1,9 +1,9 @@
 {
-  "name": "nextui-vue-playground",
+  "name": "heroui-vue-playground",
   "type": "module",
   "private": true,
   "author": "hotdogc1017@gmail.com",
-  "description": "NextUI Vue Playground",
+  "description": "HeroUI Vue Playground",
   "license": "MIT",
   "packageManager": "pnpm@10.14.0",
   "scripts": {

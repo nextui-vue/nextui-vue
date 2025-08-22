@@ -1,6 +1,6 @@
 import type { Component, HTMLAttributes } from "vue";
 
-export type HTMLNextUIVueProps<T extends keyof HTMLElementTagNameMap = "div"> =
+export type HTMLHeroVueUIProps<T extends keyof HTMLElementTagNameMap = "div"> =
   {
     as?: Component | T | (string & {});
   } & /* @vue-ignore */ HTMLAttributes;

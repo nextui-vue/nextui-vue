@@ -1,5 +1,5 @@
 {
-  "name": "@vue-nextui/shared",
+  "name": "@heroui-vue/shared",
   "type": "module",
   "version": "0.0.12",
   "author": {
@@ -12,13 +12,13 @@
   },
   "license": "MIT",
   "repository": {
-    "url": "git+https://github.com/hotdogc1017/nextui-vue.git"
+    "url": "git+https://github.com/heroui-vue/heroui-vue.git"
   },
   "bugs": {
-    "url": "https://github.com/hotdogc1017/nextui-vue/issues"
+    "url": "https://github.com/heroui-vue/heroui-vue/issues"
   },
   "keywords": [
-    "nextui",
+    "heroui",
     "vue",
     "ui",
     "ui framework",

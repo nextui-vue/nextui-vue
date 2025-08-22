@@ -1,14 +1,14 @@
 import type { ButtonVariantProps as _ButtonVariantProps } from "@heroui/theme";
-import type { HTMLNextUIVueProps } from "@vue-nextui/shared";
+import type { HTMLHeroVueUIProps } from "@heroui-vue/shared";
 import type { Ref, MaybeRef, WatchSource } from "vue";
 
 import { ref, watch, useAttrs } from "vue";
 import { useFocus, useMousePressed, useElementHover } from "@vueuse/core";
 import { dataAttr } from "@heroui/shared-utils";
 import { button } from "@heroui/theme";
-import { useRipple } from "@vue-nextui/shared";
+import { useRipple } from "@heroui-vue/shared";
 
-export interface ButtonDefineProps extends HTMLNextUIVueProps<"button"> {
+export interface ButtonDefineProps extends HTMLHeroVueUIProps<"button"> {
   isLoading?: boolean;
   disableRipple?: boolean;
   spinnerPlacement?: "start" | "end";

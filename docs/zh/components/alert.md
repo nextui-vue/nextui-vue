@@ -1,5 +1,5 @@
 <script setup>
-import { Alert } from 'nextui-vue'
+import { Alert } from '@heroui-vue/core/raw'
 </script>
 
 # Alert
@@ -8,16 +8,16 @@ import { Alert } from 'nextui-vue'
 ## 安装
 ::: code-group
 ```sh [npm]
-npm add @vue-nextui/alert
+npm add @heroui-vue/alert
 ```
 ```sh [pnpm]
-pnpm add @vue-nextui/alert
+pnpm add @heroui-vue/alert
 ```
 ```sh [yarn]
-yarn add @vue-nextui/alert
+yarn add @heroui-vue/alert
 ```
 ```sh [bun]
-bun add @vue-nextui/alert
+bun add @heroui-vue/alert
 ```
 :::
 
@@ -27,10 +27,10 @@ bun add @vue-nextui/alert
 ## 导入
 ::: code-group
 ```js [按需导入]
-import { Alert } from '@vue-nextui/alert'
+import { Alert } from '@heroui-vue/alert'
 ```
 ```js [全局导入]
-import { Alert } from 'nextui-vue'
+import { Alert } from 'heroui-vue'
 ```
 :::
 
@@ -41,7 +41,7 @@ import { Alert } from 'nextui-vue'
 ::: code-group
 ```vue [示例代码]
 <script setup lang="ts">
-import { Alert } from 'nextui-vue'
+import { Alert } from 'heroui-vue'
 </script>
 
 <template>
@@ -63,7 +63,7 @@ Alert有6种颜色变体，用以传达不同的含义。
 ::: code-group
 ```vue [示例代码]
 <script setup lang="ts">
-import { Alert } from 'nextui-vue'
+import { Alert } from 'heroui-vue'
 </script>
 
 <template>
@@ -92,7 +92,7 @@ import { Alert } from 'nextui-vue'
 ::: code-group
 ```vue [示例代码]
 <script setup lang="ts">
-import { Alert } from 'nextui-vue'
+import { Alert } from 'heroui-vue'
 </script>
 
 <template>
@@ -143,7 +143,7 @@ import { Alert } from 'nextui-vue'
 ::: code-group
 ```vue [示例代码]
 <script setup lang="ts">
-import { Alert } from 'nextui-vue'
+import { Alert } from 'heroui-vue'
 </script>
 
 <template>

@@ -10,7 +10,7 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "NextUI Vue",
+  title: "HeroUI Vue",
   description: "Vue 3 Component Library based on HeroUI Theme",
   head: [["link", { rel: "icon", href: "/logo.png" }]],
   ignoreDeadLinks: true,
@@ -32,12 +32,16 @@ export default defineConfig({
       label: "English",
       lang: "en",
       link: "/en/",
-      title: "NextUI Vue",
+      title: "HeroUI Vue",
       description: "Vue 3 Component Library based on HeroUI Theme",
       themeConfig: {
         nav: [
           { text: "Guide", link: "/en/guide/introduction" },
           { text: "Components", link: "/en/components/button" },
+          {
+            text: "Playground[WIP]",
+            link: "https://github.com/heroui-vue/heroui-vue/pull/156",
+          },
           { text: "HeroUI", link: "https://heroui.com/" },
         ],
         sidebar: [
@@ -47,6 +51,7 @@ export default defineConfig({
             items: [
               { text: "Introduction", link: "/en/guide/introduction" },
               { text: "Installation", link: "/en/guide/installation" },
+              { text: "Custom Installation", link: "/en/guide/custom-installation" },
             ],
           },
           {
@@ -64,12 +69,16 @@ export default defineConfig({
       label: "简体中文",
       lang: "zh",
       link: "/zh/",
-      title: "NextUI Vue",
+      title: "HeroUI Vue",
       description: "基于HeroUI Theme构建的Vue3组件库",
       themeConfig: {
         nav: [
           { text: "指南", link: "/zh/guide/introduction" },
           { text: "组件", link: "/zh/components/button" },
+          {
+            text: "演练场[开发中]",
+            link: "https://github.com/heroui-vue/heroui-vue/pull/156",
+          },
           { text: "HeroUI", link: "https://heroui.com/" },
         ],
         sidebar: [
@@ -79,6 +88,7 @@ export default defineConfig({
             items: [
               { text: "介绍", link: "/zh/guide/introduction" },
               { text: "安装", link: "/zh/guide/installation" },
+              { text: "自定义安装", link: "/zh/guide/custom-installation" },
             ],
           },
           {
@@ -102,7 +112,14 @@ export default defineConfig({
     outline: "deep",
 
     socialLinks: [
-      { icon: "github", link: "https://github.com/nextui-vue/nextui-vue" },
+      {
+        icon: "github",
+        link: "https://github.com/heroui-vue/heroui-vue",
+      },
+      {
+        icon: "npm",
+        link: "https://www.npmjs.com/package/heroui-vue",
+      },
     ],
 
     footer: {

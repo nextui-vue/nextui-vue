@@ -1,7 +1,7 @@
 ---
 layout: home
 
-title: NextUI Vue
+title: HeroUI Vue
 titleTemplate: 基于HeroUI Theme的Vue3组件库
 
 head:
@@ -10,13 +10,13 @@ head:
       content: 基于HeroUI Theme的Vue3组件库
   - - meta
     - name: keywords
-      content: Vue Vue3 HeroUI NextUI 组件库 Component Library
+      content: Vue Vue3 HeroUI heroui 组件库 Component Library
 hero:
-  name: "NextUI Vue"
+  name: "HeroUI Vue"
   text: "Vue 3组件库"
   image:
     src: /logo.png
-    alt: NextUI Vue
+    alt: HeroUI Vue
   tagline: HeroUI风格, 使用Vue3实现
   actions:
     - theme: brand
