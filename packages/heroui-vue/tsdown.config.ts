@@ -8,5 +8,6 @@ export default defineConfig({
   dts: {
     vue: true,
     sourcemap: true,
+    resolve: true,
   },
 });
