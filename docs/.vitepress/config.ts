@@ -87,6 +87,7 @@ export default defineConfig({
             items: [
               { text: "介绍", link: "/zh/guide/introduction" },
               { text: "安装", link: "/zh/guide/installation" },
+              { text: "自定义安装", link: "/zh/guide/custom-installation" },
             ],
           },
           {
@@ -110,7 +111,14 @@ export default defineConfig({
     outline: "deep",
 
     socialLinks: [
-      { icon: "github", link: "https://github.com/heroui-vue/heroui-vue" },
+      {
+        icon: "github",
+        link: "https://github.com/heroui-vue/heroui-vue",
+      },
+      {
+        icon: "npm",
+        link: "https://www.npmjs.com/package/heroui-vue",
+      },
     ],
 
     footer: {
