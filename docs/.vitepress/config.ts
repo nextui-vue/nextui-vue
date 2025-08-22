@@ -51,6 +51,7 @@ export default defineConfig({
             items: [
               { text: "Introduction", link: "/en/guide/introduction" },
               { text: "Installation", link: "/en/guide/installation" },
+              { text: "Custom Installation", link: "/en/guide/custom-installation" },
             ],
           },
           {
