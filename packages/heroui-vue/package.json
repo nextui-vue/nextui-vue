@@ -28,13 +28,13 @@
   ],
   "exports": {
     ".": "./dist/index.js",
-    "./styles": "./dist/index.css"
+    "./plugin": "./dist/heroui.js"
   },
   "types": "./dist/index.d.ts",
   "scripts": {
     "build": "pnpm -w build && pnpm build:only",
-    "build:only": "vite build --minify",
-    "dev": "vite build -w",
+    "build:only": "tsdown --minify",
+    "dev": "tsdown -w",
     "bump": "pnpm build && bumpp --tag v --sign"
   },
   "devDependencies": {
@@ -44,6 +44,7 @@
     "@heroui-vue/core": "workspace: *",
     "tailwindcss": "catalog:prod",
     "vite": "catalog:prod",
+    "unplugin-vue": "catalog:prod",
     "vite-plugin-dts": "^4.5.4"
   }
 }
