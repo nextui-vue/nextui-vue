@@ -1,87 +1,74 @@
 # Installation
-Global installation, on-demand installation, configuration
+Quick installation configuration and usage
 
 ## Global Installation
-::: code-group
-```bash [npm]
-npm install heroui-vue tailwindcss @heroui/theme
-```
-```bash [pnpm]
-pnpm install heroui-vue tailwindcss @heroui/theme
-```
-```bash [yarn]
-yarn install heroui-vue tailwindcss @heroui/theme
-```
-```bash [bun]
-bun install heroui-vue tailwindcss @heroui/theme
-```
-:::
-
 You can use all components under the `heroui-vue` namespace.
 
-heroui-vue does not bundle the `@heroui/theme` dependency and it depends on `tailwindcss`, so you must install them together.
-
-## On-Demand Installation
-You can also install only the components you need. Please refer to each component's documentation to learn how to install them.
-
-::: tip
-Make sure you have completed the [Configuration](#configuration) before using on-demand installation.
+::: code-group
+```bash [npm]
+npm install heroui-vue tailwindcss
+```
+```bash [pnpm]
+pnpm install heroui-vue tailwindcss
+```
+```bash [yarn]
+yarn install heroui-vue tailwindcss
+```
+```bash [bun]
+bun install heroui-vue tailwindcss
+```
 :::
 
+HeroUI Vue has a built-in `@heroui/theme` with default configuration and exports plugins for configuring TailwindCSS.
+
+## On-Demand Installation
+You can also install only the components you need. Please refer to each component's documentation to learn how to install them. But make sure you have completed the [Configuration](#configuration) before using on-demand installation.
+
 ## Configuration
-heroui-vue supports the latest version of TailwindCSS (currently V4) by default, and also provides limited support for V3 and below.
+HeroUI Vue supports TailwindCSS V4 by default and also provides limited support for V3.
+
+::: tip
+
+Here is a [template project](https://github.com/heroui-vue/template-heroui-vue) you can refer to see how it's configured.
+
+:::
 
 ### TailwindCSS
-TailwindCSS can be configured in two different ways: **with** a tailwind.config.js file and **without** a tailwind.config.js file.
+TailwindCSS can be configured in two different ways: **with** a `tailwind.config.js` file and **without** a `tailwind.config.js` file.
 
-#### With tailwind.config.js file (Recommended)
+#### With tailwind.config.js file
 If you prefer to configure TailwindCSS through a `tailwind.config.js` file, you can configure it like this:
 
 ```js{2,6,7,8,9,10}
 // tailwind.config.js
-import { heroui } from '@heroui/theme'
+import herouiVue from 'heroui-vue/plugin'
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}'
+    "./node_modules/heroui-vue/dist/index.js"
   ],
   darkMode: 'class',
-  plugins: [heroui()]
+  plugins: [herouiVue]
 }
 ```
 
-::: details Why is `tailwind.config.js` recommended?
+::: details Benefits of using `tailwind.config.js`
 Configuring TailwindCSS through a `tailwind.config.js` file has several benefits:
 
-- Reduced migration cost. Keeping the `tailwind.config.js` file allows you to use the new version of TailwindCSS.
+- Reduced migration cost. Keeping the `tailwind.config.js` file allows you to use TailwindCSS V4.
 - Intuitive. No need to understand the configuration details of the new TailwindCSS, you can configure it completely based on past experience, but there are [some limitations](https://tailwindcss.com/docs/functions-and-directives#config-directive).
-- Compatibility. Some libraries may not have adapted to the new version of TailwindCSS yet, but can still be used in the old version, and keeping the `tailwind.config.js` file also reserves space for subsequent library adaptation.
+- Compatibility. Some libraries may not have adapted to the new version of TailwindCSS yet, but can still be used in the old version, and keeping the `tailwind.config.js` file reserves space for future adaptation.
 :::
 
 #### Without tailwind.config.js file
-Configure TailwindCSS through directives, which is also the officially recommended configuration method.
-
-First create a `heroui.ts` file in the root directory to export HeroUI's TailwindCSS plugin:
-
-```ts
-// heroui.ts
-import { heroui } from "@heroui/theme";
-
-export default heroui(); // Don't forget to call the `heroui` function
-```
-
-Then create a css file in the root directory, assuming the name is `index.css`, import the plugin and configure TailwindCSS:
-
-::: tip
-You can also configure TailwindCSS in an existing css file, and make sure the imported file path is correct.
-:::
+If your entry file contains a CSS import, assuming the name is `index.css`, configure it as follows:
 
 ```css
 /* index.css */
 @import "tailwindcss";
-@source "../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}";
-@plugin "./heroui.ts";
+@source "./node_modules/heroui-vue/dist/index.js";
+@plugin "heroui-vue/plugin";
 @custom-variant dark (&:is(.dark *));
 ```
 
