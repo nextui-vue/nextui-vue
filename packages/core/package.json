@@ -33,7 +33,8 @@
   },
   "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "pnpm -w build:cmp && tsdown --dts --minify",
+    "build": "pnpm -w build:cmp && pnpm build:only",
+    "build:only": "tsdown --minify",
     "dev": "tsdown -w",
     "bump": "pnpm build && bumpp --tag @heroui-vue/core@ --sign"
   },
