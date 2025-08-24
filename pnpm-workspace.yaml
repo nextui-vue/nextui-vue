@@ -9,7 +9,7 @@ catalogs:
     "@heroui/system": ^2.4.20
     "@heroui/theme": ^2.4.11
     "@heroui/use-aria-button": ^2.2.18
-    "@types/node": ^22.15.26
+    "@types/node": ^24.3.0
     "@vue/tsconfig": ^0.7.0
     "@vueuse/core": ^11.3.0
     unplugin-vue: ^6.0.1
