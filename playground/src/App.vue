@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, watch, watchEffect } from "vue";
 import { useDark } from "@vueuse/core";
-import { Repl } from "@vue/repl";
+import { Repl, ReplProps } from "@vue/repl";
 import Monaco from "@vue/repl/monaco-editor";
 import { Header } from "./components";
 import { useStore } from "./composables";
@@ -21,9 +21,17 @@ function setAutoSaveState(value: boolean) {
 
 const autoSave = ref(getAutoSaveState());
 
-const previewOptions = {
+const previewOptions: ReplProps["previewOptions"] = {
   headHTML: `
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"><\/script>
+    <script src="https://cdn.jsdelivr.net/npm/heroui-vue@0.0.18-beta.1/dist/browser/heroui.iife.js"><\/script>
+    <script src="https://cdn.jsdelivr.net/npm/heroui-vue@0.0.17/dist/index.js"><\/script>
+    <script src="https://cdn.tailwindcss.com"><\/script>
+    <script>
+      tailwind.config = {
+        plugins: [heroui()]
+      }
+    <\/script>
   `,
 };
 

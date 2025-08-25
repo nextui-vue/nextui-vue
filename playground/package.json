@@ -19,7 +19,6 @@
     "tailwindcss": "catalog:prod",
     "vite": "catalog:prod",
     "vue": "catalog:prod",
-    "@heroui/theme": "catalog:prod",
-    "nextui-vue": "workspace:*"
+    "heroui-vue": "workspace:*"
   }
 }

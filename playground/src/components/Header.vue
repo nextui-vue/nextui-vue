@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Icon } from "@iconify/vue";
 import { useDark, useToggle } from "@vueuse/core";
-import { Button } from "nextui-vue";
+import { Button } from "heroui-vue";
 
 const emits = defineEmits<{
   (e: "refresh"): void;
@@ -23,7 +23,7 @@ const toggleDark = useToggle(dark);
           height="40"
           alt="NextUI Vue Logo"
         />
-        <h1 class="text-xl font-bold">Nextui Vue Playground</h1>
+        <h1 class="text-xl font-bold">HeroUI Vue Playground</h1>
       </header>
 
       <section class="flex items-center gap-x-4">
@@ -52,7 +52,7 @@ const toggleDark = useToggle(dark);
           <Icon v-else icon="iconamoon:mode-light" width="24" height="24"
         /></Button>
         <a
-          href="https://github.com/nextui-vue/nextui-vue"
+          href="https://github.com/heroui-vue/heroui-vue"
           target="_blank"
           title="View on github"
         >
